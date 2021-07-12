@@ -1,0 +1,114 @@
+﻿/* radiantthemes-custom-heading element-one */
+
+.radiantthemes-custom-heading.element-one{
+
+	> .radiantthemes-custom-heading-text{
+
+		> *{
+			letter-spacing:inherit;
+		}
+
+	}
+
+}
+
+/* radiantthemes-custom-heading element-two */
+
+.radiantthemes-custom-heading.element-two{
+	overflow:hidden;
+
+	> .radiantthemes-custom-heading-text{
+
+		> *{
+			letter-spacing:inherit;
+		}
+
+	}
+
+}
+
+/* radiantthemes-custom-heading element-three */
+
+.radiantthemes-custom-heading.element-three{
+	position:relative;
+	overflow:hidden;
+
+	> .radiantthemes-custom-heading-text{
+		opacity:0;
+		visibility:hidden;
+		transition:all 0.1s ease-in-out 0.7s;
+
+		> *{
+			letter-spacing:inherit;
+		}
+
+	}
+
+	> .radiantthemes-custom-heading-overlay{
+		position:absolute;
+		top:0;
+		right:0;
+		bottom:0;
+		left:0;
+		z-index:1;
+		transform:translateX(-100%);
+		transition:all 1.2s ease-in-out 0.2s;
+	}
+
+	&.wow.animated{
+
+		> .radiantthemes-custom-heading-text{
+			opacity:1;
+			visibility:visible;
+		}
+
+		> .radiantthemes-custom-heading-overlay{
+			transform:translateX(100%);
+		}
+
+	}
+
+}
+
+/* radiantthemes-custom-heading element-four */
+
+.radiantthemes-custom-heading.element-four{
+	position:relative;
+	overflow:hidden;
+
+	> .radiantthemes-custom-heading-text{
+		opacity:0;
+		visibility:hidden;
+		transition:all 0.1s ease-in-out 0.7s;
+
+		> *{
+			letter-spacing:inherit;
+		}
+
+	}
+
+	> .radiantthemes-custom-heading-overlay{
+		position:absolute;
+		top:0;
+		right:0;
+		bottom:0;
+		left:0;
+		z-index:1;
+		transform:translateX(100%);
+		transition:all 1.2s ease-in-out 0.2s;
+	}
+
+	&.wow.animated{
+
+		> .radiantthemes-custom-heading-text{
+			opacity:1;
+			visibility:visible;
+		}
+
+		> .radiantthemes-custom-heading-overlay{
+			transform:translateX(-100%);
+		}
+
+	}
+
+}

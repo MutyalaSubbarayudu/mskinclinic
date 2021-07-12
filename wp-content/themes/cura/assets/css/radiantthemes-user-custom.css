@@ -1,0 +1,3040 @@
+
+/* TESTIMONIALS */
+
+
+.newsletter .form input[type="email"] {
+    font-size: 18px;
+    width: 100%;
+    height: 53px;
+    line-height: 32px;
+    /*font-family: 'Jost Regular', Sans-serif;*/
+    color: #54546F;
+    background-color: #fff;
+    border: none;
+    padding-left: 15px;
+    margin-right: 10px;
+    border-radius: 0px;
+}
+
+.newsletter .form input[type="email"]::placeholder {
+    color: #54546F;
+}
+
+.newsletter .form input[type="submit"] {
+    width: 100%;
+    height: 53px;
+    font-size: 17px;
+    line-height: 27px;
+    /*font-family: 'Jost Medium', Sans-serif;*/
+    border: none;
+    padding: 12px 33px;
+    color: #fff;
+    background-color: #FF583C;
+    border-radius: 0px;
+    /*margin-left: 15px;*/
+}
+
+.newsletter .spacing-info {
+    padding: 0;
+}
+
+.newsletter .spacing-info-two {
+    padding-right: 0;
+}
+
+.newsletter .newsletter-position {
+    flex-wrap: nowrap !important;
+}
+
+/*.newsletter .form .icon{
+    font-family:"themify" !important;
+    padding:0 !important;
+}*/
+
+/*.newsletter .newsletter-info:before {
+    content: "";
+    position: relative;
+    display:inline-block;
+    top: 50px;
+    left: 15px;
+    width: 94%;
+    height: 1px;
+    background-color: #fff;
+}*/
+
+.pet-clinic .newsletter .form input[type="submit"] {
+    width: 100%;
+    height: 53px;
+    font-size: 17px;
+    line-height: 27px;
+    /*font-family: 'Jost Medium', Sans-serif;*/
+    border: none;
+    padding: 12px 33px;
+    color: #fff;
+    background-color: #f5ab4a;
+    border-radius: 0px;
+    /*margin-left: 15px;*/
+}
+
+/* END NEWSLETTER */
+@media only screen and (max-width: 767px) and (min-width: 250px) {
+    .button-align .radiantthemes-custom-button.element-one[data-button-direction="right"] {
+        text-align: left;
+        display: flex;
+        justify-content: flex-start;
+    }
+
+    .newsletter .form input[type="submit"] {
+        ma
+    }
+}
+
+/*END OF HOME PAGE TWO */
+/* START OF HOME PAGE FOUR */
+/* BANNER SECTION */
+.banner-text .underline-two:after {
+    content: "";
+    position: absolute;
+    top: 90%;
+    left: 6px;
+    width: 42%;
+    height: 2px;
+    background-color: #3d3c37;
+}
+
+.banner-text .underline-one:after {
+    content: "";
+    position: absolute;
+    top: 40%;
+    left: 6px;
+    width: 43%;
+    height: 2px;
+    background-color: #3d3c37;
+}
+
+/*END BANNER SECTION */
+
+.our-work-quote .fa-quote-left {
+    color: #bbcdc3;
+    font-size: 90px;
+    top: -40px;
+    left: 0;
+    position: absolute;
+}
+
+.our-work-quote p {
+    position: absolute;
+    font-style: italic;
+    top: 0;
+    left: 0;
+}
+
+
+
+.why-choose-clinic:before {
+    content: "";
+    position: absolute;
+    top: 50px;
+    left: -52px;
+    width: 405px;
+    height: 405px;
+    background: transparent;
+    border: 2px dashed #e69472;
+    border-radius: 205px;
+    z-index: -1;
+    animation-name: rotate-center;
+    animation-duration: 30s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 0;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+    animation-fill-mode: none;
+    animation-play-state: running;
+}
+
+@keyframes rotate-center {
+    0% {
+        -webkit-transform: rotate(0);
+        transform: rotate(0);
+    }
+
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+.book-appointment .form-row {
+    position: relative;
+}
+
+.book-appointment .form-row input[type="text"],
+.book-appointment .form-row input[type="tel"],
+.book-appointment .form-row input[type="email"] {
+    height: 59px;
+    background-color: #fafafa;
+    border: 0;
+    width: 100%;
+    font-size: 16px;
+    line-height: 28px;
+    color: #7e7e7e;
+    border-radius: 0;
+    margin-bottom: 15px;
+    padding: 0 20px;
+}
+
+.book-appointment .form-row i {
+    position: absolute;
+    top: 20px;
+    color: #9a9a9a;
+    right: 6%;
+}
+
+.book-appointment .form-row select {
+    height: 59px;
+    width: 100%;
+    background-color: #fafafa;
+    margin-bottom: 15px;
+    border: 0;
+    overflow: hidden;
+    font-size: 16px;
+    line-height: 28px;
+    border-radius: 0;
+    padding: 0 0 0 20px;
+    color: #7e7e7e;
+    appearance: none;
+    -webkit-appearance: none;
+    white-space: normal;
+    word-wrap: break-word;
+}
+
+.book-appointment .form-row select:placeholder {
+    color: #7e7e7e;
+}
+
+.book-appointment .form-row input[type="submit"] {
+    width: 100%;
+    padding: 12px 33px;
+    background-color: #e69472;
+    border: 0;
+    font-size: 17px;
+    letter-spacing: 0px;
+    line-height: 27px;
+    color: #ffffff;
+    border-radius: 0;
+    white-space: normal;
+    word-wrap: break-word;
+}
+
+
+/* START TESTIMONIALS */
+
+.testimonial.element-one .testimonial-item > .holder > .testimonial-data {
+    text-align: left;
+}
+
+.testimonial.element-one .testimonial-item > .holder > .testimonial-title .title {
+    text-align: left;
+}
+
+.testimonial.element-one .testimonial-item > .holder > .testimonial-title .designation {
+    text-align: left;
+}
+
+.testimonial.element-one > .owl-nav {
+    display: none;
+}
+
+.testimonial.element-one .testimonial-item > .holder > .testimonial-pic > .testimonial-pic-holder > .testimonial-pic-main {
+    display: none;
+}
+
+.testimonial.element-one .testimonial-item > .holder > .testimonial-pic > .testimonial-pic-holder > .testimonial-pic-icon {
+    top: 220px;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: 3;
+}
+
+.testimonial.element-one .testimonial-item > .holder > .testimonial-pic > .testimonial-pic-holder > .testimonial-pic-icon {
+    background-color: #f5f5f5 !important;
+    color: #c9ddd2 !important;
+    font-size: 65px;
+}
+
+.testimonial.element-one[class*='element-'].owl-dot-style-two .owl-dots {
+    top: 250px;
+    bottom: 0;
+    left: -450px;
+    right: 0;
+
+}
+
+.testimonial.element-one[class*='element-'] .owl-dots > .owl-dot {
+    padding: 10px 0 0 10px;
+    height: 30px;
+    width: 30px;
+    border-radius: 50px;
+    /*border: 1px solid #000;*/
+}
+
+.testimonial.element-one[class*="element-"].owl-dot-style-two .owl-dots > .owl-dot.active > span {
+    background-color: #E69472 !important;
+}
+
+.testimonial.element-one[class*="element-"].owl-dot-style-two .owl-dots > .owl-dot.active {
+    border: 1px solid #E69472;
+}
+
+.testimonial.element-one .testimonial-item > .holder {
+    margin-top: -73px !important;
+}
+
+/* END TESTIMONIALS */
+
+/*START QUALIFIED DOCTORS */
+
+.qualified-doctor:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #f1e9e3;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    z-index: 1;
+    transition: all .5s ease-in-out;
+}
+
+.qualified-doctor:hover:before {
+    opacity: 1;
+}
+
+.qualified-doctor .title {
+    content: "Dr. Carmelo G. Lock";
+    display: flex;
+    flex-direction: row;
+    font-size: 25px;
+    letter-spacing: 0px;
+    line-height: 30px;
+    color: #33302e;
+    /*font-family: "Niveau Grotesk Regular";*/
+    padding: 25% 23% 0 23%;
+    left: 0;
+    position: absolute;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    bottom: 0;
+    right: 0;
+    opacity: 0;
+    z-index: 3;
+    transition: all .5s ease-in-out;
+}
+
+.qualified-doctor:hover .title {
+    opacity: 1;
+}
+
+.qualified-doctor .sub-title {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    font-size: 18px;
+    letter-spacing: 1px;
+    line-height: 27px;
+    color: #c98060;
+    /*font-family: "Niveau Grotesk Regular";*/
+    text-transform: uppercase;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    padding: 33% 30% 0 30%;
+    overflow: hidden;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    opacity: 0;
+    z-index: 3;
+    transition: all .5s ease-in-out;
+}
+
+.qualified-doctor:hover .sub-title {
+    opacity: 1;
+}
+
+.qualified-doctor .text-detail {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    font-size: 18px;
+    line-height: 28px;
+    color: #636363;
+    /*font-family: "Niveau Grotesk Regular";*/
+    text-align: center;
+    padding: 45% 5% 0 5%;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: 3;
+    opacity: 0;
+    transition: all .5s ease-in-out;
+}
+
+.qualified-doctor:hover .text-detail {
+    opacity: 1;
+
+}
+
+.qualified-doctor .text-link {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: all .5s ease-in-out;
+    font-size: 17px;
+    width: 100%;
+    height: 100%;
+    padding: 65% 37% 0 37%;
+    letter-spacing: 0px;
+    line-height: 27px;
+    /*font-family: "Niveau Grotesk Regular";*/
+    z-index: 4;
+}
+
+.qualified-doctor .text-link a {
+    text-decoration: underline !important;
+    color: #1d1d1d;
+}
+
+.qualified-doctor .text-link a:hover {
+    color: #1d1d1d;
+    text-decoration: none !important;
+}
+
+.qualified-doctor:hover .text-link {
+    opacity: 1;
+}
+
+/*END QUALIFIED DOCTORS */
+/* START BEFORE AFTER */
+
+/*.rt-beforeafter.element-one .handle{
+    left:57% 
+}
+.rt-beforeafter.element-one .resize{
+    width:57%;
+}*/
+
+/* END BEFORE AFTER */
+
+
+/* END OF HOME PAGE FOUR */
+
+/* START HOME PAGE FIVE */
+.search-menu .form .search {
+    font-family: 'themify';
+    color: #000;
+}
+
+.search-menu .form input[type="text"] {
+    width: 100%;
+    border: 0;
+    background-color: #fafafa;
+
+}
+
+.search-menu .form input[type="submit"] {
+    width: 100%;
+    border: 0;
+    background-color: #fafafa;
+    margin-left: -50px;
+
+}
+
+.top-header .elementor-icon-list-text {
+    margin-top: -5px;
+}
+
+
+
+/* END HOME PAGE FIVE */
+
+/*START HOME PAGE THREE */
+/* TESTIMONIALS */
+.element-five.testimonial[class*='element-'].owl-dot-style-two .owl-dots {
+    display: none;
+}
+
+.element-five.testimonial.element-five > .owl-nav {
+    display: none;
+}
+
+/* TESTIMONIALS */
+.how-it-work-div .book-appointment {
+    transform: translate3d(0, 0, 0);
+    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+}
+
+.how-it-work-div:hover .book-appointment {
+    transform: translate3d(0, -102px, 0);
+}
+
+.how-it-work-div .appointment-text,
+.how-it-work-div .book-appointment-button {
+    opacity: 0;
+    transform: translate3d(0, 0, 0);
+    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+}
+
+.how-it-work-div:hover .appointment-text {
+    opacity: 1;
+    transform: translate3d(0, -90px, 0);
+    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+}
+
+.how-it-work-div:hover .book-appointment-button {
+    opacity: 1;
+    transform: translate3d(0, -102px, 0);
+    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+}
+
+.counselling-effect-main .main-image {
+    position: absolute;
+    min-width: 655px;
+    left: -165px;
+    top: 0;
+}
+
+.counselling-effect .first-image {
+    position: absolute;
+    min-width: 405px;
+    left: 40px;
+    top: 0;
+}
+
+.counselling-effect .second-image {
+    position: absolute;
+    min-width: 405px;
+    left: 115px;
+    top: 0;
+}
+
+.counselling-effect .third-image {
+    position: absolute;
+    min-width: 405px;
+    left: 40px;
+    top: 363px;
+}
+
+.counselling-effect .forth-image {
+    position: absolute;
+    min-width: 405px;
+    left: 115px;
+    top: 363px;
+}
+
+.counselling-effect .first-image:before,
+.counselling-effect .second-image:before,
+.counselling-effect .third-image:before,
+.counselling-effect .forth-image:before {
+    content: "";
+    position: absolute;
+    left: 15px;
+    top: 15px;
+    width: 92%;
+    height: 92%;
+    overflow: hidden;
+    background-color: rgba(236, 158, 124, 0.7);
+    z-index: 3;
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+    -webkit-transition: all 0.5s ease-in-out;
+}
+
+.counselling-effect-main .main-image:before {
+    content: "";
+    position: absolute;
+    left: 15px;
+    top: 15px;
+    width: 95.5%;
+    height: 96%;
+    overflow: hidden;
+    background-color: rgba(236, 158, 124, 0.7);
+    z-index: 3;
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+    -webkit-transition: all 0.5s ease-in-out;
+}
+
+.counselling-effect-main h3 {
+    font-size: 25px;
+    line-height: 45px;
+    color: #ffffff;
+    font-weight: bold;
+/*    font-family: "PlayfairDisplay-SemiBold", Sans-serif;*/
+    position: absolute;
+    left: 32%;
+    top: 35%;
+    /*padding:0 17%;*/
+    z-index: 4;
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+    -webkit-transition: all 0.5s ease-in-out;
+}
+
+/*.counselling-effect h3{
+    font-size: 25px;
+    line-height: 45px;
+    color: #ffffff;
+    font-weight: bold;
+    font-family: "PlayfairDisplay-SemiBold", Sans-serif;
+    position:absolute;
+    left:20%;
+    top:20%;
+    /*padding:0 17%;*/
+/* z-index:4;
+    opacity:0;
+    transition:all 0.5s ease-in-out;
+    -webkit-transition:all 0.5s ease-in-out;
+}*/
+.counselling-effect .second-image h3 {
+    left: 25%;
+}
+
+.counselling-effect .third-image h3 {
+    left: 25%;
+}
+
+.counselling-effect .forth-image h3 {
+    left: 32%;
+}
+
+.counselling-effect p {
+    font-size: 18px;
+    line-height: 30px;
+    color: #ffffff;
+    /*font-family: "Jost Regular";*/
+    text-align: center;
+    position: absolute;
+    left: 0;
+    top: 35%;
+    padding: 0 10%;
+    z-index: 4;
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+    -webkit-transition: all 0.5s ease-in-out;
+}
+
+
+/* COUNSELLING  */
+.counselling-effect .elementor-image:before {
+    content: "";
+    position: absolute;
+    top: 3%;
+    left: -24%;
+    width: 102%;
+    height: 94%;
+    opacity: 0;
+    background-color: rgba(236, 158, 124, 0.5);
+    transition: all 0.5s ease-in-out;
+    -webkit-transition: all 0.5s ease-in-out;
+}
+
+.counselling-effect:hover .elementor-image:before,
+.counselling-effect-image:hover .elementor-image:before,
+.counselling-effect-image-two:hover .elementor-image:before {
+    opacity: 1;
+}
+
+.counselling-effect-image .elementor-image:before {
+    content: "";
+    position: absolute;
+    top: 3%;
+    left: -22%;
+    width: 125%;
+    height: 94%;
+    opacity: 0;
+    background-color: rgba(236, 158, 124, 0.5);
+    transition: all 0.5s ease-in-out;
+    -webkit-transition: all 0.5s ease-in-out;
+}
+
+.counselling-effect-image-two .elementor-image:before {
+    content: "";
+    position: absolute;
+    top: 3%;
+    left: 23%;
+    width: 125%;
+    height: 94%;
+    opacity: 0;
+    background-color: rgba(236, 158, 124, 0.5);
+    transition: all 0.5s ease-in-out;
+    -webkit-transition: all 0.5s ease-in-out;
+}
+
+.counselling-effect .elementor-heading-title,
+.counselling-effect .elementor-text-editor,
+.counselling-effect .elementor-icon-list-item,
+.counselling-effect-image .elementor-heading-title,
+.counselling-effect-image .elementor-text-editor,
+.counselling-effect-image .elementor-icon-list-item,
+.counselling-effect-image-two .elementor-heading-title,
+.counselling-effect-image-two .elementor-text-editor,
+.counselling-effect-image-two .elementor-icon-list-item {
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+    -webkit-transition: all 0.5s ease-in-out;
+}
+
+.counselling-effect:hover .elementor-heading-title,
+.counselling-effect:hover .elementor-text-editor,
+.counselling-effect:hover .elementor-icon-list-item,
+.counselling-effect-image:hover .elementor-heading-title,
+.counselling-effect-image:hover .elementor-text-editor,
+.counselling-effect-image:hover .elementor-icon-list-item,
+.counselling-effect-image-two:hover .elementor-heading-title,
+.counselling-effect-image-two:hover .elementor-text-editor,
+.counselling-effect-image-two:hover .elementor-icon-list-item {
+    opacity: 1;
+}
+
+/*.counselling-effect-image-two .elementor-icon-list-item:before,
+.counselling-effect-image .elementor-icon-list-item:before{
+    content:"";
+    position:absolute;
+    top:80%;
+    left:36%;
+    width:105px;
+    height:1px;
+    background-color:#fff;
+    transition:all 0.3s ease-in-out;
+    -webkit-transition:all 0.3s ease-in-out;
+}*/
+/*.counselling-effect .elementor-icon-list-item:before{
+    content:"";
+    position:absolute;
+    top:80%;
+    left:44%;
+    width:105px;
+    height:1px;
+    background-color:#fff;
+    transition:all 0.3s ease-in-out;
+    -webkit-transition:all 0.3s ease-in-out;
+}*/
+/*.counselling-effect .elementor-icon-list-item{
+    border-bottom:1px solid #fff; !important;
+    display:inline-block;
+    height:10px;
+}*/
+.counselling-effect-image-two .elementor-icon-list-item:hover:before,
+.counselling-effect-image .elementor-icon-list-item:hover:before,
+.counselling-effect .elementor-icon-list-item:hover:before {
+    width: 0;
+}
+
+/*  COUNSELLING  */
+
+.our-team-effect .elementor-image:before {
+    content: "";
+    position: absolute;
+    left: 7.5%;
+    top: 5%;
+    width: 85%;
+    height: 92%;
+    opacity: 0;
+    background-color: rgba(236, 158, 124, 0.5);
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+}
+
+.our-team-effect:hover .elementor-image:before {
+    opacity: 1;
+}
+
+.our-team-effect .text-one,
+.our-team-effect .text-two {
+    opacity: 0;
+    transform: translate3d(0, 0, 0);
+    transition: all 0.5s ease-in-out;
+    -webkit-transition: all 0.5s ease-in-out;
+}
+
+.our-team-effect:hover .text-one,
+.our-team-effect:hover .text-two {
+    opacity: 1;
+    transform: translate3d(0, 45%, 0);
+}
+
+.our-team-effect .text-two .elementor-icon-list-text:before {
+    content: "";
+    position: absolute;
+    top: 85%;
+    left: 2%;
+    width: 95%;
+    height: 1px;
+    background-color: #fff;
+    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+}
+
+.our-team-effect .text-two .elementor-icon-list-text:hover:before {
+    width: 0;
+}
+
+/* START TESTIMONIALS DEMO THREE */
+.demo-three-testimonials .testimonial.element-six .testimonial-item > .holder {
+    padding: 55px 35px;
+    box-shadow: none;
+}
+
+/*.demo-three-testimonials .testimonial.element-eight .owl-item{
+    background-color:#f6f3ee !important;
+} 
+.demo-three-testimonials .testimonial.element-eight .owl-nav{
+    display:none;
+}
+.demo-three-testimonials .testimonial.element-eight .owl-dots{
+    display:block !important;
+}*/
+
+/* END TESTIMONIALS DEMO THREE */
+
+.element-five .testimonial-title .col-md-6 {
+    padding: 0;
+}
+
+/* END HOME PAGE THREE */
+
+/* START HOME PAGE ONE */
+
+
+.discover-more-effect .elementor-icon-list-item:before {
+    content: "";
+    position: absolute;
+    top: 88%;
+    left: 0;
+    height: 1px;
+    width: 100%;
+    background-color: #f5ab4a;
+    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+}
+
+.discover-more-effect .elementor-icon-list-item:hover:before {
+    width: 0;
+}
+
+.contact-us-effect .elementor-icon-list-item:before {
+    content: "";
+    position: absolute;
+    top: 88%;
+    left: 2%;
+    height: 1px;
+    width: 112px;
+    background-color: #f5ab4a;
+    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+}
+
+.contact-us-effect .elementor-icon-list-item:hover:before {
+    width: 0;
+}
+
+.view-all-services-effect .elementor-icon-list-item:before {
+    content: "";
+    position: absolute;
+    top: 88%;
+    left: 2%;
+    height: 1px;
+    width: 125px;
+    background-color: #f5ab4a;
+    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+}
+
+.view-all-services-effect .elementor-icon-list-item:hover:before {
+    width: 0;
+}
+
+.counter-effect .elementor-counter-title {
+    margin-left: -18px !important;
+}
+
+
+
+
+.demo-one-testimonials .testimonial.element-one .testimonial-item > .holder > .testimonial-data {
+    text-align: center;
+}
+
+.demo-one-testimonials .fa-quote-left:before {
+    display: none;
+}
+
+.demo-one-testimonials .testimonial.element-one .testimonial-item > .holder > .testimonial-pic > .testimonial-pic-holder > .testimonial-pic-main {
+    display: block;
+}
+
+.demo-one-testimonials .testimonial.element-one .testimonial-item > .holder > .testimonial-pic > .testimonial-pic-holder > .testimonial-pic-main {
+    position: absolute;
+    left: -110px;
+    top: 290px;
+    width: 87px;
+    height: 87px;
+}
+
+.demo-one-testimonials .testimonial.element-one .testimonial-item > .holder > .testimonial-pic > .testimonial-pic-holder > .testimonial-pic-icon {
+    display: none;
+}
+
+.demo-one-testimonials .testimonial.element-one .testimonial-item > .holder > .testimonial-title .title {
+    position: absolute;
+    text-align: center;
+    top: 230px;
+    left: 48%;
+}
+
+.demo-one-testimonials .testimonial.element-one .testimonial-item > .holder > .testimonial-title .designation {
+    position: absolute;
+    text-align: center;
+    top: 260px;
+    left: 48%;
+}
+
+.demo-one-testimonials .owl-carousel.owl-drag .owl-item {
+    height: 320px;
+}
+
+.demo-one-testimonials .testimonial.element-one[class*='element-'].owl-dot-style-two .owl-dots {
+    top: 265px;
+    bottom: 0;
+    left: 360px;
+    right: 0;
+}
+
+.demo-one-testimonials .testimonial.element-one[class*='element-'] .owl-dots > .owl-dot {
+    border: none;
+}
+
+.demo-one-testimonials .testimonial.element-one[class*="element-"].owl-dot-style-two .owl-dots > .owl-dot.active {
+    border: 1px solid #f5ab4a;
+}
+
+.demo-one-testimonials .testimonial[class*='element-'].owl-dot-style-two .owl-dots > .owl-dot > span {
+    width: 8px;
+    height: 8px;
+}
+
+.pet-care .form input[type="email"] {
+    font-size: 18px;
+    line-height: 32px;
+    height: 40px;
+    color: #fdfdfc;
+    /*font-family: "PlayfairDisplay-Regular";*/
+    border: 0;
+    width: 86%;
+    background-color: transparent;
+    /*padding-bottom: 10px;*/
+    float: left;
+}
+
+.pet-care .form input[type="email"]::placeholder {
+    color: #fdfdfc;
+}
+
+.pet-care .form input[type="submit"] {
+    border: 0;
+    background-color: transparent;
+    /* padding-bottom: 10px;*/
+    float: right;
+}
+
+.pet-care .form .icon {
+    content: '\e628';
+    font-family: themify !important;
+    font-size: 25px;
+    color: #f5ab4a;
+    padding-top: 8px;
+}
+
+.pet-care .border-line:before {
+    content: "";
+    position: absolute;
+    display: inline-block;
+    top: 10px;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: #fff;
+    z-index: 3;
+}
+
+/* END HOME PAGE ONE */
+/* START OF COVID-19 PAGE */
+
+.find-doctor .radiantthemes-custom-button.element-one[data-button-icon-position="right"] .radiantthemes-custom-button-main i {
+    position: relative;
+    vertical-align: middle;
+    top: 0;
+    margin-left: 5px;
+}
+
+.effect-readmore .elementor-icon-list-item:before {
+    content: "";
+    position: absolute;
+    top: 80%;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: #fd7a53;
+    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+}
+
+.effect-readmore .elementor-icon-list-item:hover:before {
+    width: 0;
+}
+
+.symptom-list span.elementor-icon-list-text:before {
+    content: "";
+    position: relative;
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    border: 3px solid #FD7952;
+    border-radius: 50px;
+    left: -10px;
+}
+.symptom-phone .elementor-icon-list-text {
+    position: relative;
+    display: inline-block;
+}
+.symptom-phone .elementor-icon-list-text:before {
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: #54546F;
+    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+}
+
+.symptom-phone .elementor-icon-list-text:hover:before {
+    width: 0;
+}
+
+.faq-question .elementor-tab-title.elementor-active {
+    background-color: #013ca3;
+}
+
+.faq-question .elementor-accordion .elementor-accordion-item {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08) !important;
+}
+
+.faq-question .elementor-accordion .elementor-accordion-item:last-child {
+    border: 0 !important;
+}
+
+.faq-question .elementor-accordion .elementor-tab-title.elementor-active .elementor-accordion-icon-opened {
+    margin-top: 0px;
+}
+
+.faq-question .elementor-accordion .elementor-tab-title .elementor-accordion-icon .elementor-accordion-icon-closed {
+    margin-top: 0px;
+}
+
+.faq-question .elementor-accordion-icon-opened .ti-angle-down,
+.faq-question .elementor-accordion-icon-closed .ti-angle-up {
+    font-size: 12px;
+}
+
+.covid-appointment .form-spacing {
+    padding: 0 12px !important;
+}
+
+.covid-appointment .form-row input[type="text"],
+.covid-appointment .form-row input[type="email"],
+.covid-appointment .form-row input[type="tel"] {
+    width: 100%;
+    height: 56px;
+    background-color: #ffffff;
+    font-size: 16px;
+    line-height: 64px;
+    color: #54546f;
+    font-weight: 400;
+    /*font-family: "Nunito";*/
+    border: 0;
+    margin-bottom: 15px;
+    padding-left: 25px;
+    border-radius: 0;
+}
+
+.covid-appointment .form-row textarea {
+    width: 100%;
+    height: 176px;
+    background-color: #ffffff;
+    font-size: 16px;
+    line-height: 64px;
+    color: #54546f;
+    font-weight: 400;
+    /*font-family: "Nunito";*/
+    border: 0;
+    margin-bottom: 5px;
+    overflow: none;
+    resize: none;
+    padding-left: 25px;
+    border-radius: 0;
+}
+
+.covid-appointment .form-row input[type="submit"] {
+    width: 100%;
+    height: 56px;
+    background-color: #013ca3;
+    font-size: 17px;
+    letter-spacing: 0px;
+    line-height: 27px;
+    color: #fefefe;
+    font-weight: 700;
+    /*font-family: "Nunito";*/
+    border: 0;
+    border-radius: 0;
+}
+.get-in-touch .elementor-icon-list-text {
+    position: relative;
+    display: inline-block;
+}
+.get-in-touch .elementor-icon-list-text:before {
+    content: "";
+    position: absolute;
+    background-color: #fd7952;
+    display: inline-block;
+    bottom: 0px;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+}
+
+.get-in-touch .elementor-icon-list-text:hover:before {
+    width: 0;
+}
+
+
+
+.newsletter-info .form .icon {
+    content: '\e649';
+    font-family: 'themify';
+    font-size: 12px;
+    padding-right: 10px;
+    color: #fff;
+}
+
+.newsletter-info .newsletter-spacing {
+    padding: 0;
+}
+
+.newsletter-info .form input[type="email"] {
+    height: 53px;
+    width: 100%;
+    background-color: #ffffff;
+    letter-spacing: 0px;
+    line-height: 36px;
+    border: 0;
+    width: 100%;
+    padding-left: 20px;
+    margin: 0;
+    font-size: 16px;
+    letter-spacing: 0px;
+    line-height: 36px;
+    color: #82919a;
+    font-weight: 600;
+    /*font-family: "Nunito";*/
+}
+
+/*.newsletter-info .form input[type="submit"] {
+    width: 100%;
+    height: 53px;
+    padding: 12px 33px;
+    border: 0;
+    margin-left: -65px;
+    color:#fff;
+    background-color: #0EDC8D;
+}*/
+
+.protect-yourself-image img {
+    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+}
+
+.protect-yourself-image img:hover {
+    border-width: 7px 7px 7px 7px !important;
+    border-color: #FD7952;
+}
+
+@media only screen and (max-width: 1200px) {
+    .how-to-protect {
+        background-image: none !important;
+    }
+}
+
+@media only screen and (max-width: 767px) and (min-width: 250px) {
+    .view-services .radiantthemes-custom-button.element-one[data-button-direction="right"] {
+        display: flex;
+        justify-content: left;
+    }
+
+    .contact-button .radiantthemes-custom-button.element-one[data-button-direction="right"] {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+@media only screen and (max-width: 575px) and (min-width: 200px) {
+    .newsletter-info .position-adjust-one {
+        flex: 0 0 60%;
+    }
+
+    .newsletter-info .position-adjust-two {
+        flex: 0 0 10%;
+    }
+}
+
+/* END OF COVID-19 PAGE */
+
+/* START ABOUT US */
+
+.we-care-about .elementor-image:before {
+    content: "";
+    position: absolute;
+    top: 25%;
+    left: 19%;
+    width: 74%;
+    height: 60%;
+    border: 2px dashed #d9d9d9;
+    border-radius: 450px;
+    z-index: -1;
+    animation-name: rotate-center;
+    animation-duration: 30s;
+    animation-timing-function: ease;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+    animation-fill-mode: none;
+}
+
+@keyframes rotate-center {
+    0% {
+        -webkit-transform: rotate(0);
+        transform: rotate(0);
+    }
+
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+.professional-services {
+    position: relative;
+    display: inline-block;
+    margin: 0 15px;
+}
+
+.professional-services:before {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background-color: #409ee6;
+    opacity: 1;
+    transition: all 0.7s ease-in-out;
+    -webkit-transition: all 0.7s ease-in-out;
+}
+
+.professional-services:hover:before {
+    opacity: 0;
+    width: 0;
+}
+
+.professional-services:after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 0;
+    height: 5px;
+    background-color: #ef576c;
+    opacity: 0;
+    transition: all 0.7s ease-in-out;
+    -webkit-transition: all 0.7s ease-in-out;
+}
+
+.professional-services:hover:after {
+    opacity: 1;
+    width: 100%;
+}
+
+.keep-improving .elementor-icon-list-items {
+    margin-left: -8px !important;
+    margin-right: 0 !important;
+}
+
+.about-us-team .elementor-image:before {
+    content: "";
+    position: absolute;
+    top: 47%;
+    left: 8.2%;
+    width: 83%;
+    height: 42%;
+    opacity: 0;
+    background-color: rgba(239, 87, 108, 0.7);
+    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+}
+
+.about-us-team:hover .elementor-image:before {
+    opacity: 1;
+    top: 45%;
+}
+
+.about-us-team .elementor-text-editor {
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+    -webkit-transition: all 0.5s ease-in-out;
+}
+
+.about-us-team:hover .elementor-text-editor {
+    opacity: 1;
+    transform: translate3d(0, -20px, 0);
+}
+
+.about-us-team .elementor-icon-list-item {
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+    -webkit-transition: all 0.5s ease-in-out;
+}
+
+.about-us-team:hover .elementor-icon-list-item {
+    opacity: 1;
+    transform: translate3d(0, -10px, 0);
+}
+
+.about-us-team .elementor-icon-list-icon i {
+    position: absolute;
+    left: 105%;
+    top: 38%;
+}
+
+.about-us-team .elementor-icon-list-item:before {
+    content: "";
+    position: absolute;
+    top: 78%;
+    left: 5%;
+    height: 1px;
+    width: 80px;
+    background-color: #fff;
+    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+}
+
+.about-us-team .elementor-icon-list-item:hover:before {
+    width: 0;
+}
+
+/* ABOUT US TESTIMONIALS */
+
+/*.about-us-testimonials .testimonial.element-one .testimonial-item > .holder > 
+.testimonial-pic > .testimonial-pic-holder > .testimonial-pic-main{
+    display: block;
+    width: 107px;
+    height: 150px;
+    position: absolute;
+    top: 104px;
+    left: -290px;
+}
+.about-us-testimonials .testimonial.element-one .testimonial-item > .holder > .testimonial-data{
+    margin:17% 7% 0 22%;
+}
+.about-us-testimonials .testimonial.element-one .testimonial-item > .holder > .testimonial-title{
+    margin:5.5% 7% 0 22%;
+}
+
+.about-us-testimonials .testimonial.element-one .testimonial-item > .holder > .testimonial-pic > 
+.testimonial-pic-holder > .testimonial-pic-icon{
+    display:none;
+}
+.about-us-testimonials .testimonial.element-one .testimonial-item > .holder{
+    background-color:#fff;
+    margin:30px 15px;
+    height:385px;
+    /*width:553px;*/
+/*box-shadow: 4.33px 2.5px 20px rgba(0,0,0,0.13);*/
+/*}*/
+.emergency-service .elementor-icon-list-items.elementor-inline-items .elementor-icon-list-item {
+    margin-left: 13px;
+}
+
+
+/* ABOUT US TESTIMONIALS END */
+
+.opening-hours:before {
+    content: "";
+    position: relative;
+    display: inline-block;
+    top: 47px;
+    left: 0;
+    width: 80%;
+    height: 1px;
+    background-color: #fff;
+}
+
+.newsletter-about .newsletter-about-spacing {
+    padding: 0;
+}
+
+.newsletter-about .form .icon {
+    content: '\e649';
+    font-family: 'themify';
+    font-size: 12px;
+    padding-right: 10px;
+    color: #fff;
+}
+
+
+.newsletter-about .form input[type="email"] {
+    width: 100%;
+    height: 53px;
+    background-color: #ffffff;
+    font-size: 16px;
+    letter-spacing: 0px;
+    line-height: 36px;
+    color: #82919a;
+    border: 0;
+    padding-left: 20px;
+    margin: 0;
+}
+
+.newsletter-about .form input[type="submit"] {
+    /*width: 100%;*/
+    height: 53px;
+    padding: 0 30px;
+    border: 0;
+    background-color: #3498db;
+}
+
+.emergency-service .elementor-icon-list-icon + .elementor-icon-list-text {
+    margin-top: -5px;
+}
+
+/* END ABOUT US */
+
+/* START ABOUT US ONE */
+.extraordinary-services .elementor-heading-title {
+    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+}
+
+.extraordinary-services .elementor-heading-title:before {
+    content: "";
+    position: absolute;
+    top: 115%;
+    left: 0;
+    width: 10%;
+    height: 1px;
+    background-color: #fff;
+    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+}
+
+.extraordinary-services .elementor-heading-title:hover:before {
+    width: 0;
+}
+
+.extraordinary-services:hover .elementor-heading-title {
+    transform: translate3d(0, -300%, 0);
+    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+}
+
+.extraordinary-services .elementor-text-editor {
+    opacity: 0;
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+}
+
+.extraordinary-services:hover .elementor-text-editor {
+    opacity: 1;
+    transform: translate3d(0, -100%, 0);
+    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+}
+
+.extraordinary-services .elementor-widget-image .elementor-image:before {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 8%;
+    right: 8%;
+    width: 85%;
+    height: 0;
+    opacity: 0;
+    overflow: hidden;
+    background-color: rgba(236, 158, 124, 0.5);
+    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+}
+
+.extraordinary-services:hover .elementor-widget-image .elementor-image:before {
+    height: 73%;
+    top: 27%;
+    opacity: 1;
+}
+
+.certificate-list .elementor-icon-list-icon {
+    padding-bottom: 5px;
+}
+
+/* END ABOUT US ONE */
+
+/* Start About Us Three */
+.nutrition-subscribe .form input[type="email"] {
+    font-size: 18px;
+    line-height: 32px;
+    height: 40px;
+    color: #fdfdfc;
+    /*font-family: "PlayfairDisplay-Regular";*/
+    border: 0;
+    width: 86%;
+    background-color: transparent;
+    /*padding-bottom: 10px;*/
+    float: left;
+}
+
+.nutrition-subscribe .form input[type="email"]::placeholder {
+    color: #fdfdfc;
+}
+
+.nutrition-subscribe .form input[type="submit"] {
+    border: 0;
+    background-color: transparent;
+    /* padding-bottom: 10px;*/
+    float: right;
+    color: #0EDC8D;
+    position: absolute;
+    right: 20px;
+    bottom: 7px;
+}
+
+.nutrition-subscribe i {
+    color: #0EDC8D;
+    position: absolute;
+    right: 0;
+    bottom: 12px;
+    font-size: 16px;
+}
+
+.nutrition-subscribe .border-line:before {
+    content: "";
+    position: absolute;
+    display: inline-block;
+    top: 10px;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: #fff;
+    z-index: 3;
+}
+
+/* End About Us Three*/
+
+/* START SERVICE TWO */
+.service-icons .bg-circle {
+    width: 120px;
+    height: 115px;
+    border-radius: 61px;
+    box-shadow: 4.33px 2.5px 14.5px rgba(32, 80, 117, 0.11);
+    transition: all 0.5s ease-in-out;
+    -webkit-transition: all 0.5s ease-in-out;
+}
+
+.service-icons:hover .bg-circle {
+    animation-name: service-rotate-center;
+    animation-duration: 20s;
+    animation-timing-function: linear;
+    animation-delay: 0s;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-fill-mode: forwards;
+}
+
+@keyframes service-rotate-center {
+    0% {
+        -webkit-transform: rotate(0);
+        transform: rotate(0);
+    }
+
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+.trust-us-image .elementor-image:before {
+    content: "";
+    position: absolute;
+    width: 250px;
+    height: 250px;
+    top: 44%;
+    left: 64%;
+    border: 2px dashed #d9d9d9;
+    border-radius: 150px;
+    z-index: -1;
+
+    animation-name: service-rotate-center;
+    animation-duration: 20s;
+    animation-timing-function: linear;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+    animation-fill-mode: forwards;
+}
+
+.trust-us-image .elementor-image:after {
+    content: "";
+    position: absolute;
+    width: 250px;
+    height: 250px;
+    top: 15%;
+    left: 10%;
+    border: 2px dashed #d9d9d9;
+    border-radius: 150px;
+    z-index: -1;
+
+    animation-name: service-rotate-center;
+    animation-duration: 20s;
+    animation-timing-function: linear;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+    animation-fill-mode: forwards;
+}
+
+@media screen and (max-width: 1200px) {
+
+    .trust-us-image .elementor-image:before,
+    .trust-us-image .elementor-image:after {
+        display: none;
+    }
+}
+
+.service-contact-us .elementor-icon-list-item:before {
+    content: "";
+    position: absolute;
+    top: 80%;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: #d9e5ee;
+    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+
+}
+
+.service-contact-us .elementor-icon-list-item:hover:before {
+    width: 0px;
+}
+
+.our-facilities-effect .elementor-heading-title:before {
+    content: "";
+    position: absolute;
+    top: 180%;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #ef576c;
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+}
+
+.our-facilities-effect:hover .elementor-heading-title:before {
+    opacity: 1;
+}
+
+.book-appointment .elementor-icon-list-item:before {
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+    height: 1px;
+    background-color: #ef576c;
+    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+}
+
+.book-appointment .elementor-icon-list-item:hover:before {
+    width: 0;
+}
+
+/* END SERVICE TWO */
+
+/* START SERVICE ONE */
+
+/*.extraordinary-service:hover .bg-circle {
+    animation-name: service-rotate-center;
+    animation-duration: 25s;
+    animation-timing-function: ease;
+    animation-delay: 0s;
+    animation-iteration-count: 1;
+    animation-direction: forwards;
+    animation-fill-mode: none;
+}
+
+@keyframes service-rotate-center {
+    0% {
+        -webkit-transform: rotate(0);
+        transform: rotate(0);
+    }
+
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}*/
+
+.what-we-do-icon .elementor-icon-list-icon {
+    margin-top: -5px;
+}
+
+
+.our-service .elementor-image:before {
+    content: "";
+    position: absolute;
+    top: 4.5%;
+    left: 2.8%;
+    width: 80%;
+    height: 90%;
+    background-color: rgba(236, 158, 124, 0.7);
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+}
+
+.our-service:hover .elementor-image:before {
+    opacity: 1;
+}
+
+.our-service .elementor-heading-title,
+.our-service .elementor-text-editor,
+.our-service-one .elementor-heading-title,
+.our-service-one .elementor-text-editor,
+.our-service-two .elementor-heading-title,
+.our-service-two .elementor-text-editor {
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+}
+
+.our-service:hover .elementor-heading-title,
+.our-service:hover .elementor-text-editor,
+.our-service-one:hover .elementor-heading-title,
+.our-service-one:hover .elementor-text-editor,
+.our-service-two:hover .elementor-heading-title,
+.our-service-two:hover .elementor-text-editor {
+    opacity: 1;
+}
+
+.our-service-one .elementor-image:before {
+    content: "";
+    position: absolute;
+    top: 4.5%;
+    left: 6.5%;
+    width: 110%;
+    height: 90%;
+    background-color: rgba(236, 158, 124, 0.7);
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+}
+
+.our-service-one:hover .elementor-image:before,
+.our-service-two:hover .elementor-image:before {
+    opacity: 1;
+}
+
+.our-service-two .elementor-image:before {
+    content: "";
+    position: absolute;
+    top: 4.5%;
+    left: 9%;
+    width: 82%;
+    height: 90%;
+    background-color: rgba(236, 158, 124, 0.7);
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+}
+
+.faq-accordion .elementor-accordion-item .elementor-tab-title.elementor-active {
+    background-color: #9d4c3d !important;
+    box-shadow: 4.33px 2.5px 9px rgba(0, 0, 0, 0.12);
+    margin-bottom: 0 !important;
+}
+
+.faq-accordion .elementor-accordion-item .elementor-tab-title {
+    border: 1px solid #c9c9c9;
+    margin-bottom: 25px;
+}
+
+.faq-accordion .elementor-accordion-item .elementor-tab-content.elementor-active {
+    box-shadow: 4.33px 2.5px 9px rgba(0, 0, 0, 0.12);
+    margin-bottom: 25px;
+}
+
+.faq-accordion .elementor-accordion-icon {
+    padding-top: 0px;
+}
+
+.abt-skin-accordion .elementor-accordion-item .elementor-tab-title.elementor-active {
+    background-color: #e69472 !important;
+    box-shadow: 4.33px 2.5px 9px rgba(0, 0, 0, 0.12);
+    margin-bottom: 0 !important;
+}
+
+.abt-skin-accordion .elementor-accordion-item .elementor-tab-title {
+    box-shadow: 4.33px 1px 20px rgba(0, 0, 0, 0.12);
+    margin-bottom: 25px;
+}
+
+.abt-skin-accordion .elementor-accordion-item .elementor-tab-content.elementor-active {
+    box-shadow: 4.33px 2.5px 9px rgba(0, 0, 0, 0.12);
+    margin-bottom: 25px;
+}
+
+.abt-skin-accordion .elementor-accordion-icon {
+    padding-top: 7px;
+}
+
+/**/
+
+
+/**/
+.opening-time:before {
+    content: "";
+    position: absolute;
+    top: 86%;
+    left: 0;
+    height: 1px;
+    width: 90%;
+    background-color: #c9c9c9;
+}
+
+
+
+
+/* END SERVICE ONE */
+
+/* START CONTACT US TWO */
+
+.contact-info .elementor-icon-list-text {
+    margin-top: -20px;
+}
+
+.doctors-appointment .form-row input[type="text"],
+.doctors-appointment .form-row input[type="email"],
+.doctors-appointment .form-row input[type="tel"] {
+    /*width: calc(100% + 5px);*/
+    /*font-family: "jost Regular";*/
+    height: 56px;
+    font-size: 16px;
+    color: #727272;
+    border: 0;
+    background-color: #f7f5f9;
+    padding: 0 25px;
+    margin-bottom: 15px;
+    width: 100%;
+    border-radius: 0;
+}
+
+.doctors-appointment .form-row textarea {
+    /*    width: calc(100% + 5px);*/
+    width: 100%;
+    height: 176px;
+    /*font-family: "jost Regular";*/
+    resize: none;
+    font-size: 16px;
+    color: #727272;
+    border: 0;
+    overflow: none;
+    background-color: #f7f5f9;
+    padding: 10px 25px 0;
+    margin-bottom: 15px;
+    border-radius: 0;
+}
+
+.doctors-appointment .form-row input[type="submit"] {
+    margin: 0 auto;
+    padding: 12px 33px;
+    /*font-family: "jost Medium";*/
+    font-size: 17px;
+    line-height: 27px;
+    color: #fff;
+    margin-top: -10px;
+    background-color: #47a2e8;
+    border: 0;
+    border-radius: 0;
+}
+
+/* END CONTACT US TWO */
+
+/* 404 ERROR PAGE */
+
+/* END 404 ERROR PAGE */
+
+
+/* START HOME PAGE FOOTR */
+.elementor-social-icon {
+    background-color: transparent;
+}
+
+.elementor-social-icon:nth-child(1) {
+    background-color: #C3C3C3;
+    border-radius: 5px;
+}
+
+.radiantthemes-list.element-one ul li a {
+    font-size: 16px !important;
+    letter-spacing: 0px !important;
+    line-height: 36px !important;
+    color: #c3c3c3 !important;
+}
+
+
+/* END HOME PAGE FOOTER */
+/*START BUTTON HOVER */
+@-webkit-keyframes hvr-back-pulse {
+    50% {
+        background-color: rgba(230, 148, 114, 0.5);
+    }
+}
+
+@keyframes hvr-back-pulse {
+    50% {
+        background-color: rgba(230, 148, 114, 0.5);
+    }
+}
+
+.button-hover-banner .radiantthemes-custom-button .radiantthemes-custom-button-main {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    overflow: hidden;
+    -webkit-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+    -webkit-transition-property: color, background-color;
+    transition-property: color, background-color;
+}
+
+.button-hover-banner .radiantthemes-custom-button .radiantthemes-custom-button-main:hover {
+    -webkit-animation-name: hvr-back-pulse;
+    animation-name: hvr-back-pulse;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-delay: 0.5s;
+    animation-delay: 0.5s;
+    -webkit-animation-timing-function: linear;
+    animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    background-color: #E69472;
+    background-color: #E69472;
+    color: white;
+}
+
+@-webkit-keyframes hvr-back-pulse-two {
+    50% {
+        background-color: rgba(22, 22, 22, 0.5);
+    }
+}
+
+@keyframes hvr-back-pulse-two {
+    50% {
+        background-color: rgba(22, 22, 22, 0.5);
+    }
+}
+
+.button-hover-class .radiantthemes-custom-button .radiantthemes-custom-button-main {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    overflow: hidden;
+    -webkit-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+    -webkit-transition-property: color, background-color;
+    transition-property: color, background-color;
+}
+
+.button-hover-class .radiantthemes-custom-button .radiantthemes-custom-button-main:hover {
+    -webkit-animation-name: hvr-back-pulse-two;
+    animation-name: hvr-back-pulse-two;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-delay: 0.5s;
+    animation-delay: 0.5s;
+    -webkit-animation-timing-function: linear;
+    animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    background-color: #161616;
+    background-color: #161616;
+    color: white;
+}
+
+/* END BUTTON HOVER */
+/* PLAY-BUTTON*/
+.play-button-effect .rt-popup-video .icon:before,
+.play-button-effect .rt-popup-video .icon:after {
+    content: "";
+    position: absolute;
+    left: 35%;
+    top: -15px;
+    width: 140px;
+    height: 140px;
+    border: 2px solid #fff;
+    border-radius: 75px;
+    animation: animate 1.5s linear infinite;
+    opacity: 0;
+
+}
+
+.play-button-effect .rt-popup-video .icon:after {
+    animation-delay: 0.5s;
+}
+
+@keyframes animate {
+    0% {
+        transform: scale(.5);
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        transform: scale(1.5);
+    }
+}
+
+/*END PLAY BUTTON */
+
+
+.rt-covid-contactform .covid-appointment .form-spacing {
+    padding: 0 12px !important;
+}
+
+.rt-covid-contactform .covid-appointment .form-row input[type="text"],
+.rt-covid-contactform .covid-appointment .form-row input[type="email"],
+.rt-covid-contactform .covid-appointment .form-row input[type="tel"] {
+    width: 100%;
+    height: 56px;
+    background-color: #ffffff;
+    border: 1px solid #d3d3d3;
+    font-size: 16px;
+    line-height: 64px;
+    color: #54546f;
+    font-weight: 400;
+    margin-bottom: 15px;
+    padding-left: 25px;
+    border-radius: 0;
+}
+
+.rt-covid-contactform .covid-appointment .form-row textarea {
+    width: 100%;
+    height: 176px;
+    background-color: #ffffff;
+    border: 1px solid #d3d3d3;
+    font-size: 16px;
+    line-height: 64px;
+    color: #54546f;
+    font-weight: 400;
+    margin-bottom: 5px;
+    overflow: none;
+    resize: none;
+    padding-left: 25px;
+    border-radius: 0;
+}
+
+.rt-covid-contactform .covid-appointment .form-row input[type="submit"] {
+    width: 100%;
+    height: 56px;
+    background-color: #013ca3;
+    font-size: 17px;
+    letter-spacing: 0px;
+    line-height: 27px;
+    color: #fefefe;
+    font-weight: 700;
+    border: 0;
+    border-radius: 0;
+}
+
+
+
+
+
+.rt-covid-contactform .doctors-appointment .form-row input[type="text"],
+.rt-covid-contactform .doctors-appointment .form-row input[type="email"],
+.rt-covid-contactform .doctors-appointment .form-row input[type="tel"] {
+    /*width: calc(100% + 5px);*/
+    /*font-family: "jost Regular";*/
+    height: 56px;
+    font-size: 16px;
+    color: #727272;
+    border: 0;
+    background-color: #f7f5f9;
+    padding: 0 25px;
+    margin-bottom: 15px;
+    width: 100%;
+    border-radius: 0;
+}
+
+.rt-covid-contactform .doctors-appointment .form-row textarea {
+    /*    width: calc(100% + 5px);*/
+    width: 100%;
+    height: 176px;
+    /*font-family: "jost Regular";*/
+    resize: none;
+    font-size: 16px;
+    color: #727272;
+    border: 0;
+    overflow: none;
+    background-color: #f7f5f9;
+    padding: 10px 25px 0;
+    margin-bottom: 15px;
+    border-radius: 0;
+}
+
+.rt-covid-contactform .doctors-appointment .form-row input[type="submit"] {
+    margin: 0 auto;
+    padding: 12px 33px;
+    /*font-family: "jost Medium";*/
+    font-size: 17px;
+    line-height: 27px;
+    color: #fff;
+    margin-top: -10px;
+    background-color: #f5ab4a;
+    border: 0;
+    border-radius: 0;
+}
+
+
+/* START MEDIA QUERY */
+@media only screen and (max-width: 1200px) {
+    .contact-page-five .form-row textarea {
+        margin-bottom: 7px;
+    }
+
+}
+
+@media only screen and (max-width: 575px) and (min-width: 250px) {
+
+
+
+    .newsletter-about .fix-position-two {
+        flex: 0 0 10%;
+    }
+
+}
+
+@media only screen and (max-width: 1200px) {
+    .element-five .testimonial-title .fa-star {
+        float: left !important;
+    }
+
+    .element-five .testimonial-title .col-md-6 {
+        max-width: 100% !important;
+        flex: 0 0 100%;
+        padding: 0;
+    }
+
+}
+
+
+
+
+
+
+@media only screen and (max-width:1100px) {
+    .banner-text .underline-one:after {
+        width: 50%;
+        top: 40%;
+    }
+
+    .banner-text .underline-two:after {
+        width: 50%;
+        top: 90%;
+    }
+
+    .team.element-two .rt-doctor:hover .box-content {
+        top: 35% !important;
+    }
+
+    .professional-services::before {
+        display: none;
+    }
+
+    .professional-services::after {
+        display: none;
+    }
+
+
+
+    /*.newsletter .newsletter-info:before {
+        width: 95%;
+    }*/
+
+    .extraordinary-services:hover .elementor-widget-image .elementor-image:before {
+        left: 2%;
+        right: 2%;
+        width: 96%;
+
+    }
+
+    .extraordinary-services:hover .elementor-widget-image .elementor-image::before {
+        height: 80%;
+        top: 20%;
+    }
+
+}
+
+/*@media screen and (min-width: 414px){
+.newsletter .form input[type="submit"]{
+	margin-left:0;
+	margin-top:10px;
+	}
+}*/
+
+@media screen and (min-width: 1024px) and (max-width: 1266px) {
+
+    .we-care-about .elementor-image::before {
+        top: 15%;
+        width: 44%;
+    }
+
+    .trust-us-image .elementor-image:before {
+        left: 44%;
+    }
+}
+
+/*@media screen and (min-width: 768px) and (max-width: 1024px) and (orientation : landscape) {
+    .our-service img {
+        width: 100% !important;
+        max-width: 100% !important;
+        height: 100% !important;
+    }
+
+    .our-service-one img {
+        width: 100% !important;
+        max-width: 100% !important;
+        height: 100% !important;
+    }
+
+}*/
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    .we-care-about .elementor-image::before {
+        top: 15%;
+        width: 44%;
+    }
+
+    .newsletter .spacing-info {
+        flex: 0 0 56%;
+
+    }
+
+    .newsletter .spacing-info-two {
+        flex: 0 0 44%;
+    }
+}
+
+
+@media only screen and (max-width: 767px) {
+
+    .newsletter .form input[type="submit"] {
+        margin: 0;
+        width: 100%;
+    }
+
+    .newsletter .spacing-info,
+    .newsletter .spacing-info-two {
+        margin-top: 10px;
+        padding: 0px;
+    }
+
+    .book-appointment .form-row i {
+        right: 7%;
+    }
+
+    .contact-page-five .form-row {
+        margin-right: -15px !important;
+        margin-left: -15px !important;
+    }
+
+    .newsletter-about .fix-position-one {
+        flex: 0 0 80%;
+    }
+
+    .newsletter-about .form input[type="submit"] {
+        padding: 0 28px;
+    }
+
+    .doctors-appointment .form-row input[type="submit"] {
+        width: 100%;
+        margin: 0;
+    }
+}
+
+
+@media screen and (min-width: 300px) and (max-width: 320px) {
+    .newsletter-about .fix-position-one {
+        flex: 0 0 76%;
+    }
+
+    .newsletter-about .form input[type="submit"] {
+        margin-left: 0;
+    }
+}
+
+
+@media screen and (min-width: 321px) and (max-width: 360px) {
+    .newsletter-about .fix-position-one {
+        flex: 0 0 79%;
+    }
+
+    .newsletter-about .form input[type="submit"] {
+        margin-left: 0;
+    }
+}
+
+@media screen and (min-width: 361px) and (max-width: 375px) {
+    .newsletter-about .fix-position-one {
+        flex: 0 0 80%;
+    }
+
+    .newsletter-about .form input[type="submit"] {
+        margin-left: 0;
+    }
+}
+
+@media screen and (min-width: 376px) and (max-width: 420px) {
+    .newsletter-about .fix-position-one {
+        flex: 0 0 82%;
+    }
+
+    .newsletter-about .form input[type="submit"] {
+        margin-left: 0;
+    }
+}
+
+
+
+@media screen and (min-width: 320px) and (max-width: 568px) and (orientation: landscape) {
+    .rt-round {
+        width: 18% !important;
+    }
+}
+
+
+
+@media only screen and (max-width: 800px) {
+
+
+    /* .newsletter .newsletter-info:before {
+        width: 95%;
+    }*/
+
+    .demo-four-footer li {
+        font-size: 16px;
+        letter-spacing: 0px;
+        line-height: 35px;
+        color: #959595;
+        /*font-family: "Niveau Grotesk Regular";*/
+    }
+
+    .why-choose-clinic::before {
+        left: -8px !important;
+    }
+
+
+
+
+    .testimonial.element-one[class*="element-"].owl-dot-style-two .owl-dots {
+        left: 0px !important;
+        top: 400px !important;
+
+    }
+
+    .our-team-effect:hover .text-one {
+        opacity: 1;
+        transform: translate3d(0, 40px, 0);
+    }
+
+    .our-team-effect:hover .text-two {
+        opacity: 1;
+        transform: translate3d(0, 30px, 0);
+
+    }
+
+    .counselling-effect-main .main-image {
+        left: 55px !important;
+    }
+
+
+
+    .demo-one-testimonials .testimonial.element-one .testimonial-item > .holder > .testimonial-pic > .testimonial-pic-holder > .testimonial-pic-main {
+        left: -110px;
+        top: 364px;
+    }
+
+    .demo-one-testimonials .owl-carousel.owl-drag .owl-item {
+        height: 380px;
+    }
+
+    .demo-one-testimonials .testimonial.element-one .testimonial-item > .holder > .testimonial-title .title {
+        top: 310px;
+        left: 48%;
+    }
+
+    .demo-one-testimonials .testimonial.element-one .testimonial-item > .holder > .testimonial-title .designation {
+        top: 340px;
+        left: 48%;
+    }
+
+    .pet-care .border-line::before {
+        top: 68%;
+        left: 0;
+        width: 100%;
+    }
+
+    .nutrition-subscribe .border-line::before {
+        top: 40px;
+        left: 0;
+        width: 100%;
+    }
+
+    .we-care-about .elementor-image::before {
+        width: 61%;
+    }
+
+    .professional-services::before {
+        width: 96%;
+    }
+
+    .about-us-team .elementor-image:before {
+        top: 10%;
+        left: 3%;
+        width: 83%;
+        height: 70%;
+    }
+
+    .about-us-team:hover .elementor-image:before {
+        opacity: 1;
+        top: 15%;
+    }
+
+
+    .about-us-team:hover .elementor-text-editor {
+        opacity: 1;
+        transform: translate3d(0, -100px, 0);
+    }
+
+    .counselling-effect .elementor-image::before {
+        left: 10%;
+        width: 80%;
+    }
+
+    .counselling-effect-image .elementor-image::before {
+        left: 3%;
+        width: 93%;
+    }
+
+    .counselling-effect-image-two .elementor-image::before {
+        left: 11%;
+        width: 93%;
+    }
+
+    .counselling-effect .elementor-icon-list-item::before {
+        left: 43%;
+    }
+
+    .counselling-effect-image-two .elementor-icon-list-item::before {
+        left: 30%;
+    }
+
+    .our-facilities-effect .elementor-heading-title::before {
+        top: 144%;
+    }
+
+    .our-service .elementor-image::before {
+        left: 4%;
+    }
+
+    .our-service-one .elementor-image::before {
+        left: 8%;
+    }
+
+    .our-service-two .elementor-image::before {
+        left: 14%;
+    }
+
+    .opening-time::before {
+        width: 100%;
+    }
+
+    /*.blog.element-one .blog-item span.icon-back::before {
+        height: 57.2%;
+    }*/
+
+    .banner-text .underline-one:after {
+        width: 50%;
+        top: 40%;
+    }
+
+    .banner-text .underline-two:after {
+        width: 50%;
+        top: 90%;
+    }
+
+    
+
+    .how-it-work-div:hover .book-appointment {
+        transform: translate3d(0, -110px, 0);
+    }
+
+    .team.element-two .rt-doctor:hover .box-content {
+        top: 35% !important;
+    }
+
+    /* .pet-care .form .icon {
+        padding-top: 5%;
+    }*/
+
+    .extraordinary-services:hover .elementor-heading-title {
+        transform: translate3d(0, -480%, 0);
+    }
+
+    .extraordinary-services:hover .elementor-widget-image .elementor-image::before {
+        height: 90%;
+        top: 10%;
+    }
+
+}
+
+@media only screen and (max-width:760px) {
+    .banner-text .underline-one:after {
+        width: 50%;
+        top: 40%;
+    }
+
+    .banner-text .underline-two:after {
+        width: 50%;
+        top: 90%;
+    }
+
+   
+    .extraordinary-services:hover .elementor-widget-image .elementor-image::before {
+        height: 90%;
+        top: 10%;
+    }
+
+}
+
+@media only screen (min-width:300px) and (max-width:375px) {
+    .main-content-area .elementor-element-populated {
+        margin: 6% 0 0 0 !important;
+    }
+}
+
+@media only screen and (max-width:375px) {
+    .main-logo .elementor-image-box-content .elementor-image-box-title {
+        margin-left: 40px;
+        margin-top: -40px;
+        padding-bottom: 12px;
+    }
+
+
+    .view-all-button {
+        margin: 0px 198px 55px 0px;
+    }
+
+    /*.row.newsletter-info::before {
+        width: 90% !important;
+        left: 0;
+    }*/
+
+    .why-choose-clinic::before {
+        top: 45px;
+        width: 360px;
+        height: 360px;
+    }
+
+
+    .elementor-31535 .elementor-element.elementor-element-b6cb67c {
+        bottom: -350px !important;
+    }
+
+    .testimonial.element-one[class*="element-"].owl-dot-style-two .owl-dots {
+        left: 0px !important;
+        top: 380px !important;
+        bottom: 0px !important;
+    }
+
+    .our-service-two .elementor-image::before {
+        left: 4%;
+        width: 90%;
+    }
+
+    .our-service-one .elementor-image::before {
+        width: 90%;
+    }
+/*
+    .blog.element-one .blog-item span.icon-back::before {
+        height: 53.3%;
+    }*/
+
+    .how-it-work-div:hover .book-appointment {
+        transform: translate3d(0, -300%, 0);
+    }
+
+    .how-it-work-div:hover .book-appointment-button {
+        transform: translate3d(0, -190%, 0);
+    }
+
+    .our-team-effect .text-one,
+    .our-team-effect .text-two {
+        top: 8% !important;
+    }
+
+    .our-team-effect .text-two {
+        left: -15%;
+    }
+
+    .team.element-two .rt-doctor:hover .box-content {
+        top: 35% !important;
+    }
+
+    .our-service-one .image-two .elementor-image img {
+        margin-left: -5%;
+    }
+
+    .our-service-one .body-text .elementor-text-editor {
+        left: 28% !important;
+    }
+
+    .our-service-one .elementor-image::before {
+        left: 3%;
+    }
+
+
+
+
+    .extraordinary-services:hover .elementor-widget-image .elementor-image::before {
+        height: 90%;
+        top: 10%;
+    }
+
+    .book-appointment .form-row select {
+        font-size: 14px !important;
+    }
+
+    /*    .book-appointment .form-row i,
+    .book-appointment-contact .form-row i {
+        right: 12%;
+    }*/
+
+
+}
+
+@media only screen and (max-width:355px) {
+    /*.row.newsletter-info::before {
+        width: 88% !important;
+        left: 0;
+    }*/
+
+    .elementor-31177 .elementor-element.elementor-element-782c6d35 > .elementor-element-populated {
+        margin: 0 !important;
+    }
+
+    .banner-text .underline-one:after {
+        width: 50%;
+        top: 40%;
+    }
+
+    .banner-text .underline-two:after {
+        width: 50%;
+        top: 90%;
+    }
+
+
+    .ready-to-transform .elementor-heading-title {
+        font-size: 30px !important;
+        line-height: 45px !important;
+    }
+
+    .why-choose-clinic::before {
+        top: 38px;
+        width: 305px;
+        height: 305px;
+    }
+
+    .testimonial.element-one[class*="element-"].owl-dot-style-two .owl-dots {
+        left: -180px !important;
+        top: 290px !important;
+    }
+
+    .copyright-text .elementor-icon-list-item {
+        text-align: center !important;
+    }
+
+    .how-it-work-div:hover .book-appointment {
+        transform: translate3d(0, -300%, 0);
+    }
+
+    .how-it-work-div:hover .book-appointment-button {
+        transform: translate3d(0, -150%, 0);
+    }
+
+    .our-team-effect .text-two {
+        left: -18% !important;
+    }
+
+    .our-team-effect .text-one,
+    .our-team-effect .text-two {
+        top: 6% !important;
+    }
+
+    .team.element-two .rt-doctor:hover .box-content {
+        top: 33% !important;
+    }
+
+    .team.element-four .rt-professionals:hover .box-content {
+        padding: 0 30px 30px 30px !important;
+        height: 93% !important;
+        top: 0 !important;
+    }
+
+    .team.element-four .rt-professionals .box-content a {
+        bottom: 15% !important;
+    }
+
+    .rt-servicebox.element-one .swiper-container .swiper-wrapper .swiper-slide > .data-box .rt-course-hover h2 {
+        padding: 0 20% 2% !important;
+    }
+
+    .extraordinary-services:hover .elementor-heading-title {
+        transform: translate3d(0, -480%, 0);
+    }
+
+/*
+
+    .blog.element-one .blog-item:hover .ti-plus:before {
+        top: 23%;
+    }
+
+    .blog.element-one .blog-item .ti-plus:after {
+        top: 29%;
+    }
+
+    .blog.element-one .blog-item:hover .ti-plus:after {
+        left: 41%;
+    }
+*/
+
+    .extraordinary-services:hover .elementor-widget-image .elementor-image::before {
+        height: 95%;
+        top: 5%;
+    }
+
+}
+
+@media only screen and (max-width:310px) {
+
+    .our-team-effect .text-one,
+    .our-team-effect .text-two {
+        top: 0 !important;
+    }
+
+    .our-team-effect .text-two {
+        left: -12% !important;
+    }
+}
+
+
+
+/* END MEDIA QUERY*/
+
+
+
+/* CONTACT PAGE FIVE CSS STARTS */
+
+.contact-page-five ::-webkit-input-placeholder {
+    /* WebKit browsers */
+    color: #fff !important;
+    opacity: 1;
+}
+
+.contact-page-five :-moz-placeholder {
+    /* Mozilla Firefox 4 to 18 */
+    color: #fff !important;
+    opacity: 1;
+}
+
+.contact-page-five ::-moz-placeholder {
+    /* Mozilla Firefox 19+ */
+    color: #fff !important;
+    opacity: 1;
+}
+
+.contact-page-five :-ms-input-placeholder {
+    /* Internet Explorer 10+ */
+    color: #fff !important;
+    opacity: 1;
+}
+
+.contact-page-five .form-row {
+    margin-right: -9px;
+    margin-left: -9px;
+}
+
+.wpcf7-form-control-wrap {
+    width: 100%;
+}
+
+.contact-page-five .form-row input[type="text"],
+.contact-page-five .form-row input[type="email"],
+.contact-page-five .form-row input[type="tel"] {
+    width: 100%;
+    height: 59px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border: 1px solid #fff;
+    font-size: 18px;
+    line-height: 32px;
+    color: #fff;
+    /*font-family: "Jost Regular", Sans-serif;*/
+    margin-bottom: 10px;
+    padding-left: 15px;
+    border-radius: 0;
+}
+
+.contact-page-five .form-row textarea {
+    width: 100%;
+    height: 127px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border: 1px solid #fff;
+    font-size: 18px;
+    line-height: 32px;
+    color: #fff;
+    /*font-family: "Jost Regular", Sans-serif;*/
+    overflow: none;
+    resize: none;
+    padding-left: 15px;
+    border-radius: 0;
+}
+
+.contact-page-five .form-row input[type="submit"] {
+    width: 100%;
+    border: 0;
+    font-size: 17px;
+    letter-spacing: 0px;
+    line-height: 27px;
+    color: #fefefe;
+    /*font-family: "Jost Medium", Sans-serif;*/
+    background-color: #ef576c;
+    padding: 12px 33px;
+    white-space: pre-wrap;
+    border-radius: 0;
+}
+
+/* CONTACT PAGE FIVE CSS ENDS */
+
+.doctor-details-social .elementor-social-icon {
+    box-shadow: 0px 14px 26px -3px rgba(0, 0, 0, 0.1);
+}
+
+.time-table.body {
+    font-weight: 400;
+    color: #29294e;
+    /*font-family: Jost Regular;*/
+    line-height: 25px;
+    font-size: 15px;
+}
+
+
+
+/* CONTACT PAGE ONE */
+.book-appointment-contact .form-row {
+    position: relative;
+}
+
+.book-appointment-contact .form-row input[type="text"],
+.book-appointment-contact .form-row input[type="tel"],
+.book-appointment-contact .form-row input[type="email"] {
+    height: 59px;
+    background-color: #fafafa;
+    border: 0;
+    width: 100%;
+    font-size: 16px;
+    line-height: 28px;
+    color: #6f6f85;
+    /*font-family: "Jost Regular", Sans-serif;*/
+    margin-bottom: 15px;
+    padding: 0 20px 0 20px;
+    border-radius: 0;
+}
+
+.book-appointment-contact .form-row i {
+    position: absolute;
+    top: 20px;
+    color: #9a9a9a;
+    right: 6%;
+}
+
+.book-appointment-contact .form-row select {
+    height: 59px;
+    width: 100%;
+    background-color: #fafafa;
+    margin-bottom: 15px;
+    border: 0;
+    overflow: hidden;
+    font-size: 16px;
+    line-height: 28px;
+    /*font-family: "Jost Regular", Sans-serif;*/
+    padding: 0 0 0 23px;
+    color: #6f6f85;
+    appearance: none;
+    -webkit-appearance: none;
+    white-space: normal;
+    word-wrap: break-word;
+    border-radius: 0;
+
+}
+
+.book-appointment-contact .form-row select:placeholder {
+    color: #7e7e7e;
+}
+
+.book-appointment-contact .form-row input[type="submit"] {
+    width: 100%;
+    padding: 12px 33px;
+    background-color: #9D4C3D;
+    border: 0;
+    font-size: 17px;
+    letter-spacing: 0px;
+    line-height: 27px;
+    color: #ffffff;
+    /*font-family: "Jost Medium", Sans-serif;*/
+    white-space: normal;
+    word-wrap: break-word;
+    border-radius: 0;
+}
+
+/* CONTACT PAGE ONE */
+
+.explore-how .content-area,
+.explore-how .main-content-area,
+.explore-how .sub-content-area {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+}
+
+.explore-how:hover .content-area,
+.explore-how:hover .main-content-area,
+.explore-how:hover .sub-content-area {
+    opacity: 1;
+    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+}
+
+@media screen and (max-width: 1200px) and (min-width: 900px) {
+
+    .explore-how .content-area,
+    .explore-how .main-content-area,
+    .explore-how .sub-content-area {
+        top: 16%;
+    }
+
+}
+
+
+@media screen and (max-width: 765px) and (min-width: 500px) {
+
+    .explore-how .content-area,
+    .explore-how .main-content-area,
+    .explore-how .sub-content-area {
+        top: 15%;
+    }
+}
+
+@media screen and (max-width: 499px) and (min-width: 380px) {
+
+    .explore-how .content-area,
+    .explore-how:hover .main-content-area,
+    .explore-how:hover .sub-content-area {
+        top: 5%;
+    }
+}
+
+@media screen and (max-width: 379px) and (min-width: 330px) {
+    .explore-how .content-area {
+        top: 2%;
+    }
+
+    .explore-how .sub-content-area {
+        top: 5%;
+    }
+
+    .explore-how .main-content-area {
+        top: 5%;
+    }
+}
+
+@media screen and (max-width: 329px) and (min-width: 310px) {
+    .explore-how .content-area {
+        top: 0;
+    }
+
+    .explore-how .sub-content-area {
+        top: 2%;
+    }
+
+    .explore-how .main-content-area {
+        top: 2%;
+    }
+}

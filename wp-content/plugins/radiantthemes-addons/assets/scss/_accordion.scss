@@ -1,0 +1,358 @@
+﻿/* radiantthemes-accordion element-one */
+
+.radiantthemes-accordion.element-one{
+
+	.radiantthemes-accordion-item{
+		border-bottom:1px rgba(0,0,0,0.07) solid;
+
+		&:last-child,
+		&:only-child{
+			border-bottom:none;
+		}
+
+		> .radiantthemes-accordion-item-title{
+			position:relative;
+			padding-top:23px;
+			padding-right:50px;
+			padding-bottom:25px;
+			cursor:pointer;
+
+			> .radiantthemes-accordion-item-title-icon{
+				position:absolute;
+				top:20px;
+				right:0;
+				z-index:1;
+				width:32px;
+				height:32px;
+				border:1px #030712 solid;
+				border-radius:50%;
+				text-align:center;
+				transition:all 0.3s ease-in-out;
+				-webkit-transition:all 0.3s ease-in-out;
+
+				i.main-icon:before{
+					font-family:"themify";
+					content:"\e61a";
+					font-size:15px;
+					color:#030712;
+					line-height:30px;
+					font-style:normal;
+					transition:all 0.3s ease-in-out;
+					-webkit-transition:all 0.3s ease-in-out;
+				}
+
+			}
+
+			> .panel-title{
+				margin:0;
+				font-weight:700;
+				font-size:20px;
+				color:#1e1e1e;
+				line-height:27px;
+				letter-spacing:-0.6px;
+			}
+
+		}
+
+		> .radiantthemes-accordion-item-body{
+			padding-bottom:25px;
+
+			> *:last-child{
+				margin-bottom:0 !important;
+			}
+
+			p{
+				margin-bottom:17px;
+			}
+
+		}
+
+		&.radiantthemes-active > .radiantthemes-accordion-item-title > .radiantthemes-accordion-item-title-icon{
+		}
+
+		&.radiantthemes-active > .radiantthemes-accordion-item-title > .radiantthemes-accordion-item-title-icon i.main-icon:before{
+			content:"\e622";
+			color:#fff !important;
+		}
+
+	}
+
+}
+
+/* radiantthemes-accordion element-two */
+
+.radiantthemes-accordion.element-two{
+
+	.radiantthemes-accordion-item{
+		margin-bottom:20px;
+		padding-top:16px;
+		padding-right:20px;
+		padding-bottom:18px;
+		padding-left:24px;
+		border:1px #ddd solid;
+		transition:all 0.3s ease-in-out;
+		-webkit-transition:all 0.3s ease-in-out;
+
+		&:last-child,
+		&:only-child{
+			margin-bottom:0;
+		}
+
+		&.radiantthemes-active{
+			border-color:transparent;
+		}
+
+		> .radiantthemes-accordion-item-title{
+			position:relative;
+			padding-right:35px;
+			cursor:pointer;
+
+			> .radiantthemes-accordion-item-title-icon{
+				position:absolute;
+				top:4px;
+				right:0;
+				z-index:1;
+
+				> .line{
+					position:relative;
+					display:block;
+					width:20px;
+					height:20px;
+
+					&:before,
+					&:after{
+						position:absolute;
+						top:calc(50% - 1px);
+						width:100%;
+						height:2px;
+						z-index:0;
+						content:" ";
+						transition:all 0.3s ease-in-out;
+						-webkit-transition:all 0.3s ease-in-out;
+					}
+
+					&:after{
+						transform:rotate(90deg);
+						-webkit-transform:rotate(90deg);
+					}
+
+				}
+
+			}
+
+			> .panel-title{
+				margin:0;
+				font-weight:600;
+				font-size:18px;
+				color:#3b3b3b;
+				line-height:28px;
+				transition:all 0.3s ease-in-out;
+				-webkit-transition:all 0.3s ease-in-out;
+			}
+
+		}
+
+		> .radiantthemes-accordion-item-body{
+			padding-top:11px;
+			padding-right:35px;
+			padding-bottom:0;
+			font-size:16px;
+			color:#fff;
+			line-height:30px;
+
+			> *:last-child{
+				margin-bottom:0 !important;
+			}
+
+			p{
+				margin-bottom:17px;
+			}
+
+		}
+
+		&.radiantthemes-active > .radiantthemes-accordion-item-title > .radiantthemes-accordion-item-title-icon > .line:before{
+			background-color:#fff !important;
+		}
+
+		&.radiantthemes-active > .radiantthemes-accordion-item-title > .radiantthemes-accordion-item-title-icon > .line:after{
+			opacity:0;
+		}
+
+		&.radiantthemes-active > .radiantthemes-accordion-item-title > .panel-title{
+			color:#fff;
+		}
+
+	}
+
+}
+
+/* radiantthemes-accordion element-three */
+
+.radiantthemes-accordion.element-three{
+
+	.radiantthemes-accordion-item{
+		margin-bottom:0;
+
+		&.radiantthemes-active{
+			border-color:transparent;
+		}
+
+		> .radiantthemes-accordion-item-title{
+			position:relative;
+			padding-top:15px;
+			padding-right:30px;
+			padding-bottom:15px;
+			padding-left:0;
+			border-bottom:1px rgba(255,255,255,0.25) solid;
+			cursor:pointer;
+			transition:all 0.3s ease-in-out;
+			-webkit-transition:all 0.3s ease-in-out;
+
+
+			> .radiantthemes-accordion-item-title-icon{
+				position:absolute;
+				top:24px;
+				right:1px;
+				z-index:1;
+
+				> .line{
+					position:relative;
+					display:block;
+					width:10px;
+					height:10px;
+
+					&:before,
+					&:after{
+						position:absolute;
+						top:calc(50% - 1px);
+						width:100%;
+						height:2px;
+						z-index:0;
+						content:" ";
+						background-color:#fff;
+					}
+
+					&:after{
+						transform:rotate(90deg);
+						-webkit-transform:rotate(90deg);
+					}
+
+				}
+
+			}
+
+			> .panel-title{
+				margin:0;
+				font-weight:600;
+				font-size:16px;
+				color:#fff;
+				line-height:27px;
+			}
+
+		}
+
+		> .radiantthemes-accordion-item-body{
+			padding-top:20px;
+			padding-bottom:20px;
+			border-bottom:1px rgba(255,255,255,0.25) solid;
+			font-size:16px;
+			color:#fff;
+			line-height:30px;
+
+			> *:last-child{
+				margin-bottom:0 !important;
+			}
+
+		}
+
+		&.radiantthemes-active > .radiantthemes-accordion-item-title{
+			/*background-color:rgba(255,255,255,0.12);*/
+		}
+
+		&.radiantthemes-active > .radiantthemes-accordion-item-title > .radiantthemes-accordion-item-title-icon > .line:after{
+			opacity:0;
+		}
+
+	}
+
+}
+
+/* radiantthemes-accordion element-four */
+
+.radiantthemes-accordion.element-four{
+
+	.radiantthemes-accordion-item{
+
+		&:last-child,
+		&:only-child{
+			border-bottom:none;
+		}
+
+		> .radiantthemes-accordion-item-title{
+			position:relative;
+			padding-top:22px;
+			padding-right:30px;
+			padding-bottom:22px;
+			border-top:2px rgba(0,0,0,0.1) dotted;
+			cursor:pointer;
+
+			> .radiantthemes-accordion-item-title-icon{
+				position:absolute;
+				top:22px;
+				right:0;
+				z-index:1;
+				text-align:center;
+				transition:all 0.3s ease-in-out;
+				-webkit-transition:all 0.3s ease-in-out;
+
+				i.main-icon:before{
+					font-family:"themify";
+					content:"\e64b";
+					font-size:15px;
+					color:#000;
+					line-height:1;
+					font-style:normal;
+					transition:all 0.3s ease-in-out;
+					-webkit-transition:all 0.3s ease-in-out;
+				}
+
+			}
+
+			> .panel-title{
+				margin:0;
+				text-transform:uppercase;
+				font-weight:500;
+				font-size:17px;
+				line-height:30px;
+				transition:all 0.3s ease-in-out;
+				-webkit-transition:all 0.3s ease-in-out;
+			}
+
+		}
+
+		> .radiantthemes-accordion-item-body{
+			border-top:2px rgba(0,0,0,0.1) dotted;
+			padding-top:25px;
+			padding-bottom:25px;
+
+			> *:last-child{
+				margin-bottom:0 !important;
+			}
+
+			p{
+				margin-bottom:17px;
+			}
+
+		}
+
+		&.radiantthemes-active > .radiantthemes-accordion-item-title > .radiantthemes-accordion-item-title-icon{
+
+			i.main-icon:before{
+				content:"\e648";
+			}
+
+		}
+
+	}
+
+}

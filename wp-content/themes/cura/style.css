@@ -1,0 +1,25 @@
+/*
+Theme Name: Cura | Shared by WPTry.org
+Theme URI: https://cura.radiantthemes.com/
+Author: RadiantThemes
+Author URI: https://radiantthemes.com
+Description: Cura was designed for Health, Medical, Clinics, Hospitals, Skincare, Pet clinic, healthcare, and Pharmacy business. Cura is 100% responsive medical & healthcare WordPress theme. It comes with Elementor, Mega menu and Slider Revolution premium plugin. Cura is ecommerce & translation ready. It has nicely designed event calendar/timetable for clinics. For Physician, Healthcare & Medical Clinic business Cura is a nice choice. Cura is loaded with header & footer builder which means you have possibility to create unlimited header and footer layouts. You can edit header/footer and even blogs within Elementor. It's optimized for fast loading & performance.
+Version: 1.0.1
+License: GNU General Public License v2 or later
+License URI: LICENSE
+Text Domain: cura
+Tags: clinic, health, healthcare, treatment center, skin care, skin clinic, therapy, life coach, coaching, veterinary clinic, doctor, hospital, blog, shop, woocommerce, theme-options, left-sidebar, right-sidebar, header options, sticky post, translation ready, threaded comments
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+
+Cura is based on Underscores http://underscores.me/, (C) 2012-2016 Automattic, Inc.
+Underscores is distributed under the terms of the GNU GPL v2 or later.
+*/
+
+.admin-bar .block {
+	top: 32px;
+}
+#yith-quick-view-content .input-group-addon.quantity-decrease,  #yith-quick-view-content .input-group-addon.quantity-increase{
+    display: none;
+}

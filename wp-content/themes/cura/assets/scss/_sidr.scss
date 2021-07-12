@@ -1,0 +1,44 @@
+/*--------------------------------------------------------------
+# Sidr
+--------------------------------------------------------------*/
+
+.sidr{
+	display:block;
+	position:fixed;
+	top:0;
+	height:100%;
+	z-index:999999;
+	width:260px;
+	overflow-x:hidden;
+	overflow-y:auto;
+}
+
+.sidr.right{
+	left:auto;
+	right:-260px;
+}
+
+.sidr.left{
+	left:-260px;
+	right:auto;
+}
+
+.sidr.right .sidr-close{
+	margin:0;
+	padding:10px;
+	background-color:rgba(0,0,0,0.05);
+	text-align:right;
+}
+
+.sidr.left .sidr-close{
+	float:left;
+	margin-left:15px;
+}
+
+.sidr-close{
+	margin-top:10px;
+	margin-bottom:10px;
+	font-size:25px;
+	line-height:25px;
+	cursor:pointer;
+}

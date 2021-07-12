@@ -1,0 +1,47 @@
+/*--------------------------------------------------------------
+# Gallery Columns
+--------------------------------------------------------------*/
+
+.gallery{
+	margin-left:-15px;
+	margin-right:-15px;
+}
+
+.gallery-item{
+    display:inline-block;
+    vertical-align:top;
+    width:50%;
+    max-width:25%;
+    margin-bottom:30px;
+    padding-left:15px;
+    padding-right:15px;
+    text-align:center;
+}
+
+.gallery-columns-1 .gallery-item{
+	width:100%;
+	max-width:100%;
+}
+
+.gallery-columns-2 .gallery-item{
+	max-width:50%;
+}
+
+.gallery-columns-3 .gallery-item{
+	max-width:33.33%;
+}
+
+.gallery-columns-4 .gallery-item{
+	max-width:25%;
+}
+
+.gallery-item .gallery-icon img{
+    width:100%;
+}
+
+.gallery-item .gallery-caption{
+	padding:10px 15px 10px 15px;
+	background-color:#f8f8f8;
+	font-size:12px;
+	line-height:22px;
+}

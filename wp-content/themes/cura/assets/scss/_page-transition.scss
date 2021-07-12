@@ -1,0 +1,72 @@
+/*--------------------------------------------------------------
+# Page Transition Layer
+--------------------------------------------------------------*/
+
+body > .page-transition-layer{
+	position:fixed;
+	top:0;
+	right:0;
+	bottom:0;
+	left:0;
+	z-index:9999999;
+	content:" ";
+	width:auto;
+	height:auto;
+	opacity:0;
+	visibility:hidden;
+	transition:all 0.7s ease-in-out;
+	-webkit-transition:all 0.7s ease-in-out;
+}
+
+.page-transition-layer.i-am-active,
+body.page-transition-active > .page-transition-layer{
+	opacity:1;
+	visibility:visible;
+}
+
+.page-transition-layer-loader{
+	position:relative;
+	width:100%;
+	height:5px;
+	overflow:hidden;
+	background-color:#f8f8f8;
+}
+
+.page-transition-layer-spinner{
+	position:absolute;
+	top:calc(50% - 33px);
+	right:0;
+	left:0;
+	animation:PageTransitionSpinner 1.4s linear infinite;
+}
+
+@keyframes PageTransitionSpinner{
+	0% {
+		transform:rotate(0deg);
+	}
+	100% {
+		transform:rotate(270deg);
+	}
+}
+
+.page-transition-layer-spinner .page-transition-layer-spinner-path{
+	stroke-dasharray:187;
+	stroke-dashoffset:0;
+	transform-origin:center;
+	stroke:#4285F4;
+	animation:PageTransitionSpinnerCircle 1.4s ease-in-out infinite;
+}
+
+@keyframes PageTransitionSpinnerCircle{
+	0% {
+		stroke-dashoffset:187;
+	}
+	50% {
+		stroke-dashoffset:46.75;
+		transform:rotate(135deg);
+	}
+	100% {
+		stroke-dashoffset:187;
+		transform:rotate(450deg);
+	}
+}

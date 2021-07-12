@@ -1,0 +1,487 @@
+/*--------------------------------------------------------------
+# Sidebar
+--------------------------------------------------------------*/
+
+.widget-area{
+	margin-bottom:40px;
+	clear:both;
+
+	> .widget{
+		margin-bottom:40px;
+
+		&:last-child,
+		&:only-child{
+			margin-bottom:0;
+		}
+
+		> *:last-child{
+			margin-bottom:0 !important;
+		}
+
+		.widget-title{
+			margin-top:-7px;
+			margin-bottom:22px;
+			font-weight:600;
+			font-size:20px;
+			line-height:28px;
+			letter-spacing:-0.2px;
+
+			&:after{
+				display:inline-block;
+				vertical-align:middle;
+				margin-left:15px;
+				content:" ";
+				width:15px;
+				height:2px;
+			}
+
+			a{
+				color:inherit;
+			}
+
+			img{
+				margin-right:7px;
+			}
+
+		}
+
+		&.widget_media_image{
+			padding:0;
+			border:none;
+		}
+
+		&.widget_search,
+		&.widget_product_search{
+			/*padding:0;*/
+		}
+
+		&.widget_search .widget-title,
+		&.widget_product_search .widget-title{
+			display:none;
+		}
+
+		&.widget_search .search-form,
+		&.widget_product_search .woocommerce-product-search{
+			position:relative;
+
+			label{
+				width:100%;
+				margin:0;
+			}
+
+			input[type=search]{
+				vertical-align:top;
+				width:100%;
+				height:52px;
+				padding:0px 45px 0px 13px;
+				background-color:#fff;
+				border:1px rgba(0,0,0,0.2) solid;
+				border-radius:0;
+				font-weight:500;
+				font-size:15px;
+				color:#888;
+				line-height:23px;
+				transition:all 0.3s ease-in-out;
+				-webkit-transition:all 0.3s ease-in-out;
+
+				&:focus{
+				}
+
+			}
+
+			button[type=submit]{
+				position:absolute;
+				top:0;
+				right:0;
+				width:45px;
+				height:52px;
+				padding:0;
+				background-color:initial;
+				border:none;
+				border-radius:0;
+				font-size:0;
+
+				i{
+					font-size:16px;
+					color:#000;
+					line-height:30px;
+				}
+
+			}
+
+		}
+
+		.textwidget{
+			margin-bottom:20px;
+
+			> *:last-child{
+				margin-bottom:0 !important;
+			}
+
+			p{
+				margin-bottom:18px;
+				font-size:14px;
+				line-height:26px;
+			}
+
+			img{
+				margin:12px 0px 15px 0px;
+			}
+
+		}
+
+		&.widget_rss ul{
+			margin:0;
+
+			li{
+				margin-bottom:20px;
+				font-size:14px;
+				line-height:24px;
+
+				&:last-child,
+				&:only-child{
+					margin-bottom:0;
+				}
+
+				a{
+					color:#31281f;
+				}
+
+				.rss-date{
+					display:block;
+					margin-top:7px;
+					font-size:14px;
+					color:#9b9a9a;
+					line-height:22px;
+
+					&:before{
+						margin-right:10px;
+						content:"\f017";
+						font-family:'FontAwesome';
+					}
+
+				}
+
+				.rssSummary{
+					display:block;
+					margin-top:7px;
+				}
+
+			}
+
+		}
+
+		&.widget_recent_entries ul,
+		&.widget_recent_comments ul{
+			margin:0;
+
+			li{
+				position:relative;
+				margin-bottom:15px;
+				padding-left:23px;
+				padding-bottom:15px;
+				border-bottom:1px #e2e2e2 solid;
+				font-size:14px;
+				line-height:24px;
+				transition:all 0.3s ease-in-out;
+				-webkit-transition:all 0.3s ease-in-out;
+
+				&:last-child,
+				&:only-child{
+					margin-bottom:0;
+					padding-bottom:0;
+					border-bottom:none;
+				}
+
+				&:before{
+					position:absolute;
+					top:-1px;
+					left:0;
+					z-index:0;
+					content:"\f101";
+					font-family:"FontAwesome";
+					color:#000;
+				}
+
+				a{
+					color:inherit;
+				}
+
+				.post-date{
+					display:block;
+					margin-top:6px;
+					font-size:12px;
+					color:#282828;
+					line-height:20px;
+				}
+
+				a{
+					color:inherit;
+				}
+
+			}
+
+		}
+
+		&.widget_archive ul,
+		&.widget_categories ul,
+		&.widget_meta ul,
+		&.widget_pages ul,
+		&.widget_nav_menu ul,
+		&.widget_layered_nav ul,
+		&.widget_product_categories ul{
+
+			li{
+				margin-bottom:10px;
+				font-size:14px;
+				line-height:26px;
+
+				&:last-child,
+				&:only-child{
+					margin-bottom:0;
+				}
+
+				a{
+					position:relative;
+					color:inherit;
+					transition:all 0.3s ease-in-out;
+					-webkit-transition:all 0.3s ease-in-out;
+
+					&:hover{
+					}
+
+					&:before{
+						position:absolute;
+						right:0;
+						bottom:-2px;
+						content:" ";
+						display:block;
+						width:0;
+						height:2px;
+						transition:all 0.7s ease-in-out;
+						-webkit-transition:all 0.7s ease-in-out;
+					}
+
+					&:hover:before{
+						right:auto;
+						left:0;
+						width:100%;
+					}
+
+				}
+
+				ul{
+					margin-top:12px;
+					margin-left:15px;
+				}
+
+			}
+
+		}
+
+		&.widget_rating_filter ul{
+		}
+
+		&.widget_rating_filter ul li{
+			margin-bottom:15px;
+		}
+
+		&.widget_rating_filter ul li:last-child,
+		&.widget_rating_filter ul li:only-child{
+			margin-bottom:0;
+		}
+
+		&.widget_recent_reviews ul,
+		&.widget_top_rated_products ul{
+		}
+
+		&.widget_recent_reviews ul li,
+		&.widget_top_rated_products ul li{
+			margin-bottom:15px;
+		}
+
+		&.widget_recent_reviews ul li:last-child,
+		&.widget_recent_reviews ul li:only-child,
+		&.widget_top_rated_products ul li:last-child,
+		&.widget_top_rated_products ul li:only-child{
+			margin-bottom:0;
+		}
+
+		&.widget_recent_reviews ul li img,
+		&.widget_top_rated_products ul li img{
+			width:40px;
+			margin-top:8px;
+		}
+
+		&.widget_recent_reviews ul li .star-rating,
+		&.widget_top_rated_products ul li .star-rating{
+			float:left;
+			margin-top:7px;
+		}
+
+		&.widget_recent_reviews ul li .reviewer,
+		&.widget_top_rated_products ul li .amount{
+			width:100%;
+			float:left;
+			margin-top:5px;
+		}
+
+		&.widget_price_filter .ui-slider{
+			margin-bottom:22px;
+			background-color:#252525;
+		}
+
+		&.widget_price_filter .ui-slider .ui-slider-range,
+		&.widget_price_filter .ui-slider .ui-slider-handle{
+		}
+
+		&.widget_price_filter button[type=submit]{
+			padding:5px 20px 4px 20px;
+			border-radius:30px;
+			text-transform:uppercase;
+			font-size:12px;
+		}
+
+		&.widget_layered_nav_filters ul li{
+			width:100%;
+			margin-bottom:7px;
+			padding:0;
+		}
+
+		&.widget_layered_nav_filters ul li:last-child,
+		&.widget_layered_nav_filters ul li:only-child{
+			margin-bottom:0;
+		}
+
+		&.widget_products ul li{
+			padding-top:17px;
+			padding-bottom:17px;
+		    border-bottom:1px #e2e2e2 solid;
+		}
+
+		&.widget_products ul li:first-child{
+			padding-top:0;
+		}
+
+		&.widget_products ul li:last-child{
+			padding-bottom:0;
+		    border-bottom:none;
+		}
+
+		&.widget_products ul li:only-child{
+			padding-top:0;
+			padding-bottom:0;
+		    border-bottom:none;
+		}
+
+		&.widget_products ul li > a{
+			margin-bottom:1px;
+			font-weight:500;
+			color:inherit;
+		}
+
+		&.widget_products ul li img{
+		    width:60px;
+		}
+
+		&.widget_products ul li .star-rating{
+			display:none;
+		}
+
+		&.widget_products ul li .woocommerce-Price-amount{
+			font-size:13px;
+		}
+
+		&.widget_products ul li del{
+			opacity:0.7;
+		}
+
+		select{
+			width:100%;
+			height:50px;
+			padding:0px 10px 0px 10px;
+			background-color:#fff;
+			border:1px #e0e0e0 solid;
+			border-radius:0;
+			transition:all 0.3s ease-in-out;
+			-webkit-transition:all 0.3s ease-in-out;
+
+			:focus{
+			}
+
+		}
+
+		.tagcloud{
+			margin:0px 0px 14px 0px;
+			font-size:0;
+
+			> [class*='tag-link-']{
+				display:inline-block;
+				vertical-align:top;
+				margin-bottom:4px;
+				font-weight:400;
+				font-size:14px !important;
+				color:#212127;
+				line-height:26px;
+				transition:all 0.3s ease-in-out;
+				-webkit-transition:all 0.3s ease-in-out;
+
+				&:after{
+					display:inline-block;
+					vertical-align:middle;
+					content:"/";
+					margin-top:-2px;
+					margin-left:10px;
+					margin-right:10px;
+				}
+
+				&:last-child:after,
+				&:only-child:after{
+					display:none;
+				}
+
+			}
+
+		}
+
+		&.widget_calendar .calendar_wrap{
+			background-color:#fff;
+		}
+
+		&.widget_calendar #wp-calendar{
+			width:100%;
+			table-layout:fixed;
+		}
+
+		&.widget_calendar #wp-calendar caption{
+			padding:9px 10px 10px 4px;
+			border:1px #e2e2e2 solid;
+			border-bottom:none;
+			text-align:center;
+			text-transform:uppercase;
+			font-weight:700;
+			font-size:14px;
+			color:#373737;
+			line-height:24px;
+			letter-spacing:1px;
+		}
+
+		&.widget_calendar #wp-calendar > tbody > tr > td,
+		&.widget_calendar #wp-calendar > tbody > tr > th,
+		&.widget_calendar #wp-calendar > tfoot > tr > td,
+		&.widget_calendar #wp-calendar > tfoot > tr > th,
+		&.widget_calendar #wp-calendar > thead > tr > td,
+		&.widget_calendar #wp-calendar > thead > tr > th{
+			padding:2px 5px;
+			border:1px #e2e2e2 solid;
+			text-align:center;
+			font-size:70%;
+		}
+
+		&.widget_calendar #wp-calendar > tbody > tr > td#today{
+			background:rgba(0,0,0,0.05);
+		}
+
+	}
+
+}

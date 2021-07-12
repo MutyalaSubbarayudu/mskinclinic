@@ -1,0 +1,79 @@
+/* ================================== */
+/* RadiantThemes Circular Progress Bar CSS */
+/* TABLE OF INDEX */
+/* ================================== */
+/* ==================================
+# Main CSS
+================================== */
+
+/* ==================================
+# Main CSS
+================================== */
+
+.radiantthemes-circular-progress-bar{
+    text-align:center;
+
+    .radiantthemes-circular-progress-bar-main{
+    	position:relative;
+    	display:inline-block;
+    	vertical-align:top;
+    	width:190px;
+    	height:190px;
+
+		div{
+		    position:absolute;
+		    width:190px;
+		    height:190px;
+		    border-radius:50%;
+
+			span{
+			    position:absolute;
+			    top:3px;
+			    left:3px;
+			    width:184px;
+			    height:184px;
+			    border-radius:50%;
+
+			    > .table{
+				    display:table;
+				    table-layout:fixed;
+				    width:100%;
+				    height:100%;
+				    margin:0;
+
+				    > .table-cell{
+				    	position:static;
+					    display:table-cell;
+					    width:100%;
+					    height:100%;
+					    vertical-align:middle;
+					}
+
+				}
+
+			}
+
+		}
+
+		.background{
+		    background-color:#b3cef6;
+		}
+
+		.rotate,
+		.left,
+		.right{
+		    clip:rect(0 95px 190px 0);
+		}
+
+		.left{
+		    opacity:1;
+		}
+
+		.right{
+		    transform:rotate(180deg);
+		    opacity:0;
+		}
+
+	}
+
+}

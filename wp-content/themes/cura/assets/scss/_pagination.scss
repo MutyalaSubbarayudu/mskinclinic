@@ -1,0 +1,91 @@
+/*--------------------------------------------------------------
+# Pagination / WooCommerce Pagination
+--------------------------------------------------------------*/
+
+.pagination,
+.woocommerce nav.woocommerce-pagination{
+	display:block;
+	margin-left:-5px;
+	margin-right:-5px;
+	padding:0;
+	border-radius:0;
+	text-align:center;
+	font-size:0;
+}
+
+.woocommerce nav.woocommerce-pagination ul{
+	margin:0;
+	border:none;
+}
+
+.pagination > *,
+.woocommerce nav.woocommerce-pagination ul li{
+	display:inline-block;
+	vertical-align:top;
+	float:none;
+	margin:0px 5px 10px 5px;
+	border:none;
+}
+
+.pagination > *,
+.woocommerce nav.woocommerce-pagination ul li a,
+.woocommerce nav.woocommerce-pagination ul li span{
+	min-width:45px;
+	min-height:45px;
+	padding:9px 15px 9px 15px;
+	border:1px rgba(0,0,0,0.12) solid;
+	border-radius:40px;
+	text-align:center;
+	font-weight:700;
+	font-size:14px;
+	color:#010101;
+	line-height:25px;
+	transition:all 0.3s ease-in-out;
+	-webkit-transition:all 0.3s ease-in-out;
+}
+
+.pagination > * svg {
+	stroke:#010101;
+	transition:transform cubic-bezier(0.19, 1, 0.22, 1) 0.4s;
+}
+
+.pagination > *:hover svg{
+	transform:translateY(20px);
+}
+
+.pagination > * .animated-arrow{
+	display:block;
+	width:50px;
+	height:19px;
+	margin-top:-2px;
+	margin-right:-8px;
+	overflow:hidden;
+}
+
+.pagination > * .animated-arrow svg{
+	stroke:#010101;
+	transition:transform cubic-bezier(0.19, 1, 0.22, 1) 0.4s;
+	transform:translateX(-15px) rotate(-90deg);
+}
+
+.pagination > *:hover .animated-arrow svg{
+	transform:translateX(-10px) rotate(-90deg);
+}
+
+.pagination > *.current,
+.woocommerce nav.woocommerce-pagination ul li span.current{
+	color:#fff !important;
+}
+
+.pagination > *.prev,
+.pagination > *.next{
+	min-width:initial;
+	padding-left:5px;
+	padding-right:5px;
+	border-color:transparent;
+}
+
+.pagination > *.prev{
+    transform:rotate(180deg);
+    -webkit-transform:rotate(180deg);
+}

@@ -1,0 +1,1069 @@
+/*
+
+* RadiantThemes Plugin Activator
+
+*/
+
+
+
+/* Bootstrap */
+
+
+
+/* demo importer */
+
+
+
+.radiantthemes-theme-browser-wrap .themes .wbc-progress-count {
+
+	background-color: #1d4fce;
+
+	box-shadow: 0 5px 10px -5px #1d4fce;
+
+	border-radius: 4px;
+
+	color: #fff !important;
+
+	left: 100%;
+
+	padding: 1px 5px;
+
+	position: absolute;
+
+	text-align: center;
+
+	top: -44px;
+
+	-webkit-transform: translateX(-50%);
+
+	-ms-transform: translateX(-50%);
+
+	transform: translateX(-50%);
+
+	width: 40px;
+
+}
+
+
+
+.radiantthemes-theme-browser-wrap .themes .wbc-progress-count:after {
+
+	background-color: inherit;
+
+	bottom: -5px;
+
+	content: "";
+
+	height: 10px;
+
+	left: 50%;
+
+	margin-left: -5px;
+
+	position: absolute;
+
+	-webkit-transform: rotate(45deg);
+
+	-ms-transform: rotate(45deg);
+
+	transform: rotate(45deg);
+
+	width: 10px;
+
+}
+
+
+
+.radiantthemes-theme-browser-wrap .themes .wbc-progress-back {
+
+	background-color: #fff;
+
+	border-radius: 20px;
+
+	height: 9px;
+
+	padding: 2px;
+
+	box-shadow: 0 1px 22px -1px rgba(0, 0, 0, 0.2);
+
+	text-align: left;
+
+	margin: 0 auto;
+
+	width: 100%;
+
+}
+
+
+
+.radiantthemes-theme-browser-wrap .themes .wbc-progress-bar {
+
+	transition: width 1.5s ease;
+
+	-webkit-transition: width 0.7s ease;
+
+	border-radius: 24px;
+
+	height: 100%;
+
+	position: relative;
+
+	width: 0%;
+
+	padding: 0 !important;
+
+	background: #1d4fce;
+
+	border: 0;
+
+	box-shadow: 0 2px 11px -2px #1d4fce;
+
+	text-shadow: none;
+
+	z-index: 2;
+
+	top: -6px;
+
+}
+
+
+
+.radiantthemes-theme-browser-wrap .themes .wbc-progress-bar:active {
+
+	top: 0;
+
+}
+
+
+
+.radiantthemes-theme-browser-wrap h3.theme-name {
+
+	line-height: 1.3;
+
+	border: none;
+
+}
+
+
+
+.radiantthemes-theme-browser-wrap .theme-actions {
+
+	opacity: 1 !important;
+
+}
+
+
+
+.radiantthemes-theme-browser-wrap .theme-browser .theme .theme-screenshot img {
+
+	max-width: none !important;
+
+	width: 100% !important;
+
+}
+
+
+
+.radiantthemes-theme-browser-wrap .theme-browser .theme:hover .theme-screenshot img {
+
+	opacity: 0.12;
+
+}
+
+
+
+.radiantthemes-theme-browser-wrap .theme-browser .theme:focus .more-details,
+
+.radiantthemes-theme-browser-wrap .theme-browser .theme:hover .more-details {
+
+	opacity: 1;
+
+}
+
+
+
+.radiantthemes-theme-browser-wrap .theme-browser .theme .spinner {
+
+	background-position: right center;
+
+	font-size: 12px;
+
+	height: 20px;
+
+	margin-right: 0;
+
+	padding-right: 25px;
+
+	padding-top: 5px;
+
+	width: auto;
+
+	visibility: visible;
+
+	display: none;
+
+}
+
+
+
+.radiantthemes-theme-browser-wrap .importer-button {
+
+	margin-top: 0;
+
+}
+
+
+
+.radiantthemes-theme-browser-wrap #wbc-importer-reimport {
+
+	margin-left: 4px;
+
+	display: none;
+
+}
+
+
+
+.radiantthemes-theme-browser-wrap .theme-browser .theme:hover #wbc-importer-reimport {
+
+	display: inline-block;
+
+}
+
+
+
+.radiantthemes-theme-browser-wrap .wbc-importer-info {
+
+	background-color: #fff;
+
+	border-left: 4px solid orange;
+
+	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1);
+
+	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1);
+
+	padding: 1px 12px;
+
+}
+
+
+
+.radiantthemes-theme-browser-wrap .importer-button,
+
+#wpwrap .radiantthemes-admin-btn,
+
+.radiantthemes-admin-wrap .theme-browser .theme .more-details {
+
+	border-radius: 0;
+
+	display: inline-block;
+
+	box-shadow: none;
+
+	text-shadow: none;
+
+	text-decoration: none;
+
+	background-color: #1d4fce;
+
+	color: #fff;
+
+	border: none;
+
+	transition: 0.24s;
+
+	height: 30px;
+
+	line-height: 28px;
+
+	margin-top: 4px;
+
+	margin-right: 3px;
+
+	padding: 0 15px;
+
+	font-size: 12px;
+
+	letter-spacing: 0.4px;
+
+	font-weight: 500;
+
+	text-transform: uppercase;
+
+	box-shadow: 0 5px 10px -5px #1d4fce;
+
+}
+
+
+
+.radiantthemes-theme-browser-wrap .importer-button:hover,
+
+#wpwrap .radiantthemes-admin-btn:hover,
+
+.radiantthemes-admin-wrap .theme-browser .theme .more-details:hover {
+
+	background-color: #252525;
+
+	color: #fff;
+
+	box-shadow: 0 5px 10px -5px #333;
+
+}
+
+
+
+.radiantthemes-admin-wrap .theme-browser .theme .more-details {
+
+	text-transform: uppercase;
+
+	right: auto;
+
+	left: 50%;
+
+	height: 40px;
+
+	width: 100px;
+
+	line-height: 38px;
+
+	letter-spacing: 2px;
+
+	margin-left: -65px;
+
+}
+
+
+
+.wrap-importer.imported .wbc-importer-buttons.importer-button {
+
+	background: #32bf65;
+
+	box-shadow: none;
+
+	border-radius: 1px;
+
+}
+
+
+
+.wrap-importer.imported:hover .wbc-importer-buttons.importer-button {
+
+	display: none;
+
+}
+
+
+
+.wrap-importer.imported .wbc-importer-buttons.importer-button:hover,
+
+.wrap-importer.imported .wbc-importer-buttons.importer-button.import-demo-data:hover {
+
+	background: #222;
+
+	box-shadow: 0 5px 10px -5px #333;
+
+}
+
+
+
+.wrap-importer.imported .wbc-importer-buttons.importer-button.import-demo-data {
+
+	background: #1d4fce;
+
+	box-shadow: 0 2px 11px -2px #1d4fce;
+
+	border-radius: 20px;
+
+}
+
+
+
+.whi-install-plugins-wrap {
+
+	position: relative;
+
+}
+
+
+
+#wpwrap .whi-install-plugins {
+
+	position: absolute;
+
+	top: -4px;
+
+	right: 0;
+
+	text-transform: initial;
+
+}
+
+
+
+.radiantthemes-coming-soon-badge {
+
+	position: relative;
+
+	background: linear-gradient(95deg, #6fe08a 0%, #58cf74 50%, #36cb58 100%);
+
+	box-shadow: 0 5px 10px -5px #4cbf67;
+
+	color: #fff;
+
+	padding: 4px 15px 6px;
+
+	margin-left: 12px;
+
+	z-index: 2;
+
+	border-radius: 3px;
+
+}
+
+
+
+.radiantthemes-coming-soon-badge.radiantthemes-left:before {
+
+	content: '';
+
+	position: absolute;
+
+	top: 50%;
+
+	left: -5px;
+
+	margin-top: 0px;
+
+	z-index: 0;
+
+	width: 0;
+
+	height: 0;
+
+	border-top: 5px solid transparent !important;
+
+	border-right: 6px solid;
+
+	border-bottom: 5px solid transparent;
+
+	transform: translateY(-4.5px);
+
+	border-top-color: #6edf89;
+
+	color: #6edf89;
+
+}
+
+
+
+#wni-bad-status-message {
+
+	display: none;
+
+	position: absolute;
+
+	background-color: #fff;
+
+	z-index: 999;
+
+	top: 85px;
+
+	bottom: 0;
+
+	left: 0;
+
+	right: 0;
+
+	padding: 35px;
+
+	padding-right: 45px;
+
+}
+
+
+
+#wni-bad-status-message p,
+
+#wni-bad-status-message ul {
+
+	line-height: 1.6;
+
+}
+
+
+
+#wni-bad-status-message ul {
+
+	list-style: inherit;
+
+	margin-left: 20px;
+
+}
+
+
+
+
+
+/* plugins */
+
+
+
+.radiantthemes-plugins-wrap.radiantthemes-plugins{
+
+	box-shadow:0px 5px 7px rgba(0,0,0,0.1);
+
+	margin-bottom:20px;
+
+}
+
+
+
+.radiantthemes-plugins-wrap.radiantthemes-plugins > .radiantthemes-plugin{
+
+	padding:5px 10px 7px 10px;
+
+}
+
+
+
+.radiantthemes-plugins-wrap.radiantthemes-plugins > .radiantthemes-plugin:nth-child(odd){
+
+	background-color:rgba(0,0,0,0.07);
+
+}
+
+
+
+.radiantthemes-plugins-wrap.radiantthemes-plugins > .radiantthemes-plugin:nth-child(even){
+
+	background-color:rgba(255,255,255,0.7);
+
+}
+
+
+
+.radiantthemes-plugins .theme-actions .row-actions>span {
+
+	display: inline-block;
+
+	margin-top: -2px;
+
+}
+
+
+
+.radiantthemes-plugins .theme-actions button {
+
+	display: none;
+
+}
+
+
+
+.radiantthemes-plugins .button.installed:before,
+
+.radiantthemes-plugins .button.installing:before,
+
+.radiantthemes-plugins .button.updated-message:before,
+
+.radiantthemes-plugins .button.updating-message:before {
+
+	margin-top: 6px;
+
+}
+
+
+
+
+
+/* importdemo light box */
+
+
+
+.wbc_importer .theme-browser .theme:nth-child(3n) {
+
+	margin-right: 4%;
+
+}
+
+
+
+.wbc_importer .theme-browser .theme:nth-child(3n+2) {
+
+	margin-right: 0;
+
+}
+
+
+
+.radiantthemes-lightbox-wrap {
+
+	font-family: 'Oxygen', sans-serif;
+
+	position: fixed;
+
+	top: 0;
+
+	right: 0;
+
+	left: 0;
+
+	bottom: 0;
+
+	background-color: rgba(0, 0, 0, 0.85);
+
+	z-index: 999999;
+
+	display: none;
+
+}
+
+
+
+.radiantthemes-lightbox-contents {
+
+	position: absolute;
+
+	top: 50%;
+
+	left: 50%;
+
+	width: 611px;
+
+	-webkit-transform: translate(-50%, -50%);
+
+	transform: translate(-50%, -50%);
+
+	background-color: #fff;
+
+	box-shadow: 0 0 155px #000;
+
+}
+
+
+
+.radiantthemes-lightbox-contents i {
+
+	position: absolute;
+
+	top: 15px;
+
+	right: 15px;
+
+	padding: 10px;
+
+	color: #ffffff;
+
+	font-size: 14px;
+
+	cursor: pointer;
+
+	-webkit-transition: all 0.22s ease;
+
+	transition: all 0.22s ease;
+
+	z-index: 9999999;
+
+}
+
+
+
+.radiantthemes-lightbox {
+
+	display: none;
+
+}
+
+
+
+#wpwrap .radiantthemes-lightbox h2 {
+
+	margin: 0;
+
+	font-size: 25px;
+
+	font-weight: 700;
+
+	background: #1d4fce url('../images/radiantthemes-importer-head.png') no-repeat center;
+
+	color: #fff;
+
+	height: 85px;
+
+	line-height: 85px;
+
+	text-transform: uppercase;
+
+}
+
+
+
+.wnl-row {
+
+	padding-bottom: 33px;
+
+	margin: 0 66px 33px;
+
+	border-bottom: 1px solid #ececec;
+
+}
+
+
+
+.wnl-row:nth-child(4),
+
+.wnl-row:nth-child(5) {
+
+	border-bottom: 0;
+
+	padding-bottom: 12px;
+
+}
+
+
+
+.wnl-row h3 {
+
+	margin: 0;
+
+	font-size: 18px;
+
+	line-height: 1;
+
+	margin-bottom: 21px;
+
+}
+
+
+
+.wnl-row h3 span {
+
+	font-size: 13px;
+
+	font-weight: 400;
+
+	color: #a7a7a7;
+
+	margin-left: 8px;
+
+}
+
+
+
+.radiantthemes-radio-wrap {
+
+	display: inline-block;
+
+}
+
+
+
+.radiantthemes-radio-wrap:first-child {
+
+	padding-right: 70px;
+
+}
+
+
+
+.radiantthemes-radio-control {
+
+	position: relative;
+
+	display: inline-block;
+
+	font-size: 13px;
+
+	line-height: 14px;
+
+	color: #7b7b7b;
+
+	padding-left: 22px;
+
+	cursor: pointer;
+
+}
+
+
+
+.radiantthemes-radio-control.checked {
+
+	color: #1d4fce;
+
+}
+
+
+
+.radiantthemes-radio-control input {
+
+	display: none;
+
+}
+
+
+
+.radiantthemes-radio-indicator {
+
+	position: absolute;
+
+	top: 0;
+
+	left: 0;
+
+	height: 14px;
+
+	width: 14px;
+
+	text-align: center;
+
+	background-color: #fff;
+
+	border: 1px solid #d4d4d4;
+
+	border-radius: 100%;
+
+	box-shadow: 0 2px 16px -2px rgba(0, 0, 0, 0.2);
+
+	-webkit-user-select: none;
+
+	-moz-user-select: none;
+
+	-ms-user-select: none;
+
+	user-select: none;
+
+}
+
+
+
+.radiantthemes-radio-control input:focus~.radiantthemes-radio-indicator,
+
+.radiantthemes-radio-control input:active~.radiantthemes-radio-indicator,
+
+.radiantthemes-radio-indicator.checked {
+
+	background-color: #1d4fce;
+
+	border-color: #1d4fce;
+
+	box-shadow: 0 2px 14px -3px #1d4fce;
+
+}
+
+
+
+.radiantthemes-radio-control input:checked~.radiantthemes-radio-indicator:after,
+
+.radiantthemes-radio-control input:active~.radiantthemes-radio-indicator:after,
+
+.radiantthemes-radio-indicator.checked:after {
+
+	content: '';
+
+	display: block;
+
+	position: absolute;
+
+	top: 5px;
+
+	left: 5px;
+
+	width: 4px;
+
+	height: 4px;
+
+	background: #fff;
+
+	border-radius: 100%;
+
+}
+
+
+
+.radiantthemes-admin-wrap .radiantthemes-radio-wrap label {
+
+	line-height: 1;
+
+}
+
+
+
+.radiantthemes-plugin {
+
+	position: relative;
+
+	width: 100%;
+
+	margin-bottom: 8px;
+
+}
+
+
+
+.radiantthemes-plugin[data-plugin-name="KingComposer"],
+
+.radiantthemes-plugin[data-plugin-name="KingComposer pro"] {
+
+	display: none;
+
+}
+
+
+
+.radiantthemes-plugin h4 {
+
+	color: #636363;
+
+	font-weight: 400;
+
+	font-size: 15px;
+
+	line-height: 30px;
+
+	display: inline-block;
+
+	float: left;
+
+	margin: 0;
+
+	position: relative;
+
+	z-index: 2;
+
+	padding-right: 20px;
+
+}
+
+
+
+.radiantthemes-plugin span.radiantthemes-plugin-line {
+
+	position: absolute;
+
+	width: 100%;
+
+	left: 0;
+
+	top: 50%;
+
+	display: block;
+
+	border-top: 1px dashed #ddd;
+
+	z-index: 0;
+
+}
+
+
+
+.radiantthemes-plugin .row-actions {
+
+	float: right;
+
+	position: relative;
+
+	top: auto;
+
+	left: auto;
+
+	right: auto;
+
+	bottom: auto;
+
+	padding-left: 26px;
+
+}
+
+
+
+.radiantthemes-plugin .row-actions>span {
+
+	display: inline-block;
+
+}
+
+
+
+#wpwrap .radiantthemes-plugin .row-actions a {
+
+	background-color: #1d4fce;
+
+	font-size: 10px;
+
+	color: #fff;
+
+	/*line-height: 23px;*/
+
+	font-weight: 500;
+
+	padding: 0;
+
+	text-align: center;
+
+	height: 23px;
+
+	width: 78px;
+
+	-webkit-transform: translate(0);
+
+	transform: translate(0);
+
+	vertical-align: middle;
+
+}
+
+
+
+#wpwrap .radiantthemes-plugin .row-actions a:hover {
+
+	background: #222;
+
+}
+
+
+
+#wpwrap .radiantthemes-plugin .row-actions.active a {
+
+	background: #e5e5e5;
+
+	color: #a6a6a6;
+
+	cursor: default;
+
+	box-shadow: none;
+
+}
+
+
+
+#wpwrap .radiantthemes-plugin .row-actions a:before {
+
+	position: absolute;
+
+	left: -22px;
+
+	top: 2px;
+
+	color: #b4b9be;
+
+	margin: 0;
+
+}
+
+
+
+.radiantthemes-plugin>button {
+
+	display: none;
+
+}
+
+
+
+.radiantthemes-lb-content {
+
+	height: 600px;
+
+	padding-top: 43px;
+
+}

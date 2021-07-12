@@ -1,0 +1,1637 @@
+<?php
+/**
+ * Header Nav Menu
+ *
+ * @package Radiantthemes
+ */
+
+namespace RadiantthemesAddons\Widgets;
+
+use Elementor\Controls_Manager;
+use Elementor\Group_Control_Typography;
+use Elementor\Group_Control_Background;
+use Elementor\Widget_Base;
+use Elementor\Group_Control_Border;
+use Radiantthemes_Menu_Walker;
+
+if ( ! defined( 'ABSPATH' ) ) {
+	exit; // Exit if accessed directly.
+}
+
+/**
+ * Elementor Blog widget.
+ *
+ * Elementor widget that displays posts in different styles.
+ *
+ * @since 1.0.0
+ */
+class Radiantthemes_Header_Custom_Menu extends Widget_Base {
+
+	/**
+	 * Retrieve the widget name.
+	 *
+	 * @since 1.1.0
+	 *
+	 * @access public
+	 *
+	 * @return string Widget name.
+	 */
+	public function get_name() {
+		return 'radiant-header_custom_menu';
+	}
+
+	/**
+	 * Retrieve the widget title.
+	 *
+	 * @since 1.1.0
+	 *
+	 * @access public
+	 *
+	 * @return string Widget title.
+	 */
+	public function get_title() {
+		return esc_html__( 'Header Custom Menu', 'radiantthemes-addons' );
+	}
+
+	/**
+	 * Retrieve the widget icon.
+	 *
+	 * @since 1.1.0
+	 *
+	 * @access public
+	 *
+	 * @return string Widget icon.
+	 */
+	public function get_icon() {
+		return 'eicon-nav-menu';
+	}
+
+	/**
+	 * Requires css files.
+	 *
+	 * @return array
+	 */
+	public function get_style_depends() {
+		return array(
+			'radiantthemes-addons-custom',
+		);
+	}
+
+	/**
+	 * Requires js files.
+	 *
+	 * @return array
+	 */
+	public function get_script_depends() {
+		return array(
+			'radiantthemes-addons-custom',
+			'rt-velocity',
+			'rt-velocity-ui',
+			'rt-vertical-menu',
+		);
+	}
+
+	/**
+	 * Retrieve the list of categories the widget belongs to.
+	 *
+	 * Used to determine where to display the widget in the editor.
+	 *
+	 * Note that currently Elementor supports only one category.
+	 * When multiple categories passed, Elementor uses the first one.
+	 *
+	 * @since 1.1.0
+	 *
+	 * @access public
+	 *
+	 * @return array Widget categories.
+	 */
+	public function get_categories() {
+		return array( 'radiant-widgets-category' );
+	}
+
+	/**
+	 * Get all case Custom Post Type Categories.
+	 *
+	 * @return array case categories.
+	 */
+	public function radiantthemes_navmenu_navbar_menu_choices() {
+		$menus = wp_get_nav_menus();
+		$items = array();
+		$i     = 0;
+		foreach ( $menus as $menu ) {
+			if ( $i == 0 ) {
+				$default = $menu->term_id;
+				$i++;
+			}
+			$items[ $menu->term_id ] = $menu->name;
+		}
+
+		return $items;
+	}
+
+	/**
+	 * Register the widget controls.
+	 *
+	 * Adds different input fields to allow the user to change and customize the widget settings.
+	 *
+	 * @since 1.1.0
+	 *
+	 * @access protected
+	 */
+	protected function _register_controls() {
+
+		$this->start_controls_section(
+			'section_content',
+			array(
+				'label' => esc_html__( 'Navigation', 'radiantthemes-addons' ),
+			)
+		);
+
+		$this->add_control(
+			'header_cus_nav_style',
+			array(
+				'label'       => esc_html__( 'Select Header Navigation Style', 'radiantthemes-addons' ),
+				'label_block' => true,
+				'type'        => Controls_Manager::SELECT,
+				'options'     => array(
+					'one'   => esc_html__( 'Style One', 'radiantthemes-addons' ),
+					
+				),
+				'default'     => 'one',
+			)
+		);
+
+		$this->add_control(
+			'header_cus_nav_menu',
+			array(
+				'label'       => esc_html__( 'Select Menu', 'radiantthemes-addons' ),
+				'label_block' => true,
+				'type'        => Controls_Manager::SELECT,
+				'options'     =>
+				radiantthemes_navmenu_navbar_menu_choices(),
+				'default'     => '',
+			)
+		);
+
+		$this->add_control(
+			'header_cus_menu_location',
+			array(
+				'label'       => esc_html__( 'Menu Location', 'radiantthemes-addons' ),
+				'description' => esc_html__( 'Select a location for your menu. This option facilitate the ability to create up to 2 mobile enabled menu locations', 'radiantthemes-addons' ),
+				'type'        => Controls_Manager::SELECT,
+				'options'     => array(
+					'primary'   => esc_html__( 'Primary', 'radiantthemes-addons' ),
+					'secondary' => esc_html__( 'Secondary', 'radiantthemes-addons' ),
+				),
+				'default'     => 'primary',
+				'condition'   => array(
+					'header_cus_nav_style!' => 'three',
+				),
+			)
+		);
+
+		
+
+		$this->add_control(
+			'header_cus_menu_background_image',
+			array(
+				'label'       => esc_html__( 'Upload Background Image', 'radiantthemes-addons' ),
+				'label_block' => true,
+				'type'        => Controls_Manager::MEDIA,
+				'condition'   => array(
+					'header_cus_nav_style' => 'two',
+				),
+			)
+		);
+
+		$this->add_control(
+			'header_cus_menu_toggle_icon_color',
+			array(
+				'label'     => esc_html__( 'Toggle Icon Color', 'radiantthemes-addons' ),
+				'type'      => Controls_Manager::COLOR,
+				'default'   => '#FFFFFF',
+				'selectors' => array(
+					'{{WRAPPER}} .rt-main-toggle-menu-trigger span:before, .rt-main-toggle-menu-trigger span:after, .rt-main-toggle-menu-trigger span, .rt-main-toggle-menu-open .rt-main-toggle-menu-trigger span:after' => 'background: {{VALUE}};',
+				),
+				'condition' => array(
+					'header_cus_nav_style!' => 'one',
+				),
+			)
+		);
+
+		$this->add_control(
+			'header_cus_menu_toggle_sticky_icon_color',
+			array(
+				'label'     => esc_html__( 'Toggle Icon Color on Sticky', 'radiantthemes-addons' ),
+				'type'      => Controls_Manager::COLOR,
+				'default'   => '#000000',
+				'selectors' => array(
+					'{{WRAPPER}} .rt-main-toggle-menu-trigger span.sticky-toggle-menu:before, .rt-main-toggle-menu-trigger span.sticky-toggle-menu:after, .rt-main-toggle-menu-trigger span.sticky-toggle-menu, .rt-main-toggle-menu-open .rt-main-toggle-menu-trigger span.sticky-toggle-menu:after' => 'background: {{VALUE}};',
+				),
+				'condition' => array(
+					'header_cus_nav_style!' => 'one',
+				),
+			)
+		);
+		$this->add_control(
+			'header_cus_menu_toggle_close_icon_color',
+			array(
+				'label'     => esc_html__( 'Close Icon Color ', 'radiantthemes-addons' ),
+				'type'      => Controls_Manager::COLOR,
+				'default'   => '#000000',
+				'selectors' => array(
+					'{{WRAPPER}} .rt-main-toggle-menu-open .rt-main-toggle-menu-trigger span::before' => 'background: {{VALUE}} !important;',
+					'{{WRAPPER}} .rt-main-toggle-menu-open .rt-main-toggle-menu-trigger span::after' => 'background: {{VALUE}} !important;',
+				),
+				'condition' => array(
+					'header_cus_nav_style' => 'three',
+				),
+			)
+		);
+		$this->add_responsive_control(
+			'align_nav',
+			array(
+				'label'     => esc_html__( 'Menu Alignment', 'radiantthemes-addons' ),
+				'type'      => Controls_Manager::CHOOSE,
+				'options'   => array(
+					'left'    => array(
+						'title' => esc_html__( 'Left', 'radiantthemes-addons' ),
+						'icon'  => 'eicon-text-align-left',
+					),
+					'center'  => array(
+						'title' => esc_html__( 'Center', 'radiantthemes-addons' ),
+						'icon'  => 'eicon-text-align-center',
+					),
+					'right'   => array(
+						'title' => esc_html__( 'Right', 'radiantthemes-addons' ),
+						'icon'  => 'eicon-text-align-right',
+					),
+					'justify' => array(
+						'title' => esc_html__( 'Justified', 'radiantthemes-addons' ),
+						'icon'  => 'eicon-text-align-justify',
+					),
+				),
+				'selectors' => array(
+					'{{WRAPPER}} #rt-mainMenu nav > ul' => 'text-align: {{VALUE}};',
+				),
+			)
+		);
+		$this->add_control(
+			'align_nav_sticky',
+			array(
+				'label'     => esc_html__( 'Sticky Menu Alignment', 'radiantthemes-addons' ),
+				'type'      => Controls_Manager::CHOOSE,
+				'options'   => array(
+					'left'    => array(
+						'title' => esc_html__( 'Left', 'radiantthemes-addons' ),
+						'icon'  => 'eicon-text-align-left',
+					),
+					'center'  => array(
+						'title' => esc_html__( 'Center', 'radiantthemes-addons' ),
+						'icon'  => 'eicon-text-align-center',
+					),
+					'right'   => array(
+						'title' => esc_html__( 'Right', 'radiantthemes-addons' ),
+						'icon'  => 'eicon-text-align-right',
+					),
+					'justify' => array(
+						'title' => esc_html__( 'Justified', 'radiantthemes-addons' ),
+						'icon'  => 'eicon-text-align-justify',
+					),
+				),
+				'default'   => 'right',
+				'selectors' => array(
+					'.header-sticky.sticky-active #rt-mainMenu nav > ul' => 'text-align: {{VALUE}} !important;',
+				),
+			)
+		);
+		$this->add_control(
+			'header_cus_parent_menu_color',
+			array(
+				'label'     => esc_html__( 'Parent Menu Link Color', 'radiantthemes-addons' ),
+				'type'      => Controls_Manager::COLOR,
+				'selectors' => array(
+					'{{WRAPPER}} ul.rt-tree a, {{WRAPPER}} #rt-mainMenu nav > ul > li > a' => 'color: {{VALUE}};',
+				),
+				'default'   => '#000000',
+				'condition' => array(
+					'header_cus_nav_style!' => 'three',
+				),
+			)
+		);
+		$this->add_control(
+			'header_cus_parent_sticky_menu_color',
+			array(
+				'label'     => esc_html__( 'Parent Sticky Menu Link Color', 'radiantthemes-addons' ),
+				'type'      => Controls_Manager::COLOR,
+				'selectors' => array(
+					'.header-sticky.sticky-active #rt-mainMenu nav > ul > li > a' => 'color: {{VALUE}} !important;',
+				),
+				'default'   => '#f00000',
+				'condition' => array(
+					'header_cus_nav_style!' => 'three',
+				),
+			)
+		);
+		$this->add_control(
+			'header_cus_second_child_menu_color',
+			array(
+				'label'     => esc_html__( 'Second Level Menu Link Color', 'radiantthemes-addons' ),
+				'type'      => Controls_Manager::COLOR,
+				'selectors' => array(
+					'{{WRAPPER}} .rt-mobile-menu ul.rt-tree ul li a, {{WRAPPER}} #rt-mainMenu nav > ul > li .rt-dropdown-menu > li > a' => 'color: {{VALUE}};',
+				),
+				'default'   => '#000000',
+				'condition' => array(
+					'header_cus_nav_style!' => 'three',
+				),
+			)
+		);
+		$this->add_control(
+			'header_cus_second_child_sticky_menu_color',
+			array(
+				'label'     => esc_html__( 'Second Level Sticky Menu Link Color', 'radiantthemes-addons' ),
+				'type'      => Controls_Manager::COLOR,
+				'selectors' => array(
+					'{{WRAPPER}} .rt-mobile-menu ul.rt-tree ul li a, .header-sticky.sticky-active #rt-mainMenu nav > ul > li .rt-dropdown-menu > li > a' => 'color: {{VALUE}} !important;',
+				),
+				'default'   => '#ff0000',
+				'condition' => array(
+					'header_cus_nav_style!' => 'three',
+				),
+			)
+		);
+		$this->add_control(
+			'header_cus_third_child_menu_color',
+			array(
+				'label'     => esc_html__( 'Third Level Menu Link Color', 'radiantthemes-addons' ),
+				'type'      => Controls_Manager::COLOR,
+				'selectors' => array(
+					'{{WRAPPER}} .rt-mobile-menu ul.rt-tree ul li ul li a, {{WRAPPER}} #rt-mainMenu nav > ul > li .rt-dropdown-submenu > ul.rt-dropdown-menu > li a' => 'color: {{VALUE}};',
+				),
+				'default'   => '#FFFFFF',
+				'condition' => array(
+					'header_cus_nav_style!' => 'three',
+				),
+			)
+		);
+		$this->add_control(
+			'header_cus_third_child_sticky_menu_color',
+			array(
+				'label'     => esc_html__( 'Third Level Sticky Menu Link Color', 'radiantthemes-addons' ),
+				'type'      => Controls_Manager::COLOR,
+				'selectors' => array(
+					'{{WRAPPER}} .rt-mobile-menu ul.rt-tree ul li ul li a, .header-sticky.sticky-active #rt-mainMenu nav > ul > li .rt-dropdown-submenu > ul.rt-dropdown-menu > li a' => 'color: {{VALUE}} !important;',
+				),
+				'default'   => '#231cf9',
+				'condition' => array(
+					'header_cus_nav_style!' => 'three',
+				),
+			)
+		);
+		$this->add_responsive_control(
+			'align',
+			array(
+				'label'        => esc_html__( 'Navbar/Toggle Alignment', 'radiantthemes-addons' ),
+				'type'         => Controls_Manager::CHOOSE,
+				'options'      => array(
+					'left'   => array(
+						'title' => esc_html__( 'Left', 'radiantthemes-addons' ),
+						'icon'  => 'fa fa-align-left',
+					),
+					'center' => array(
+						'title' => esc_html__( 'Center', 'radiantthemes-addons' ),
+						'icon'  => 'fa fa-align-center',
+					),
+					'right'  => array(
+						'title' => esc_html__( 'Right', 'radiantthemes-addons' ),
+						'icon'  => 'fa fa-align-right',
+					),
+				),
+				'prefix_class' => 'elementor%s-align-',
+				'default'      => '',
+				'condition'    => array(
+					'header_cus_nav_style' => 'one',
+				),
+			)
+		);
+
+		$this->add_responsive_control(
+			'item_align',
+			array(
+				'label'     => esc_html__( 'Mobile Item Alignment', 'radiantthemes-addons' ),
+				'type'      => Controls_Manager::CHOOSE,
+				'options'   => array(
+					'left'   => array(
+						'title' => esc_html__( 'Left', 'radiantthemes-addons' ),
+						'icon'  => 'fa fa-align-left',
+					),
+					'center' => array(
+						'title' => esc_html__( 'Center', 'radiantthemes-addons' ),
+						'icon'  => 'fa fa-align-center',
+					),
+					'right'  => array(
+						'title' => esc_html__( 'Right', 'radiantthemes-addons' ),
+						'icon'  => 'fa fa-align-right',
+					),
+				),
+				'default'   => '',
+				'selectors' => array(
+					'{{WRAPPER}} .elementor-navigation ul li, .elementor-navigation ul ul li' => 'text-align: {{VALUE}};',
+				),
+				'condition' => array(
+					'header_cus_nav_style' => 'one',
+				),
+			)
+		);
+
+		$this->add_control(
+			'text_padding',
+			array(
+				'label'      => esc_html__( 'Text Padding', 'radiantthemes-addons' ),
+				'type'       => Controls_Manager::DIMENSIONS,
+				'size_units' => array( 'px', 'em', '%' ),
+				'selectors'  => array(
+					'{{WRAPPER}} #rt-mainMenu nav a' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+				),
+				'condition'  => array(
+					'header_cus_nav_style' => 'one',
+				),
+			)
+		);
+
+		$this->add_control(
+			'show_ham_menu',
+			array(
+				'label'        => esc_html__( 'Display Desktop Hamburger Menu', 'radiantthemes-addons' ),
+				'type'         => Controls_Manager::SWITCHER,
+				'label_on'     => esc_html__( 'Show', 'radiantthemes-addons' ),
+				'label_off'    => esc_html__( 'Hide', 'radiantthemes-addons' ),
+				'return_value' => 'yes',
+				'default'      => 'no',
+				'condition'    => array(
+					'header_cus_nav_style' => 'one',
+				),
+			)
+		);
+		$this->add_control(
+			'select_ham_menu',
+			array(
+				'label'        => esc_html__( 'Display Menu on Desktop Hamburger', 'radiantthemes-addons' ),
+				'type'         => Controls_Manager::SWITCHER,
+				'label_on'     => esc_html__( 'Show', 'radiantthemes-addons' ),
+				'label_off'    => esc_html__( 'Hide', 'radiantthemes-addons' ),
+				'return_value' => 'yes',
+				'default'      => 'no',
+				'condition'    => array(
+					'header_cus_nav_style' => 'one',
+				),
+			)
+		);
+
+		$this->add_control(
+			'header_cus_ham_nav_menu',
+			array(
+				'label'       => esc_html__( 'Select Menu', 'radiantthemes-addons' ),
+				'label_block' => true,
+				'type'        => Controls_Manager::SELECT,
+				'options'     =>
+				radiantthemes_navmenu_navbar_menu_choices(),
+				'default'     => '',
+				'condition'   => array(
+					'header_cus_nav_style' => 'one',
+					'select_ham_menu'        => 'yes',
+					'show_ham_menu'        => 'yes',
+				),
+			)
+		);
+		$this->add_control(
+			'header_cus_menu_logo',
+			array(
+				'label'       => esc_html__( 'Upload Logo', 'radiantthemes-addons' ),
+				'label_block' => true,
+				'type'        => Controls_Manager::MEDIA,
+				'condition'   => array(
+					'header_cus_nav_style' => 'one',
+					'show_ham_menu'        => 'yes',
+				),
+			)
+		);
+		$this->add_control(
+			'logo_dimension',
+			array(
+				'label'       => esc_html__( 'Image Dimension', 'radiantthemes-addons' ),
+				'label_block' => true,
+				'type'        => Controls_Manager::IMAGE_DIMENSIONS,
+				'description' => esc_html__( 'Crop the original image size to any custom size. Set custom width or height to keep the original size ratio.', 'radiantthemes-addons' ),
+				'default'     => array(
+					'width'  => '106',
+					'height' => '45',
+				),
+				'condition'   => array(
+					'header_cus_nav_style' => 'one',
+					'show_ham_menu'        => 'yes',
+				),
+			)
+		);
+
+		$this->add_control(
+			'header_cus_menu_title',
+			array(
+				'label'       => esc_html__( 'Text', 'radiantthemes-addons' ),
+				'label_block' => true,
+				'type'       => Controls_Manager::WYSIWYG,
+				'condition'   => array(
+					'header_cus_nav_style' => 'one',
+					'show_ham_menu'        => 'yes',
+				),
+				'default'     => esc_html__( 'Responsive Multi-Purpose Theme', 'radiantthemes-addons' ),
+			)
+		);
+		$this->add_control(
+			'header_cus_menu_social_heading',
+			array(
+				'label'       => esc_html__( 'Social Heading', 'radiantthemes-addons' ),
+				'label_block' => true,
+				'type'       => Controls_Manager::TEXT,
+				'condition'   => array(
+					'header_cus_nav_style' => 'one',
+					'show_ham_menu'        => 'yes',
+				),
+				'default'     => esc_html__( 'Social Links', 'radiantthemes-addons' ),
+			)
+		);
+
+		$this->add_control(
+			'show_normal_menu',
+			array(
+				'label'        => esc_html__( 'Display Desktop Menu', 'radiantthemes-addons' ),
+				'type'         => Controls_Manager::SWITCHER,
+				'label_on'     => esc_html__( 'Show', 'radiantthemes-addons' ),
+				'label_off'    => esc_html__( 'Hide', 'radiantthemes-addons' ),
+				'return_value' => 'yes',
+				'default'      => 'yes',
+				'condition'    => array(
+					'header_cus_nav_style' => 'one',
+				),
+			)
+		);
+
+		$this->end_controls_section();
+
+		$this->start_controls_section(
+			'submenu_content',
+			array(
+				'label'     => esc_html__( 'Submenu', 'radiantthemes-addons' ),
+				'condition' => array(
+					'header_cus_nav_style' => 'one',
+				),
+			)
+		);
+
+		$this->add_responsive_control(
+			'submenu_align',
+			array(
+				'label'     => esc_html__( 'Item Alignment', 'radiantthemes-addons' ),
+				'type'      => Controls_Manager::CHOOSE,
+				'options'   => array(
+					'left'   => array(
+						'title' => esc_html__( 'Left', 'radiantthemes-addons' ),
+						'icon'  => 'fa fa-align-left',
+					),
+					'center' => array(
+						'title' => esc_html__( 'Center', 'radiantthemes-addons' ),
+						'icon'  => 'fa fa-align-center',
+					),
+					'right'  => array(
+						'title' => esc_html__( 'Right', 'radiantthemes-addons' ),
+						'icon'  => 'fa fa-align-right',
+					),
+				),
+				'default'   => '',
+				'selectors' => array(
+					'{{WRAPPER}} .elementor-navigation .sub-menu .menu-item a' => 'text-align: {{VALUE}};',
+				),
+				'condition' => array(
+					'header_cus_nav_style' => 'one',
+				),
+			)
+		);
+
+		$this->add_control(
+			'sub_padding',
+			array(
+				'label'      => esc_html__( 'Item Padding', 'radiantthemes-addons' ),
+				'type'       => Controls_Manager::DIMENSIONS,
+				'size_units' => array( 'px', 'em', '%' ),
+				'selectors'  => array(
+					'{{WRAPPER}} #rt-mainMenu nav .sub-menu .menu-item a' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+				),
+				'condition'  => array(
+					'header_cus_nav_style' => 'one',
+				),
+			)
+		);
+
+		$this->end_controls_section();
+
+		$this->start_controls_section(
+			'section_menu_style',
+			array(
+				'label'     => esc_html__( 'Navbar', 'radiantthemes-addons' ),
+				'tab'       => Controls_Manager::TAB_STYLE,
+				'condition' => array(
+					'header_cus_nav_style' => 'one',
+				),
+			)
+		);
+
+		// $this->add_responsive_control(
+		// 'nav_bar_bg',
+		// array(
+		// 'label'     => esc_html__( 'Navbar Background', 'radiantthemes-addons' ),
+		// 'type'      => Controls_Manager::COLOR,
+		// 'default'   => '#00215e',
+		// 'selectors' => array(
+		// '{{WRAPPER}} .elementor-nav-menu' => 'background-color: {{VALUE}};',
+		// ),
+		// 'condition' => array(
+		// 'header_cus_nav_style' => 'one',
+		// ),
+		// )
+		// );
+
+		$this->add_control(
+			'normal_header_title',
+			array(
+				'label'     => __( 'Normal Header Background', 'radiantthemes-addons' ),
+				'type'      => Controls_Manager::HEADING,
+				'separator' => 'before',
+			)
+		);
+
+		$this->add_group_control(
+			Group_Control_Background::get_type(),
+			array(
+				'name'     => 'normal_header_background',
+				'label'    => esc_html__( 'Normal Header Background', 'radiantthemes-addons' ),
+				'types'    => array( 'classic', 'gradient' ),
+				'selector' => 'header.rt-dark.rt-submenu-light',
+			)
+		);
+
+		$this->add_control(
+			'sticky_header_title',
+			array(
+				'label'     => __( 'Sticky Header Background', 'radiantthemes-addons' ),
+				'type'      => Controls_Manager::HEADING,
+				'separator' => 'before',
+			)
+		);
+
+		$this->add_group_control(
+			Group_Control_Background::get_type(),
+			array(
+				'name'     => 'sticky_header_background',
+				'label'    => esc_html__( 'Sticky Header Background', 'radiantthemes-addons' ),
+				'types'    => array( 'classic', 'gradient' ),
+				'selector' => 'header.rt-submenu-light.header-sticky.sticky-active .rt-header-inner',
+			)
+		);
+
+		$this->add_responsive_control(
+			'menu_link_color',
+			array(
+				'label'     => esc_html__( 'Main Menu Link Color', 'radiantthemes-addons' ),
+				'type'      => Controls_Manager::COLOR,
+				'default'   => '#ffffff',
+				'selectors' => array(
+					'{{WRAPPER}} .elementor-nav-menu .menu-item a' => 'color: {{VALUE}};',
+				),
+				'condition' => array(
+					'header_cus_nav_style' => 'one',
+				),
+			)
+		);
+
+		$this->add_responsive_control(
+			'menu_link_bg',
+			array(
+				'label'     => esc_html__( 'Main Menu Link Background', 'radiantthemes-addons' ),
+				'type'      => Controls_Manager::COLOR,
+				'default'   => '#00215e',
+				'selectors' => array(
+					'{{WRAPPER}} .elementor-nav-menu .menu-item a' => 'background-color: {{VALUE}};',
+				),
+				'condition' => array(
+					'header_cus_nav_style' => 'one',
+				),
+			)
+		);
+
+		$this->add_responsive_control(
+			'menu_link_hover_color',
+			array(
+				'label'     => esc_html__( 'Main Menu Link Hover Color', 'radiantthemes-addons' ),
+				'type'      => Controls_Manager::COLOR,
+				'selectors' => array(
+					'{{WRAPPER}} #rt-mainMenu nav > ul > li > a:hover' => 'color: {{VALUE}};',
+				),
+				'condition' => array(
+					'header_cus_nav_style' => 'one',
+				),
+			)
+		);
+
+		$this->add_responsive_control(
+			'link_hover_bg_color',
+			array(
+				'label'     => esc_html__( 'Main Menu Link Background Hover Color', 'radiantthemes-addons' ),
+				'type'      => Controls_Manager::COLOR,
+				'selectors' => array(
+					'{{WRAPPER}} .elementor-nav-menu .menu-item a:hover' => 'background-color: {{VALUE}};',
+				),
+				'condition' => array(
+					'header_cus_nav_style' => 'one',
+				),
+			)
+		);
+
+		$this->add_group_control(
+			Group_Control_Border::get_type(),
+			array(
+				'name'      => 'menu_border',
+				'label'     => esc_html__( 'Border', 'radiantthemes-addons' ),
+				'default'   => '1px',
+				'selector'  => '{{WRAPPER}} #rt-mainMenu nav .elementor-nav-menu .menu-item a',
+				'condition' => array(
+					'header_cus_nav_style' => 'one',
+				),
+			)
+		);
+
+		$this->add_responsive_control(
+			'menu_radius',
+			array(
+				'label'      => esc_html__( 'Border Radius', 'radiantthemes-addons' ),
+				'type'       => Controls_Manager::DIMENSIONS,
+				'size_units' => array( 'px', '%' ),
+				'selectors'  => array(
+					'{{WRAPPER}} .elementor-nav-menu .menu-item a' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+				),
+				'condition'  => array(
+					'header_cus_nav_style' => 'one',
+				),
+			)
+		);
+
+		$this->end_controls_section();
+
+		$this->start_controls_section(
+			'active_color',
+			array(
+				'label'     => esc_html__( 'Current/Active', 'radiantthemes-addons' ),
+				'type'      => Controls_Manager::SECTION,
+				'tab'       => Controls_Manager::TAB_STYLE,
+				'condition' => array(
+					'header_cus_nav_style' => 'one',
+				),
+			)
+		);
+
+		$this->add_control(
+			'menu_link_active_color',
+			array(
+				'label'     => esc_html__( 'Active Color', 'radiantthemes-addons' ),
+				'type'      => Controls_Manager::COLOR,
+				'selectors' => array(
+					'{{WRAPPER}} .elementor-nav-menu .current-menu-item > a, .elementor-nav-menu .current_page_item > a' => 'color: {{VALUE}};',
+				),
+				'condition' => array(
+					'header_cus_nav_style' => 'one',
+				),
+			)
+		);
+
+		$this->add_control(
+			'link_active_bg_color',
+			array(
+				'label'     => esc_html__( 'Active Background', 'radiantthemes-addons' ),
+				'type'      => Controls_Manager::COLOR,
+				'selectors' => array(
+					'{{WRAPPER}} .elementor-nav-menu .current-menu-item > a, .elementor-nav-menu .current_page_item > a' => 'background-color: {{VALUE}};',
+				),
+				'condition' => array(
+					'header_cus_nav_style' => 'one',
+				),
+			)
+		);
+
+		$this->add_control(
+			'active_hover_color',
+			array(
+				'label'     => esc_html__( 'Active Link', 'radiantthemes-addons' ),
+				'type'      => Controls_Manager::COLOR,
+				'selectors' => array(
+					'{{WRAPPER}} .elementor-nav-menu .current-menu-item > a:hover, .elementor-nav-menu .current_page_item > a:hover' => 'color: {{VALUE}};',
+				),
+				'condition' => array(
+					'header_cus_nav_style' => 'one',
+				),
+			)
+		);
+
+		$this->add_control(
+			'active_hover_bg_color',
+			array(
+				'label'     => esc_html__( 'Active Background', 'radiantthemes-addons' ),
+				'type'      => Controls_Manager::COLOR,
+				'selectors' => array(
+					'{{WRAPPER}} .elementor-nav-menu .current-menu-item > a:hover, .elementor-nav-menu .current_page_item > a:hover' => 'background-color: {{VALUE}};',
+				),
+				'condition' => array(
+					'header_cus_nav_style' => 'one',
+				),
+			)
+		);
+
+		$this->add_group_control(
+			Group_Control_Border::get_type(),
+			array(
+				'name'      => 'active_border',
+				'label'     => esc_html__( 'Border', 'radiantthemes-addons' ),
+				'default'   => '1px',
+				'selector'  => '{{WRAPPER}} .elementor-nav-menu .current-menu-item > a, .elementor-nav-menu .current_page_item > a',
+				'condition' => array(
+					'header_cus_nav_style' => 'one',
+				),
+			)
+		);
+
+		$this->add_control(
+			'active_radius',
+			array(
+				'label'      => esc_html__( 'Border Radius', 'radiantthemes-addons' ),
+				'type'       => Controls_Manager::DIMENSIONS,
+				'size_units' => array( 'px', '%' ),
+				'selectors'  => array(
+					'{{WRAPPER}} .elementor-nav-menu .current-menu-item > a, .elementor-nav-menu .current_page_item > a' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+				),
+				'condition'  => array(
+					'header_cus_nav_style' => 'one',
+				),
+			)
+		);
+
+		$this->end_controls_section();
+
+		$this->start_controls_section(
+			'submenu_color',
+			array(
+				'label'     => esc_html__( 'Submenu', 'radiantthemes-addons' ),
+				'type'      => Controls_Manager::SECTION,
+				'tab'       => Controls_Manager::TAB_STYLE,
+				'condition' => array(
+					'header_cus_nav_style' => 'one',
+				),
+			)
+		);
+
+		$this->add_control(
+			'submenu_link_color',
+			array(
+				'label'     => esc_html__( 'Submenu Links', 'radiantthemes-addons' ),
+				'type'      => Controls_Manager::COLOR,
+				'default'   => '#ffffff',
+				'selectors' => array(
+					'{{WRAPPER}} .elementor-nav-menu .sub-menu .menu-item a' => 'color: {{VALUE}};',
+				),
+				'condition' => array(
+					'header_cus_nav_style' => 'one',
+				),
+			)
+		);
+
+		$this->add_control(
+			'submenu_link_bg',
+			array(
+				'label'     => esc_html__( 'Submenu Background', 'radiantthemes-addons' ),
+				'type'      => Controls_Manager::COLOR,
+				'default'   => '#00215e',
+				'selectors' => array(
+					'{{WRAPPER}} #rt-mainMenu nav > ul > li .rt-dropdown-menu > li > a' => 'background-color: {{VALUE}};',
+				),
+				'condition' => array(
+					'header_cus_nav_style' => 'one',
+				),
+			)
+		);
+
+		$this->add_control(
+			'submenu_link_hover',
+			array(
+				'label'     => esc_html__( 'Submenu Link Hover', 'radiantthemes-addons' ),
+				'type'      => Controls_Manager::COLOR,
+				'selectors' => array(
+					'{{WRAPPER}} #rt-mainMenu nav > ul > li .rt-dropdown-menu > li > a:hover,
+					#rt-mainMenu nav > ul > li .rt-dropdown-submenu > ul.rt-dropdown-menu > li a:hover' => 'color: {{VALUE}};',
+				),
+				'condition' => array(
+					'header_cus_nav_style' => 'one',
+				),
+			)
+		);
+
+		$this->add_control(
+			'submenu_hover_bg_color',
+			array(
+				'label'     => esc_html__( 'Submenu Hover BG', 'radiantthemes-addons' ),
+				'type'      => Controls_Manager::COLOR,
+				'selectors' => array(
+					'{{WRAPPER}} .elementor-nav-menu .sub-menu .menu-item a:hover' => 'background-color: {{VALUE}};',
+				),
+				'condition' => array(
+					'header_cus_nav_style' => 'one',
+				),
+			)
+		);
+
+		$this->add_group_control(
+			Group_Control_Border::get_type(),
+			array(
+				'name'      => 'submenu_border',
+				'label'     => esc_html__( 'Border', 'radiantthemes-addons' ),
+				'default'   => '1px',
+				'selector'  => '{{WRAPPER}} .elementor-nav-menu .sub-menu .menu-item a',
+				'condition' => array(
+					'header_cus_nav_style' => 'one',
+				),
+			)
+		);
+
+		$this->add_control(
+			'submenu_radius',
+			array(
+				'label'      => esc_html__( 'Border Radius', 'radiantthemes-addons' ),
+				'type'       => Controls_Manager::DIMENSIONS,
+				'size_units' => array( 'px', '%' ),
+				'selectors'  => array(
+					'{{WRAPPER}} .elementor-nav-menu .sub-menu .menu-item a' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+				),
+				'condition'  => array(
+					'header_cus_nav_style' => 'one',
+				),
+			)
+		);
+
+		$this->end_controls_section();
+
+		$this->start_controls_section(
+			'menu_toggle',
+			array(
+				'label'     => esc_html__( 'Mobile Toggle', 'radiantthemes-addons' ),
+				'type'      => Controls_Manager::SECTION,
+				'tab'       => Controls_Manager::TAB_STYLE,
+				'condition' => array(
+					'header_cus_nav_style' => 'one',
+				),
+			)
+		);
+
+		$this->add_control(
+			'toggle_back_color',
+			array(
+				'label'     => esc_html__( 'background Color', 'radiantthemes-addons' ),
+				'type'      => Controls_Manager::COLOR,
+				'default'   => '#000',
+				'selectors' => array(
+					'{{WRAPPER}} #rt-mainMenu-trigger' => 'background: {{VALUE}};',
+					
+				),
+				'condition' => array(
+					'header_cus_nav_style' => 'one',
+				),
+			)
+		);
+
+		$this->add_control(
+			'toggle_icon_color',
+			array(
+				'label'     => esc_html__( 'Icon Color', 'radiantthemes-addons' ),
+				'type'      => Controls_Manager::COLOR,
+				'default'   => '#333333',
+				'selectors' => array(
+					'{{WRAPPER}} .elementor-menu-toggle' => 'background-color: {{VALUE}};',
+					'{{WRAPPER}} .rt-dark #header .rt-header-inner .lines, .rt-dark #header .rt-header-inner .lines:before, .rt-dark #header .rt-header-inner .lines:after, .rt-dark #header #header-wrap .lines, .rt-dark #header #header-wrap .lines:before, .rt-dark #header #header-wrap .lines:after, #header.rt-dark .rt-header-inner .lines, #header.rt-dark .rt-header-inner .lines:before, #header.rt-dark .rt-header-inner .lines:after, #header.rt-dark #header-wrap .lines, #header.rt-dark #header-wrap .lines:before, #header.rt-dark #header-wrap .lines:after' => 'background-color: {{VALUE}};',
+				),
+				'condition' => array(
+					'header_cus_nav_style' => 'one',
+				),
+			)
+		);
+
+		
+
+		$this->end_controls_section();
+
+		$this->start_controls_section(
+			'menu_typography',
+			array(
+				'label'     => esc_html__( 'Typography', 'radiantthemes-addons' ),
+				'type'      => Controls_Manager::SECTION,
+				'tab'       => Controls_Manager::TAB_STYLE,
+				'condition' => array(
+					'header_cus_nav_style!' => 'two',
+				),
+			)
+		);
+
+		$this->add_group_control(
+			Group_Control_Typography::get_type(),
+			array(
+				'name'      => 'menu_typography',
+				'label'     => esc_html__( 'Typography', 'radiantthemes-addons' ),
+				'selector'  => '{{WRAPPER}} .elementor-nav-menu .menu-item, {{WRAPPER}} #rt-mainMenu nav > ul > li > a',
+				'condition' => array(
+					'header_cus_nav_style' => 'one',
+				),
+			)
+		);
+		$this->add_group_control(
+			Group_Control_Typography::get_type(),
+			array(
+				'name'      => 'sub_menu_typography',
+				'label'     => esc_html__( 'Submenu Typography', 'radiantthemes-addons' ),
+				'selector'  => '{{WRAPPER}} #rt-mainMenu nav > ul > li > ul > li > a,
+				#rt-mainMenu nav > ul > li > ul > li > ul > li > a,
+				#rt-mainMenu nav > ul > li > ul > li > ul > li > ul > li > a,
+				#rt-mainMenu nav > ul > li > ul > li > ul > li > ul > li ul li a,
+				#rt-mainMenu nav > ul > li > ul > li > ul > li > ul > li ul li > ul > li > a ,#rt-mainMenu nav > ul > li .rt-dropdown-submenu > ul.rt-dropdown-menu > li a',
+				'condition' => array(
+					'header_cus_nav_style' => 'one',
+				),
+			)
+		);
+
+		$this->end_controls_section();
+
+		$this->start_controls_section(
+			'desktop_hamburger',
+			array(
+				'label'     => esc_html__( 'Desktop Hamburger', 'radiantthemes-addons' ),
+				'type'      => Controls_Manager::SECTION,
+				'tab'       => Controls_Manager::TAB_STYLE,
+				'condition' => array(
+					'header_cus_nav_style' => 'one',
+				),
+			)
+		);
+
+		$this->add_control(
+			'desktop_hamburger_toggle_bg_color',
+			array(
+				'label'     => esc_html__( 'Toggle Background Color', 'radiantthemes-addons' ),
+				'type'      => Controls_Manager::COLOR,
+				'default'   => '#000000',
+				'selectors' => array(
+					'{{WRAPPER}} .rt-main-toggle-menu-trigger' => 'background: {{VALUE}};',
+				),
+				'condition' => array(
+					'header_cus_nav_style' => 'one',
+				),
+			)
+		);
+		
+		$this->add_control(
+			'desktop_hamburger_toggle_bg_color_sticky',
+			array(
+				'label'     => esc_html__( 'Toggle Background Color Sticky', 'radiantthemes-addons' ),
+				'type'      => Controls_Manager::COLOR,
+				'default'   => '#000000',
+				'selectors' => array(
+					'.header-sticky.sticky-active .rt-main-toggle-menu-trigger' => 'background: {{VALUE}} !important;',
+				),
+				'condition' => array(
+					'header_cus_nav_style' => 'one',
+				),
+			)
+		);
+
+		$this->add_control(
+			'desktop_hamburger_toggle_open_color',
+			array(
+				'label'     => esc_html__( 'Toggle Open Color', 'radiantthemes-addons' ),
+				'type'      => Controls_Manager::COLOR,
+				'default'   => '#ff0',
+				'selectors' => array(
+					'{{WRAPPER}} .rt-main-toggle-menu-trigger span:before, .rt-main-toggle-menu-trigger span:after, .rt-main-toggle-menu-trigger span' => 'background: {{VALUE}};',
+				),
+				'condition' => array(
+					'header_cus_nav_style' => 'one',
+				),
+			)
+		);
+		
+		$this->add_control(
+			'desktop_hamburger_toggle_open_color_sticky',
+			array(
+				'label'     => esc_html__( 'Toggle Open Color Sticky', 'radiantthemes-addons' ),
+				'type'      => Controls_Manager::COLOR,
+				'default'   => '#ff0',
+				'selectors' => array(
+					'.header-sticky.sticky-active .rt-main-toggle-menu-trigger span:before, .header-sticky.sticky-active .rt-main-toggle-menu-trigger span:after, .header-sticky.sticky-active .rt-main-toggle-menu-trigger span' => 'background: {{VALUE}};',
+				),
+				'condition' => array(
+					'header_cus_nav_style' => 'one',
+				),
+			)
+		);
+
+		$this->add_control(
+			'desktop_hamburger_toggle_close_color',
+			array(
+				'label'     => esc_html__( 'Toggle Close Color', 'radiantthemes-addons' ),
+				'type'      => Controls_Manager::COLOR,
+				'default'   => '#ffffff',
+				'selectors' => array(
+					'{{WRAPPER}} .rt-main-toggle-menu-open .rt-main-toggle-menu-trigger span:before, .rt-main-toggle-menu-open .rt-main-toggle-menu-trigger span:after' => 'background: {{VALUE}};',
+				),
+				'condition' => array(
+					'header_cus_nav_style' => 'one',
+				),
+			)
+		);
+		
+		$this->add_control(
+			'desktop_hamburger_toggle_close_color_sticky',
+			array(
+				'label'     => esc_html__( 'Toggle Close Color Sticky', 'radiantthemes-addons' ),
+				'type'      => Controls_Manager::COLOR,
+				'default'   => '#ffffff',
+				'selectors' => array(
+					'.header-sticky.sticky-active .rt-main-toggle-menu-open .rt-main-toggle-menu-trigger span:before, .header-sticky.sticky-active .rt-main-toggle-menu-open .rt-main-toggle-menu-trigger span:after' => 'background: {{VALUE}} !important;',
+				),
+				'condition' => array(
+					'header_cus_nav_style' => 'one',
+				),
+			)
+		);
+
+		$this->add_control(
+			'desktop_hamburger_body_bg',
+			array(
+				'label'     => esc_html__( 'Body Background', 'radiantthemes-addons' ),
+				'type'      => Controls_Manager::HEADING,
+				'separator' => 'before',
+			)
+		);
+
+		$this->add_group_control(
+			Group_Control_Background::get_type(),
+			array(
+				'name'     => 'background',
+				'label'    => esc_html__( 'Background', 'radiantthemes-addons' ),
+				'types'    => array( 'classic', 'gradient' ),
+				'selector' => '{{WRAPPER}} .minimal-menu-overlay, .minimal-logo-overlay, .rt-menu-overlay',
+			)
+		);
+
+		$this->end_controls_section();
+
+	}
+
+	/**
+	 * Render the widget output on the frontend.
+	 *
+	 * Written in PHP and used to generate the final HTML.
+	 *
+	 * @since 1.1.0
+	 *
+	 * @access protected
+	 */
+	protected function render() {
+		$settings      = $this->get_settings_for_display();
+		$menu_location = $settings['header_cus_menu_location'];
+		// Get menu.
+		$nav_menu = ! empty( $settings['header_cus_nav_menu'] ) ? wp_get_nav_menu_object( $settings['header_cus_nav_menu'] ) : false;
+
+		if ( ! $nav_menu ) {
+			return;
+		}
+
+		$nav_menu_args = array(
+			'fallback_cb'    => false,
+			'container'      => false,
+			'menu_class'     => 'elementor-nav-menu',
+			'theme_location' => 'default_navmenu', // creating a fake location for better functional control.
+			'menu'           => $nav_menu,
+			'echo'           => true,
+			'depth'          => 0,
+			'walker'         => new Radiantthemes_Menu_Walker(),
+
+		);
+
+		$ham_nav_menu = ! empty( $settings['header_cus_ham_nav_menu'] ) ? wp_get_nav_menu_object( $settings['header_cus_ham_nav_menu'] ) : false;
+
+		$ham_nav_menu_args = array(
+			'fallback_cb'    => false,
+			'container'      => false,
+			'menu_class'     => 'rt-tree',
+			'menu_id'        => 'main-menu',
+			'theme_location' => 'default_navmenu', // creating a fake location for better functional control.
+			'menu'           => $ham_nav_menu,
+			'echo'           => true,
+			'depth'          => 0,
+		);
+
+		if ( 'one' === $settings['header_cus_nav_style'] ) {
+			if ( 'yes' === $settings['show_normal_menu'] ) {
+				$hid_class = '';
+			} else {
+				$hid_class = 'elementor-hidden-desktop';
+			}
+			?>
+			<div id="rt-mainMenu-trigger"> <a class="rt-lines-button x"><span class="lines"></span></a> </div>
+			<div id="rt-mainMenu" class="<?php echo esc_attr( $hid_class ); ?>" style="min-height: 0px;">
+				<nav>
+						<?php
+						wp_nav_menu(
+							apply_filters(
+								'widget_nav_menu_args',
+								$nav_menu_args,
+								$nav_menu,
+								$settings
+							)
+						);
+						?>
+				</nav>
+			</div>
+			<?php
+			if ( 'yes' === $settings['show_ham_menu'] ) {
+				?>
+				<!--========================================================Slide burger menu========================================================-->
+				<nav id="rt-main-toggle-menu" class="rt-main-toggle-menu rt-main-toggle-menu-close">
+					<span class="rt-main-toggle-menu-trigger"><span>Menu</span></span>
+				</nav>
+				<div class="rt-menu-wrap">
+					<div class="rt-mobile-menu-toggle">
+						<div class="rt-menu-overlay">
+							<div class="rt-menu-bg" style="background: url(images/glow-pattern.png) no-repeat right bottom;"></div>
+						</div>
+					</div>
+				</div>
+				<div class="rt-mobile-menu">
+					<div class="rt-dashboard-columns">
+					<?php if ( 'yes' === $settings['select_ham_menu'] ) { ?>
+						<nav>
+							<?php
+							wp_nav_menu(
+								apply_filters(
+									'widget_nav_menu_args',
+									$ham_nav_menu_args,
+									$ham_nav_menu,
+									$settings
+								)
+							);
+							?>
+						</nav>
+					<?php } ?>
+						<?php if ( $settings['header_cus_menu_logo']['id'] ) : ?>
+                       <div class="rt-hamburger-menu-logo">
+					   <img src="<?php echo wp_get_attachment_image_url( $settings['header_cus_menu_logo']['id'], 'full' ); ?>" width="<?php echo $settings['logo_dimension']['width'] ;?>" height="<?php echo $settings['logo_dimension']['height'] ; ?> ">
+                                
+                            </div>
+							<?php endif; ?>
+							<?php if ( $settings['header_cus_menu_title'] ) : ?>
+                            <div class="rt-hamburger-about-text">
+                                
+                                   <?php echo  $settings['header_cus_menu_title'] ; ?>
+                                
+                            </div>
+							<?php endif; ?>
+                            <div class="rt-hamburger-social-link">
+							<h4><?php echo  $settings['header_cus_menu_social_heading'] ; ?></h4>
+                                <ul>
+                                    <?php if ( ! empty( radiantthemes_global_var( 'social-icon-googleplus', '', false ) ) ) : ?>
+										<li><a href="<?php echo esc_url( radiantthemes_global_var( 'social-icon-googleplus', '', false ) ); ?>" ><i class="fa fa-google-plus"></i></a></li>
+									<?php endif; ?>
+									<?php if ( ! empty( radiantthemes_global_var( 'social-icon-facebook', '', false ) ) ) : ?>
+										<li><a href="<?php echo esc_url( radiantthemes_global_var( 'social-icon-facebook', '', false ) ); ?>"><i class="fa fa-facebook"></i></a></li>
+									<?php endif; ?>
+									<?php if ( ! empty( radiantthemes_global_var( 'social-icon-twitter', '', false ) ) ) : ?>
+										<li class="twitter"><a href="<?php echo esc_url( radiantthemes_global_var( 'social-icon-twitter', '', false ) ); ?>"><i class="fa fa-twitter"></i></a></li>
+									<?php endif; ?>
+									<?php if ( ! empty( radiantthemes_global_var( 'social-icon-vimeo', '', false ) ) ) : ?>
+										<li class="vimeo"><a href="<?php echo esc_url( radiantthemes_global_var( 'social-icon-vimeo', '', false ) ); ?>"><i class="fa fa-vimeo"></i></a></li>
+									<?php endif; ?>
+									<?php if ( ! empty( radiantthemes_global_var( 'social-icon-youtube', '', false ) ) ) : ?>
+										<li class="youtube"><a href="<?php echo esc_url( radiantthemes_global_var( 'social-icon-youtube', '', false ) ); ?>"><i class="fa fa-youtube-play"></i></a></li>
+									<?php endif; ?>
+									<?php if ( ! empty( radiantthemes_global_var( 'social-icon-flickr', '', false ) ) ) : ?>
+										<li class="flickr"><a href="<?php echo esc_url( radiantthemes_global_var( 'social-icon-flickr', '', false ) ); ?>"><i class="fa fa-flickr"></i></a></li>
+									<?php endif; ?>
+									<?php if ( ! empty( radiantthemes_global_var( 'social-icon-linkedin', '', false ) ) ) : ?>
+										<li class="linkedin"><a href="<?php echo esc_url( radiantthemes_global_var( 'social-icon-linkedin', '', false ) ); ?>"><i class="fa fa-linkedin"></i></a></li>
+									<?php endif; ?>
+									<?php if ( ! empty( radiantthemes_global_var( 'social-icon-pinterest', '', false ) ) ) : ?>
+										<li class="pinterest"><a href="<?php echo esc_url( radiantthemes_global_var( 'social-icon-pinterest', '', false ) ); ?>"><i class="fa fa-pinterest-p"></i></a></li>
+									<?php endif; ?>
+									<?php if ( ! empty( radiantthemes_global_var( 'social-icon-xing', '', false ) ) ) : ?>
+										<li class="xing"><a href="<?php echo esc_url( radiantthemes_global_var( 'social-icon-xing', '', false ) ); ?>"><i class="fa fa-xing"></i></a></li>
+									<?php endif; ?>
+									<?php if ( ! empty( radiantthemes_global_var( 'social-icon-viadeo', '', false ) ) ) : ?>
+										<li class="viadeo"><a href="<?php echo esc_url( radiantthemes_global_var( 'social-icon-viadeo', '', false ) ); ?>"><i class="fa fa-viadeo"></i></a></li>
+									<?php endif; ?>
+									<?php if ( ! empty( radiantthemes_global_var( 'social-icon-vkontakte', '', false ) ) ) : ?>
+										<li class="vkontakte"><a href="<?php echo esc_url( radiantthemes_global_var( 'social-icon-vkontakte', '', false ) ); ?>"><i class="fa fa-vk"></i></a></li>
+									<?php endif; ?>
+									<?php if ( ! empty( radiantthemes_global_var( 'social-icon-tripadvisor', '', false ) ) ) : ?>
+										<li class="tripadvisor"><a href="<?php echo esc_url( radiantthemes_global_var( 'social-icon-tripadvisor', '', false ) ); ?>"><i class="fa fa-tripadvisor"></i></a></li>
+									<?php endif; ?>
+									<?php if ( ! empty( radiantthemes_global_var( 'social-icon-tumblr', '', false ) ) ) : ?>
+										<li class="tumblr"><a href="<?php echo esc_url( radiantthemes_global_var( 'social-icon-tumblr', '', false ) ); ?>"><i class="fa fa-tumblr"></i></a></li>
+									<?php endif; ?>
+									<?php if ( ! empty( radiantthemes_global_var( 'social-icon-behance', '', false ) ) ) : ?>
+										<li class="behance"><a href="<?php echo esc_url( radiantthemes_global_var( 'social-icon-behance', '', false ) ); ?>"><i class="fa fa-behance"></i></a></li>
+									<?php endif; ?>
+									<?php if ( ! empty( radiantthemes_global_var( 'social-icon-instagram', '', false ) ) ) : ?>
+										<li class="instagram"><a href="<?php echo esc_url( radiantthemes_global_var( 'social-icon-instagram', '', false ) ); ?>"><i class="fa fa-instagram"></i></a></li>
+									<?php endif; ?>
+									<?php if ( ! empty( radiantthemes_global_var( 'social-icon-dribbble', '', false ) ) ) : ?>
+										<li class="dribbble"><a href="<?php echo esc_url( radiantthemes_global_var( 'social-icon-dribbble', '', false ) ); ?>"><i class="fa fa-dribbble"></i></a></li>
+									<?php endif; ?>
+									<?php if ( ! empty( radiantthemes_global_var( 'social-icon-skype', '', false ) ) ) : ?>
+										<li class="skype"><a href="<?php echo esc_url( radiantthemes_global_var( 'social-icon-skype', '', false ) ); ?>"><i class="fa fa-skype"></i></a></li>
+									<?php endif; ?>
+                                </ul>
+                            </div>
+						<div class="cleafix"></div>
+					</div>
+				</div>
+				<?php
+			}
+		} elseif ( 'two' === $settings['header_cus_nav_style'] ) {
+				$nav_menu_args_two = array(
+					'fallback_cb'    => false,
+					'container'      => false,
+					'menu_class'     => 'rt-tree',
+					'menu_id'        => 'main-menu',
+					'theme_location' => 'default_navmenu', // creating a fake location for better functional control.
+					'menu'           => $nav_menu,
+					'echo'           => true,
+					'depth'          => 0,
+				);
+
+				$css = '@media only screen and (max-width: 767px) { .main-header {display: block;} } @media only screen and (min-width: 768px) and (max-width: 1024px) { .main-header {display: block;} } .rt-mobile-menu ul.rt-tree ul > li ul li a { color: green; }';
+				wp_register_style( 'radiant-side-panel-right-menu', false );
+				wp_enqueue_style( 'radiant-side-panel-right-menu' );
+				wp_add_inline_style( 'radiant-side-panel-right-menu', $css );
+
+				?>
+				<nav id="rt-main-toggle-menu" class="rt-main-toggle-menu rt-main-toggle-menu-close">
+					<span class="rt-main-toggle-menu-trigger"><span>Menu</span></span>
+				</nav>
+				<div class="rt-menu-wrap">
+					<div class="rt-mobile-menu-toggle">
+						<div class="rt-menu-overlay">
+							<div class="rt-menu-background-image">
+								<?php echo wp_get_attachment_image( $settings['header_cus_menu_background_image']['id'], 'full' ); ?>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="rt-mobile-menu">
+					<div class="rt-dashboard-columns">
+						<nav>
+							<?php
+							wp_nav_menu(
+								apply_filters(
+									'widget_nav_menu_args',
+									$nav_menu_args_two,
+									$nav_menu,
+									$settings
+								)
+							);
+							?>
+						</nav>
+						<div class="cleafix"></div>
+						<div class="rt-menu-btm-area">
+							<?php if ( $settings['header_cus_menu_logo']['id'] ) : ?>
+								<div class="rt-menu-logo">
+									<?php echo wp_get_attachment_image( $settings['header_cus_menu_logo']['id'], 'full' ); ?>
+								</div>
+							<?php endif; ?>
+							<?php if ( $settings['header_cus_menu_title'] ) : ?>
+								<div class="rt-menu-text">
+									<?php echo esc_html( $settings['header_cus_menu_title'] ); ?>
+								</div>
+							<?php endif; ?>
+							<div class="rt-social-link">
+								<ul>
+									<?php if ( ! empty( radiantthemes_global_var( 'social-icon-googleplus', '', false ) ) ) : ?>
+										<li><a href="<?php echo esc_url( radiantthemes_global_var( 'social-icon-googleplus', '', false ) ); ?>" ><i class="fa fa-google-plus"></i></a></li>
+									<?php endif; ?>
+									<?php if ( ! empty( radiantthemes_global_var( 'social-icon-facebook', '', false ) ) ) : ?>
+										<li><a href="<?php echo esc_url( radiantthemes_global_var( 'social-icon-facebook', '', false ) ); ?>"><i class="fa fa-facebook"></i></a></li>
+									<?php endif; ?>
+									<?php if ( ! empty( radiantthemes_global_var( 'social-icon-twitter', '', false ) ) ) : ?>
+										<li class="twitter"><a href="<?php echo esc_url( radiantthemes_global_var( 'social-icon-twitter', '', false ) ); ?>"><i class="fa fa-twitter"></i></a></li>
+									<?php endif; ?>
+									<?php if ( ! empty( radiantthemes_global_var( 'social-icon-vimeo', '', false ) ) ) : ?>
+										<li class="vimeo"><a href="<?php echo esc_url( radiantthemes_global_var( 'social-icon-vimeo', '', false ) ); ?>"><i class="fa fa-vimeo"></i></a></li>
+									<?php endif; ?>
+									<?php if ( ! empty( radiantthemes_global_var( 'social-icon-youtube', '', false ) ) ) : ?>
+										<li class="youtube"><a href="<?php echo esc_url( radiantthemes_global_var( 'social-icon-youtube', '', false ) ); ?>"><i class="fa fa-youtube-play"></i></a></li>
+									<?php endif; ?>
+									<?php if ( ! empty( radiantthemes_global_var( 'social-icon-flickr', '', false ) ) ) : ?>
+										<li class="flickr"><a href="<?php echo esc_url( radiantthemes_global_var( 'social-icon-flickr', '', false ) ); ?>"><i class="fa fa-flickr"></i></a></li>
+									<?php endif; ?>
+									<?php if ( ! empty( radiantthemes_global_var( 'social-icon-linkedin', '', false ) ) ) : ?>
+										<li class="linkedin"><a href="<?php echo esc_url( radiantthemes_global_var( 'social-icon-linkedin', '', false ) ); ?>"><i class="fa fa-linkedin"></i></a></li>
+									<?php endif; ?>
+									<?php if ( ! empty( radiantthemes_global_var( 'social-icon-pinterest', '', false ) ) ) : ?>
+										<li class="pinterest"><a href="<?php echo esc_url( radiantthemes_global_var( 'social-icon-pinterest', '', false ) ); ?>"><i class="fa fa-pinterest-p"></i></a></li>
+									<?php endif; ?>
+									<?php if ( ! empty( radiantthemes_global_var( 'social-icon-xing', '', false ) ) ) : ?>
+										<li class="xing"><a href="<?php echo esc_url( radiantthemes_global_var( 'social-icon-xing', '', false ) ); ?>"><i class="fa fa-xing"></i></a></li>
+									<?php endif; ?>
+									<?php if ( ! empty( radiantthemes_global_var( 'social-icon-viadeo', '', false ) ) ) : ?>
+										<li class="viadeo"><a href="<?php echo esc_url( radiantthemes_global_var( 'social-icon-viadeo', '', false ) ); ?>"><i class="fa fa-viadeo"></i></a></li>
+									<?php endif; ?>
+									<?php if ( ! empty( radiantthemes_global_var( 'social-icon-vkontakte', '', false ) ) ) : ?>
+										<li class="vkontakte"><a href="<?php echo esc_url( radiantthemes_global_var( 'social-icon-vkontakte', '', false ) ); ?>"><i class="fa fa-vk"></i></a></li>
+									<?php endif; ?>
+									<?php if ( ! empty( radiantthemes_global_var( 'social-icon-tripadvisor', '', false ) ) ) : ?>
+										<li class="tripadvisor"><a href="<?php echo esc_url( radiantthemes_global_var( 'social-icon-tripadvisor', '', false ) ); ?>"><i class="fa fa-tripadvisor"></i></a></li>
+									<?php endif; ?>
+									<?php if ( ! empty( radiantthemes_global_var( 'social-icon-tumblr', '', false ) ) ) : ?>
+										<li class="tumblr"><a href="<?php echo esc_url( radiantthemes_global_var( 'social-icon-tumblr', '', false ) ); ?>"><i class="fa fa-tumblr"></i></a></li>
+									<?php endif; ?>
+									<?php if ( ! empty( radiantthemes_global_var( 'social-icon-behance', '', false ) ) ) : ?>
+										<li class="behance"><a href="<?php echo esc_url( radiantthemes_global_var( 'social-icon-behance', '', false ) ); ?>"><i class="fa fa-behance"></i></a></li>
+									<?php endif; ?>
+									<?php if ( ! empty( radiantthemes_global_var( 'social-icon-instagram', '', false ) ) ) : ?>
+										<li class="instagram"><a href="<?php echo esc_url( radiantthemes_global_var( 'social-icon-instagram', '', false ) ); ?>"><i class="fa fa-instagram"></i></a></li>
+									<?php endif; ?>
+									<?php if ( ! empty( radiantthemes_global_var( 'social-icon-dribbble', '', false ) ) ) : ?>
+										<li class="dribbble"><a href="<?php echo esc_url( radiantthemes_global_var( 'social-icon-dribbble', '', false ) ); ?>"><i class="fa fa-dribbble"></i></a></li>
+									<?php endif; ?>
+									<?php if ( ! empty( radiantthemes_global_var( 'social-icon-skype', '', false ) ) ) : ?>
+										<li class="skype"><a href="<?php echo esc_url( radiantthemes_global_var( 'social-icon-skype', '', false ) ); ?>"><i class="fa fa-skype"></i></a></li>
+									<?php endif; ?>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			<?php
+		} elseif ( 'three' === $settings['header_cus_nav_style'] ) {
+			?>
+		 <div class="rt-menu-wrapper-style-three">
+			<nav id="rt-main-toggle-menu" class="rt-main-toggle-menu rt-main-toggle-menu-close">
+					<span class="rt-main-toggle-menu-trigger"><span>Menu</span></span>
+				</nav>
+				<div class="rt-menu-wrap">
+					<div class="rt-mobile-menu-toggle">
+						<div class="rt-menu-overlay">
+							<div class="rt-menu-background-image">
+
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="rt-mobile-menu">
+<div class="rt-dashboard-columns" >
+			<div class="rt-mobile-menu-logo-sec">
+			<?php if ( $settings['header_cus_menu_logo']['id'] ) : ?>
+			<div class="rt-menu-logo">
+				<?php echo wp_get_attachment_image( $settings['header_cus_menu_logo']['id'], 'full' ); ?>
+			</div>
+			<?php endif; ?>
+			<?php if ( $settings['header_cus_menu_title'] ) : ?>
+			<div class="rt-menu-text">
+				<?php echo esc_html( $settings['header_cus_menu_title'] ); ?>
+			</div>
+			<?php endif; ?>
+			</div>
+						<?php dynamic_sidebar( 'radiantthemes-hamburger-sidebar' ); ?>
+						<div class="cleafix"></div>
+						<div class="rt-menu-btm-area">
+
+							<div class="rt-social-link">
+								<ul>
+									<?php if ( ! empty( radiantthemes_global_var( 'social-icon-googleplus', '', false ) ) ) : ?>
+										<li><a href="<?php echo esc_url( radiantthemes_global_var( 'social-icon-googleplus', '', false ) ); ?>" ><i class="fa fa-google-plus"></i></a></li>
+									<?php endif; ?>
+									<?php if ( ! empty( radiantthemes_global_var( 'social-icon-facebook', '', false ) ) ) : ?>
+										<li><a href="<?php echo esc_url( radiantthemes_global_var( 'social-icon-facebook', '', false ) ); ?>"><i class="fa fa-facebook"></i></a></li>
+									<?php endif; ?>
+									<?php if ( ! empty( radiantthemes_global_var( 'social-icon-twitter', '', false ) ) ) : ?>
+										<li class="twitter"><a href="<?php echo esc_url( radiantthemes_global_var( 'social-icon-twitter', '', false ) ); ?>"><i class="fa fa-twitter"></i></a></li>
+									<?php endif; ?>
+									<?php if ( ! empty( radiantthemes_global_var( 'social-icon-vimeo', '', false ) ) ) : ?>
+										<li class="vimeo"><a href="<?php echo esc_url( radiantthemes_global_var( 'social-icon-vimeo', '', false ) ); ?>"><i class="fa fa-vimeo"></i></a></li>
+									<?php endif; ?>
+									<?php if ( ! empty( radiantthemes_global_var( 'social-icon-youtube', '', false ) ) ) : ?>
+										<li class="youtube"><a href="<?php echo esc_url( radiantthemes_global_var( 'social-icon-youtube', '', false ) ); ?>"><i class="fa fa-youtube-play"></i></a></li>
+									<?php endif; ?>
+									<?php if ( ! empty( radiantthemes_global_var( 'social-icon-flickr', '', false ) ) ) : ?>
+										<li class="flickr"><a href="<?php echo esc_url( radiantthemes_global_var( 'social-icon-flickr', '', false ) ); ?>"><i class="fa fa-flickr"></i></a></li>
+									<?php endif; ?>
+									<?php if ( ! empty( radiantthemes_global_var( 'social-icon-linkedin', '', false ) ) ) : ?>
+										<li class="linkedin"><a href="<?php echo esc_url( radiantthemes_global_var( 'social-icon-linkedin', '', false ) ); ?>"><i class="fa fa-linkedin"></i></a></li>
+									<?php endif; ?>
+									<?php if ( ! empty( radiantthemes_global_var( 'social-icon-pinterest', '', false ) ) ) : ?>
+										<li class="pinterest"><a href="<?php echo esc_url( radiantthemes_global_var( 'social-icon-pinterest', '', false ) ); ?>"><i class="fa fa-pinterest-p"></i></a></li>
+									<?php endif; ?>
+									<?php if ( ! empty( radiantthemes_global_var( 'social-icon-xing', '', false ) ) ) : ?>
+										<li class="xing"><a href="<?php echo esc_url( radiantthemes_global_var( 'social-icon-xing', '', false ) ); ?>"><i class="fa fa-xing"></i></a></li>
+									<?php endif; ?>
+									<?php if ( ! empty( radiantthemes_global_var( 'social-icon-viadeo', '', false ) ) ) : ?>
+										<li class="viadeo"><a href="<?php echo esc_url( radiantthemes_global_var( 'social-icon-viadeo', '', false ) ); ?>"><i class="fa fa-viadeo"></i></a></li>
+									<?php endif; ?>
+									<?php if ( ! empty( radiantthemes_global_var( 'social-icon-vkontakte', '', false ) ) ) : ?>
+										<li class="vkontakte"><a href="<?php echo esc_url( radiantthemes_global_var( 'social-icon-vkontakte', '', false ) ); ?>"><i class="fa fa-vk"></i></a></li>
+									<?php endif; ?>
+									<?php if ( ! empty( radiantthemes_global_var( 'social-icon-tripadvisor', '', false ) ) ) : ?>
+										<li class="tripadvisor"><a href="<?php echo esc_url( radiantthemes_global_var( 'social-icon-tripadvisor', '', false ) ); ?>"><i class="fa fa-tripadvisor"></i></a></li>
+									<?php endif; ?>
+									<?php if ( ! empty( radiantthemes_global_var( 'social-icon-tumblr', '', false ) ) ) : ?>
+										<li class="tumblr"><a href="<?php echo esc_url( radiantthemes_global_var( 'social-icon-tumblr', '', false ) ); ?>"><i class="fa fa-tumblr"></i></a></li>
+									<?php endif; ?>
+									<?php if ( ! empty( radiantthemes_global_var( 'social-icon-behance', '', false ) ) ) : ?>
+										<li class="behance"><a href="<?php echo esc_url( radiantthemes_global_var( 'social-icon-behance', '', false ) ); ?>"><i class="fa fa-behance"></i></a></li>
+									<?php endif; ?>
+									<?php if ( ! empty( radiantthemes_global_var( 'social-icon-instagram', '', false ) ) ) : ?>
+										<li class="instagram"><a href="<?php echo esc_url( radiantthemes_global_var( 'social-icon-instagram', '', false ) ); ?>"><i class="fa fa-instagram"></i></a></li>
+									<?php endif; ?>
+									<?php if ( ! empty( radiantthemes_global_var( 'social-icon-dribbble', '', false ) ) ) : ?>
+										<li class="dribbble"><a href="<?php echo esc_url( radiantthemes_global_var( 'social-icon-dribbble', '', false ) ); ?>"><i class="fa fa-dribbble"></i></a></li>
+									<?php endif; ?>
+									<?php if ( ! empty( radiantthemes_global_var( 'social-icon-skype', '', false ) ) ) : ?>
+										<li class="skype"><a href="<?php echo esc_url( radiantthemes_global_var( 'social-icon-skype', '', false ) ); ?>"><i class="fa fa-skype"></i></a></li>
+									<?php endif; ?>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+				</div>
+			<?php
+		} elseif ( 'four' === $settings['header_cus_nav_style'] ) {
+
+			function my_plugin_body_class( $classes ) {
+				$classes[] = 'left-side-menu';
+				return $classes;
+			}
+			add_filter( 'body_class', 'my_plugin_body_class' );
+
+			?>
+			<div class="rt-nav-sidebar-menu">
+			<div class="brand-logo">
+			  <?php echo wp_get_attachment_image( $settings['header_cus_menu_logo']['id'], 'full' ); ?>
+			</div>
+	<i class="fa fa-bars fa-2x toggle-btn" data-toggle="collapse" data-target="#menu-content"></i>
+
+		<div class="menu-list">
+
+			<?php
+			$nav_menu_args_two = array(
+				'fallback_cb'    => false,
+				'container'      => false,
+				'menu_class'     => 'menu-content collapse out',
+				'menu_id'        => 'menu-content',
+				'theme_location' => 'default_navmenu', // creating a fake location for better functional control.
+				'menu'           => $nav_menu,
+				'echo'           => true,
+				'depth'          => 0,
+			);
+							wp_nav_menu(
+								apply_filters(
+									'widget_nav_menu_args',
+									$nav_menu_args_two,
+									$nav_menu,
+									$settings
+								)
+							);
+			?>
+	 </div>
+</div>
+			<?php
+		}
+	}
+
+
+	/**
+	 * Render the widget output in the editor.
+	 *
+	 * Written as a Backbone JavaScript template and used to generate the live preview.
+	 *
+	 * @since 1.1.0
+	 *
+	 * @access protected
+	 */
+	protected function _content_template() {
+
+	}
+}

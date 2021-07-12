@@ -1,0 +1,490 @@
+body{
+    font-family:"Montserrat", Verdana, Geneva, Tahoma, sans-serif;
+}
+
+a{
+    color:#09276f;
+}
+
+blockquote{
+    margin-left:0;
+    margin-right:0;
+    padding-left:30px;
+    border-left:3px rgba(0,0,0,0.15) solid;
+	font-size:105%;
+	line-height:110%;
+}
+
+table thead tr th,
+table tbody tr td,
+table tbody tr th{
+	padding:10px 10px 10px 10px;
+}
+
+
+
+*[class^="wp-block-"] {	/* put a margin at the bottom of each block */
+	margin-bottom: 		1.5em;
+}
+
+/* Blockquotes
+ * Blockquotes needed a bit of styling to match the theme default.
+ **/
+blockquote.wp-block-quote {
+	background:		rgba(128, 128, 128, 0.1);
+	border-width:	0;
+	border-left:	4px solid rgba(128, 128, 128, 0.4) !important;
+	margin:			1.5em;
+	overflow:		auto;
+	padding:		1em 1.5em 1em 1.2em;
+	width: 			90%;
+}
+
+.wp-block-quote p {
+	font-style:		italic;
+	font-size:		1em;
+	margin:			0;
+}
+
+
+.wp-block-quote cite {
+	border-width:	0;
+	color:			inherit;
+	display:		block;
+	font-style:		normal;
+	font-weight:	bold;
+	margin-left:	3em;
+	margin-top:		.5em;
+}
+
+
+/* =================== Audio =================== */
+
+.wp-block-audio {}
+
+/* =================== Block Columns =================== */
+
+
+/* =================== Buttons =================== */
+
+.wp-block-button {
+	border-radius: 	3px;
+	line-height: 	1.25;
+	padding: 		.6em 1em;
+	text-align: 	center;
+}
+
+.wp-block-button a {
+	border: 		0;
+	font-weight: 	bold;
+}
+
+.wp-block-button:not([style]) a:hover,
+.wp-block-button:not([style]) a:focus {
+	color: 			#fff;
+}
+
+.wp-block-button.alignwide,
+.wp-block-button.alignfull {
+	display: 		block;
+}
+
+
+
+/* =================== Categories =================== */
+
+
+.wp-block-categories {}
+
+.wp-block-categories-list ul,
+.wp-block-categories-list li {
+	list-style: 	none;
+	margin: 		0;
+	padding: 		0;
+}
+
+.wp-block-categories-list li {
+	padding: 		0.25em 0;
+}
+
+.wp-block-categories-list li:not(:last-child) {
+	border-bottom: 1px dashed rgba(0,0,0,0.2);
+}
+
+.wp-block-categories-list ul ul {
+	padding-left: 		2em;
+}
+
+.wp-block-categories-list ul ul li:last-child {
+	padding-bottom: 	0;
+}
+
+.wp-block-categories-dropdown {}
+
+
+
+/* =================== Code =================== */
+
+/* =================== Preformatted =================== */
+
+/* Overrides to match theme */
+.wp-block-code,
+.wp-block-preformatted {
+	background:			rgba(128, 128, 128, 0.1);
+	border:				1px solid #aaaaaa;
+	border-bottom-color:    #cccccc;
+	border-radius:		2px;
+	font-family:		'Inconsolata', monospace;
+	font-size:			.8em;
+	height:				auto;
+	margin:				0;
+	margin-bottom:		1.5em;
+	outline:			none;
+	overflow:			auto;
+	padding:			6px 10px;
+	vertical-align:		middle;
+	width:				100%;
+	word-wrap:			break-word;
+	white-space:		pre-wrap;
+}
+
+.wp-block-code .blocks-plain-text {
+	background:			transparent;
+	border:				none !important;
+	color:				inherit !important;
+	font-family:		inherit!important;
+	font-size:			0.8em;
+	margin:				0 !important;
+	xoverflow-x:			auto!important;
+	padding:			0 !important;
+}
+
+
+
+/* =================== Cover Images =================== */
+
+.wp-block-cover-image {					/* make them tall */
+	min-height: 		50vw;
+	height: 			100%;
+}
+
+.wp-block-cover-image.has-parallax {	/* this makes a nice looking parallax window */
+	min-height:			 25vw;
+}
+
+
+.is-ios .wp-block-cover-image.has-parallax {
+    background-attachment: scroll;
+}
+
+
+.wp-block-cover-image.has-background-dim {}
+
+.wp-block-cover-image.has-parallax {	/* no margin for wide parallax images  */
+	margin-bottom:		0;
+}
+
+
+
+
+/* =================== Dropcaps =================== */
+
+.has-drop-cap {}
+
+/* Galleries */
+ul.wp-block-gallery {
+	clear:		both;
+}
+
+ul.wp-block-gallery,
+ul.wp-block-gallery li {
+	padding:			0;
+}
+
+ul.wp-block-gallery.alignnone {
+	display:		flex;			/* override some themes */
+}
+
+/* Images */
+.wp-block-image {}
+
+.wp-block-image.aligncenter {
+	margin: 			0 auto;
+}
+
+
+@media (max-width: 767px) {
+	figure.wp-block-image.alignleft {
+		max-width:		50%;					/* make responsive */
+	}
+
+	figure.wp-block-image.alignright {
+		max-width:		50%;					/* make responsive */
+	}
+}
+
+figure.wp-block-image.alignleft {
+	margin: 			.1em 1.0em 1.0em 0;		/* this leaves margins when float-left or float-right */
+}
+
+figure.wp-block-image.alignright {
+	margin: 			.1em 0em 1.0em 1.0em;	/* this leaves margins when float-left or float-right */
+}
+
+figure.wp-block-image.aligncenter {
+	margin: 			1.0em auto 1.0em auto;	/* this leaves margins when aligncenter */
+}
+
+figure.wp-block-image {
+	margin:				0;						/* make the default Gutenberg style: no margins */
+}
+
+.wp-block-image figcaption {			/* custom styling for .wp-block-image figcaption - make a bit closer to the image in #content, not editor */
+	margin: 			-.25em 0 .25em 0;
+}
+
+
+/* =================== Embed =================== */
+
+.wp-block-embed {
+	clear:				both;
+}
+
+*[class^="wp-block-embed-"] {
+	clear:				both;
+}
+
+
+/* =================== Latest Posts =================== */
+
+.wp-block-latest-posts__post-date {
+	color: 				inherit;
+	margin-bottom: 		0;
+	opacity: 			0.8;
+}
+
+.wp-block-latest-posts,
+.wp-block-latest-posts li {
+	list-style: 		none;
+	margin: 			0;
+}
+
+.wp-block-latest-posts li {
+	padding: 			0.25em 0;
+}
+
+#content .wp-block-latest-posts li {
+	padding: 			0.25em 2em;
+}
+
+.wp-block-latest-posts li:not(:last-child) {
+	border-bottom: 		1px dashed rgba(0,0,0,0.2);
+}
+
+.wp-block-latest-posts.is-grid li {
+	border: 			0;
+}
+
+
+/* =================== Pullquotes =================== */
+
+.wp-block-pullquote {
+	border: 			2px dotted rgba(0,0,0,0.25);
+	background: 		rgba(0,0,0,0.15);
+	box-shadow: 		0px 0px 0px 10px rgba(0,0,0,0.15);
+	color: 				inherit;
+	padding: 			1.5em 0.75em;
+}
+
+.wp-block-pullquote > p {
+	font-family: 		inherit;
+}
+
+.wp-block-pullquote cite {
+	color: 				inherit;
+	opacity: 			0.8;
+}
+
+.wp-block-pullquote.alignleft {
+	margin-right:		1.5em;
+}
+
+.wp-block-pullquote.alignright {
+	margin-left:		1.5em;
+}
+
+
+/* =================== Separator =================== */
+
+.wp-block-separator {
+	background-color:	#ccc;
+	border:				none;
+	box-sizing:			border-box;
+	height:				4px;
+	margin:				1.0em auto;
+	width: 				90%;
+}
+
+
+/* =================== Tables ===================
+ *
+ * Overrides to match theme table styling
+ *
+ */
+
+.wp-block-table {
+	display: 			table;
+}
+
+.wp-block-table th {
+	padding:			4px 4px;
+	text-align:			left;
+}
+
+.wp-block-table td {
+	margin:				0;
+	padding:			4px 4px;
+}
+
+
+/* =================== Text Columns =================== */
+
+@media only screen and ( max-width: 580px ) {	/* for phones */
+	.wp-block-text-columns,
+	.wp-block-text-columns.aligncenter {
+		display: 		block;
+	}
+
+	.wp-block-text-columns.columns-2 .wp-block-column,
+	.wp-block-text-columns.columns-3 .wp-block-column,
+	.wp-block-text-columns.columns-4 .wp-block-column {
+		float: 			none;
+		margin-left: 	0;
+		margin-right: 	0;
+		width: 			100%;
+	}
+}
+
+
+
+
+/* =================== Verse =================== */
+
+.wp-block-verse {
+	background:			rgba(128, 128, 128, 0.1);
+	border:				none;
+	border-width:		0;
+	border-left:		4px solid rgba(128, 128, 128, 0.4);
+	box-shadow:			none;
+	font-family: 		'Alegreya', serif;
+	font-size:			1em;
+	font-style:			italic;
+	margin:				1.5em;
+	padding:			1em 1.5em 1em 1.2em;
+	width:				90%;
+}
+
+
+
+/* =================== Video =================== */
+.wp-block-video {}
+
+.wp-block-video video,
+.wp-block-video iframe {
+	max-width: 			100%;
+}
+
+/* =================== Full and Wide =================== */
+
+@media screen and (max-width: 767px) {	/* mobile */
+	*[class^="wp-block-"].alignleft,
+	*[class^="wp-block-"].alignright {
+		max-width: 		75%;
+	}
+}
+
+.tsg-plugin .wp-block-cover-image.alignwide,
+.wp-block-cover-image.aligncenter {				/* This rule makes the image full width on desktops */
+		width: 			100%;
+		margin-left:	auto;
+		margin-right:	auto;
+}
+
+.wp-block-cover-image.alignright {
+	width: 				30%;
+	margin-left: 		1.5em;
+}
+
+.wp-block-cover-image.alignleft {
+	width: 				30%;
+	margin-right: 		1.5em;
+}
+
+
+
+
+.alignfull,
+.alignwide,
+.aligncenter {
+	clear: 				both;
+}
+
+.wp-block-cover-image {			/* make cover images display more responsively */
+	background-position:	center center;
+}
+
+
+
+@media (min-width: 768px) {
+
+	.tsg-plugin .alignfull,
+	.tsg-plugin .wp-block-image.alignfull img {
+		margin-left: 	calc(50% - 50vw)	!important;
+		margin-right: 	calc(50% - ( 50vw - 12px ) )	!important;		/* take off 12px for vertical scroll bar - 16 works with all browsers */
+		max-width: 		1000%;
+		width: 			100vw !important;
+	}
+
+	/* some themes need a bit of adjustment for alignfull */
+	.tsg-plugin.tsg-twentyseventeen .alignfull,
+	.tsg-plugin.tsg-twentyseventeen .wp-block-image.alignfull img {
+		margin-left: 	calc(50% - 48.75vw)	!important;
+		margin-right: 	calc(50% - 48.75vw)	!important;		/* take off 12px for vertical scroll bar - 16 works with all browsers */
+		max-width: 		1000%;
+		width: 			97.5vw !important;
+	}
+
+	.tsg-plugin.align-full-90 .alignfull,
+	.tsg-plugin.align-full-90 .wp-block-image.alignfull img,
+	.tsg-plugin.tsg-fitvids *[class^="wp-block-embed"].alignfull,
+	.tsg-plugin .wp-block-pullquote.alignfull {
+		margin-left: 	calc(50% - 45vw)	!important;
+		margin-right: 	calc(50% - 45vw )	!important;		/* take off 12px for vertical scroll bar - 16 works with all browsers */
+		max-width: 		1000%;
+		width: 			90vw !important;
+	}
+
+	.tsg-plugin .alignwide,
+	.tsg-plugin .wp-block-image.alignwide img,
+	.tsg-plugin.tsg-fitvids *[class^="wp-block-embed"].alignwide {
+		margin-left: 	calc(50% - 40vw) !important;
+		margin-right: 	calc(50% - 40vw) !important;
+		max-width: 		1000%;
+		width: 			80vw !important;
+	}
+
+	/* Video embeds don't work correctly for wide/full unless fitvids is installed - see .tsg-fitvids rules above */
+	.tsg-plugin *[class^="wp-block-embed"].alignwide,
+	.tsg-plugin *[class^="wp-block-embed"].alignfull {
+		margin-left:	0 !important;
+		margin-right:	0 !important;
+		width:			100% !important;
+	}
+
+	/* theme specific rules - for a few selected themes */
+	.caos .col-md-8 { width: 100%; }
+
+} /* end of @media */
+
+/* end */
+

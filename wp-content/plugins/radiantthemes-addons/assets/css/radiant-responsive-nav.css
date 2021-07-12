@@ -1,0 +1,29 @@
+#rt-main-toggle-menu,
+.minimal-menu-overlay,
+.rt-menu-overlay,
+.rt-menu-wrap {
+ display: block;
+}
+
+.menu-is-vertical {
+ top: 0;
+}
+
+.responsive-titles {
+ display: block;
+}
+
+
+@media only screen and (max-width : 767px) {
+ .menu-is-onscreen .rt-menu-overlay {
+  width: 100%;
+ }
+
+}
+
+@media only screen and (min-width : 768px) and (max-width : 1024px) {
+ .menu-is-onscreen .rt-menu-overlay {
+  width: 100%;
+ }
+
+}

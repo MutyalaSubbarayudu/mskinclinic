@@ -1,0 +1,76 @@
+﻿/* radiantthemes-contact-box element-one */
+
+.radiantthemes-contact-box.element-one{
+
+	ul{
+
+		li{
+			position:relative;
+			margin-bottom:12px;
+			padding-left:29px;
+
+			&:last-child{
+				margin-bottom:0;
+			}
+
+			i,
+			span[class*='ti-']{
+				position:absolute;
+				left:0;
+				top:0;
+				z-index:1;
+				width:15px;
+			    text-align:center;
+			    line-height:inherit;
+			}
+
+			strong{
+				display:block;
+				font-weight:500;
+			}
+
+			ul{
+				margin-top:12px;
+			}
+
+		}
+
+	}
+
+}
+
+/* radiantthemes-contact-box element-two */
+
+.radiantthemes-contact-box.element-two{
+
+	ul{
+
+		li{
+			position:relative;
+			margin-bottom:12px;
+			padding-left:29px;
+
+			&:last-child{
+				margin-bottom:0;
+			}
+
+			i,
+			span[class*='ti-']{
+				position:absolute;
+				left:0;
+				top:0;
+				z-index:1;
+				width:15px;
+			    text-align:center;
+			    line-height:inherit;
+			}
+
+			ul{
+				margin-top:12px;
+			}
+
+		}
+
+	}
+
+}

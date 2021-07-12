@@ -1,0 +1,362 @@
+/*--------------------------------------------------------------
+# Header
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+# Header Style Three
+--------------------------------------------------------------*/
+
+/*#page,
+.wraper_footer{
+	margin-left:265px;
+}*/
+
+body[data-header-style="header-style-three"]{
+
+	#page,
+	.wraper_footer{
+		margin-left:270px;
+	}
+
+	#page .container.page-container,
+	.wraper_footer > .container{
+		width:100%;
+	}
+
+	.vc_row{
+
+	    &:not(.vc_row-no-padding){
+		    padding-left:15px;
+		    padding-right:15px;
+		}
+
+	    &:before{
+		    display:none !important;
+		}
+
+	}
+
+	/* wraper_header */
+
+	.wraper_header.style-three{
+		direction:initial;
+	}
+
+	/* wraper_header_responsive */
+
+	.wraper_header_responsive{
+		position:fixed;
+	    left:0;
+		z-index:9999999;
+
+		> div[class*='responsive-sidemenu-']{
+			padding:10px;
+			text-align:center;
+			font-size:25px;
+			line-height:1;
+
+			&.responsive-sidemenu-open{
+				color:#000;
+			}
+
+			&.responsive-sidemenu-close{
+				color:#fff;
+			}
+
+		}
+
+	}
+
+	&.sidemenu-open{
+
+		.wraper_header_responsive{
+			top:0;
+		}
+
+	}
+
+	/* wraper_header_main */
+
+	.wraper_header_main{
+		position:fixed;
+		top:0;
+		bottom:0;
+		left:0;
+		z-index:999;
+	    width:270px;
+	    overflow-x:hidden;
+	    overflow-y:auto;
+	    padding:55px 40px 55px 40px;
+
+		.header_main{
+
+			.brand-logo{
+			    margin-bottom:100px;
+			    text-align:left;
+			    font-size:0;
+
+				img{
+					max-width:110px;
+				}
+
+			}
+
+			/* NAV */
+
+			.nav{
+				margin-bottom:60px;
+
+				> [class*='menu-'] > ul.menu{
+
+					> li,
+					> li > ul > li,
+					> li > ul > li > ul > li,
+					> li > ul > li > ul > li > ul > li,
+					> li > ul > li > ul > li > ul > li > ul li{
+						position:relative;
+						width:100%;
+						margin-bottom:10px;
+					}
+
+					> li > a,
+					> li > ul > li > a,
+					> li > ul > li > ul > li > a,
+					> li > ul > li > ul > li > ul > li > a,
+					> li > ul > li > ul > li > ul > li > ul li a{
+						position:relative;
+						display:inline-block;
+						vertical-align:top;
+						padding-bottom:2px;
+						color:inherit;
+						transition:all 0.5s ease-in-out;
+						-webkit-transition:all 0.5s ease-in-out;
+					}
+
+					> li > a:before,
+					> li > ul > li > a:before,
+					> li > ul > li > ul > li > a:before,
+					> li > ul > li > ul > li > ul > li > a:before,
+					> li > ul > li > ul > li > ul > li > ul li a:before{
+						position:absolute;
+						bottom:0;
+						right:0;
+						z-index:0;
+						content:" ";
+						width:0;
+						height:2px;
+						transition:all 0.5s ease-in-out;
+						-webkit-transition:all 0.5s ease-in-out;
+					}
+
+					> li.current-menu-item > a,
+					> li.current-menu-parent > a,
+					> li > ul > li.current-menu-item > a,
+					> li > ul > li.current-menu-parent > a,
+					> li > ul > li > ul > li.current-menu-item > a,
+					> li > ul > li > ul > li.current-menu-parent > a{
+					}
+
+					> li > a:hover:before,
+					> li.current-menu-item > a:before,
+					> li.current-menu-parent > a:before,
+					> li > ul > li > a:hover:before,
+					> li > ul > li.current-menu-item > a:before,
+					> li > ul > li.current-menu-parent > a:before,
+					> li > ul > li > ul > li > a:hover:before,
+					> li > ul > li > ul > li.current-menu-item > a:before,
+					> li > ul > li > ul > li.current-menu-parent > a:before{
+						right:auto;
+						left:0;
+						width:100%;
+					}
+
+					> li > ul,
+					> li > ul > li > ul,
+					> li > ul > li > ul > li > ul,
+					> li > ul > li > ul > li > ul > li > ul{
+						display:none;
+						margin-top:10px;
+						margin-bottom:15px;
+					}
+
+					> li > ul > li > a,
+					> li > ul > li > ul > li > a,
+					> li > ul > li > ul > li > ul > li > a,
+					> li > ul > li > ul > li > ul > li > ul li a{
+						padding-left:25px;
+						font-weight:400;
+						font-size:13px;
+						line-height:22px;
+						opacity:0.85;
+					}
+
+					> li > ul > li > ul > li > a{
+						padding-left:35px;
+					}
+
+					> li > ul > li > ul > li > ul > li > a{
+						padding-left:45px;
+					}
+
+					> li > ul > li > ul > li > ul > li > ul li a{
+						padding-left:55px;
+					}
+
+				}
+
+			}
+
+			.header-copyright{
+				margin-bottom:25px;
+
+				> *:last-child{
+					margin-bottom:0 !important;
+				}
+
+				p{
+					margin-bottom:15px;
+					font-weight:400;
+					font-size:14px;
+					color:#d0d0d0;
+					line-height:24px;
+				}
+
+			}
+
+			.header-social{
+
+				ul.social{
+					font-size:0;
+
+					li{
+						display:inline-block;
+						vertical-align:top;
+						margin-right:9px;
+						margin-bottom:8px;
+
+						a{
+							display:block;
+							width:33px;
+							height:33px;
+							background-color:transparent;
+							border:2px rgba(255,255,255,0.3) solid;
+							border-radius:50%;
+							text-align:center;
+							font-size:12px;
+							color:#fff;
+							line-height:30px;
+							transition:all 0.3s ease-in-out;
+							-webkit-transition:all 0.3s ease-in-out;
+						}
+
+					}
+
+				}
+
+			}
+
+		}
+
+	}
+
+	/* SIDR */
+
+	#sidemenu.sidr.left{
+	    left:-100%;
+	}
+
+	#sidemenu.sidr{
+	    width:100%;
+	}
+
+}
+
+body:not(.sidemenu-open) .responsive-sidemenu-open,
+body.sidemenu-open .responsive-sidemenu-close{
+	display:block;
+}
+
+body.sidemenu-open .responsive-sidemenu-open,
+body:not(.sidemenu-open) .responsive-sidemenu-close{
+	display:none;
+}
+
+/* LARGE DESKTOP PART */
+@media screen and (min-width:1200px){
+}
+
+/* DESKTOP PART */
+@media screen and (min-width:992px) and (max-width:1199px){
+}
+
+/* TABLET LANDSCAPE PART */
+@media screen and (min-width:768px) and (max-width:991px){
+
+	body[data-header-style="header-style-three"] #page,
+	body[data-header-style="header-style-three"] .wraper_footer{
+		margin-left:0;
+	}
+
+	/* wraper_header_main */
+
+	body[data-header-style="header-style-three"] .wraper_header_main{
+		position:absolute;
+	    width:100%;
+	    max-width:280px;
+	}
+
+}
+
+/* TABLET PROTRAIT PART */
+@media screen and (min-width:480px) and (max-width:767px){
+
+	body[data-header-style="header-style-three"] #page,
+	body[data-header-style="header-style-three"] .wraper_footer{
+		margin-left:0;
+	}
+
+	/* wraper_header_main */
+
+	body[data-header-style="header-style-three"] .wraper_header_main{
+		position:absolute;
+	    width:100%;
+	    max-width:280px;
+	}
+
+}
+
+/* SMART PHONE LANDSCAPE PART */
+@media screen and (min-width:321px) and (max-width:479px){
+
+	body[data-header-style="header-style-three"] #page,
+	body[data-header-style="header-style-three"] .wraper_footer{
+		margin-left:0;
+	}
+
+	/* wraper_header_main */
+
+	body[data-header-style="header-style-three"] .wraper_header_main{
+		position:absolute;
+	    width:100%;
+	    max-width:280px;
+	}
+
+}
+
+/* SMART PHONE PROTRAIT PART */
+@media screen and (max-width:320px){
+
+	body[data-header-style="header-style-three"] #page,
+	body[data-header-style="header-style-three"] .wraper_footer{
+		margin-left:0;
+	}
+
+	/* wraper_header_main */
+
+	body[data-header-style="header-style-three"] .wraper_header_main{
+		position:absolute;
+	    width:100%;
+	    max-width:280px;
+	}
+
+}

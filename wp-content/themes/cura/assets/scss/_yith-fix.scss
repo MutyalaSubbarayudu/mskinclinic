@@ -1,0 +1,66 @@
+/*--------------------------------------------------------------
+# YITH Fix
+--------------------------------------------------------------*/
+
+#yith-quick-view-modal{
+
+	> .yith-wcqv-wrapper{
+		width:100%;
+		max-width:800px;
+
+		> .yith-wcqv-main{
+
+			> .yith-wcqv-head{
+
+				> .yith-wcqv-close{
+					width:30px;
+					height:30px;
+					border:1px rgba(0,0,0,0.5) solid;
+					border-radius:50%;
+					text-align:center;
+					font-weight:400;
+					font-size:0;
+					color:rgba(0,0,0,0.5);
+					line-height:28px;
+
+					&:before{
+						font-family:'themify';
+						content:"\e646";
+						font-size:14px;
+					}
+
+				}
+
+			}
+
+			#yith-quick-view-content{
+
+				.images{
+					width:50%;
+					margin-bottom:0;
+				}
+
+				.summary{
+					width:50%;
+					padding:30px 15px 30px 15px;
+
+					.quantity{
+						margin-top:0 !important;
+
+						> .qty{
+							width:50px;
+							height:43px;
+							border:1px #d8dada solid;
+						}
+
+					}
+
+				}
+
+			}
+
+		}
+
+	}
+
+}

@@ -1,0 +1,97 @@
+﻿/* radiantthemes-blockquote element-one */
+
+.radiantthemes-blockquote.element-one{
+
+	> blockquote{
+		text-align:center;
+
+		> *:last-child{
+			margin-bottom:0 !important;
+		}
+
+		> i.fa{
+			display:block;
+			margin-bottom:20px;
+			font-size:80px;
+			color:#e7e9ef;
+			line-height:80px;
+		}
+
+		cite{
+			display:block;
+			margin-top:20px;
+			font-weight:500;
+			font-size:13px;
+			color:#2f2f2f;
+			line-height:25px;
+			font-style:normal;
+		}
+
+	}
+
+}
+
+/* radiantthemes-blockquote element-two */
+
+.radiantthemes-blockquote.element-two{
+
+	> blockquote{
+		font-weight:500;
+
+		> *:last-child{
+			margin-bottom:0 !important;
+		}
+
+		> i.fa{
+			display:none;
+		}
+
+		cite{
+			display:block;
+			margin-top:20px;
+			font-weight:400;
+			font-size:14px;
+			color:#2f2f2f;
+			line-height:25px;
+			font-style:normal;
+		}
+
+	}
+
+}
+
+/* radiantthemes-blockquote element-three */
+
+.radiantthemes-blockquote.element-three{
+
+	> blockquote{
+		position:relative;
+		padding-left:65px;
+
+		> *:last-child{
+			margin-bottom:0 !important;
+		}
+
+		> i.fa{
+			position:absolute;
+			top:4px;
+			left:0;
+			z-index:1;
+			font-size:45px;
+			color:#5d5e64;
+			line-height:45px;
+		}
+
+		cite{
+			display:block;
+			margin-top:20px;
+			font-weight:500;
+			font-size:13px;
+			color:#2f2f2f;
+			line-height:25px;
+			font-style:normal;
+		}
+
+	}
+
+}

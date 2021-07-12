@@ -1,0 +1,9 @@
+2020-10-16T14:21:01+00:00 CRITICAL Uncaught Error: Call to undefined function RadiantthemesAddons\Widgets\setPostViews() in /home/cura.radiantthemes.com/public_html/wp-content/plugins/radiantthemes-addons/widgets/blog/class-radiantthemes-style-blog.php:862
+Stack trace:
+#0 /home/cura.radiantthemes.com/public_html/wp-content/plugins/elementor/includes/base/widget-base.php(530): RadiantthemesAddons\Widgets\Radiantthemes_Style_Blog->render()
+#1 /home/cura.radiantthemes.com/public_html/wp-content/plugins/elementor/includes/base/widget-base.php(660): Elementor\Widget_Base->render_content()
+#2 /home/cura.radiantthemes.com/public_html/wp-content/plugins/elementor/includes/base/element-base.php(644): Elementor\Widget_Base->_print_content()
+#3 /home/cura.radiantthemes.com/public_html/wp-content/plugins/elementor/includes/base/element-base.php(864): Elementor\Element_Base->print_element()
+#4 /home/cura.radiantthemes.com/public_html/wp-content/plugins/elementor/includes/base/element-base.php(644): Elementor\Element_Base->_print_content()
+#5 /home/cura.rad in /home/cura.radiantthemes.com/public_html/wp-content/plugins/radiantthemes-addons/widgets/blog/class-radiantthemes-style-blog.php on line 862
+

@@ -1,0 +1,307 @@
+﻿/*--------------------------------------------------------------
+# Header
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+# Header Style Seventeen
+--------------------------------------------------------------*/
+
+/* wraper_header */
+
+.wraper_header.style-seventeen{
+	position:absolute;
+	z-index:999;
+    width:100%;
+    direction:initial;
+
+	/* wraper_header_main */
+
+	.wraper_header_main{
+	    width:100%;
+	    overflow:hidden;
+
+	    &.radiantthemes-sticky-style-two{
+
+	    	&.delayed-sticky-mode{
+		    	transform:translateY(-100%);
+		    	-webkit-transform:translateY(-100%);
+		    }
+
+		    &.delayed-sticky-mode-acivate{
+		    	position:fixed;
+		    	transition:all 0.4s ease-in-out;
+		    	-webkit-transition:all 0.4s ease-in-out;
+		    }
+
+		    &.i-am-delayed-sticky{
+		    	transform:translateY(0);
+		    	-webkit-transform:translateY(0);
+		    	box-shadow:0px 0px 20px rgba(0,0,0,0.075);
+
+		    }
+
+	    }
+
+		> .container{
+			padding-top:25px;
+			padding-bottom:25px;
+		}
+
+		.header_main{
+			position:relative;
+
+			.brand-logo{
+			    float:left;
+			    text-align:center;
+			    font-size:0;
+
+			    img{
+			    	max-width:110px;
+				}
+
+			}
+
+		}
+
+		.header-slideout-menu{
+			width:45px;
+			height:45px;
+			float:right;
+			margin-top:0;
+			padding:12px 10px 0 10px;
+			border-radius:50%;
+			text-align:center;
+			cursor:pointer;
+			transition-property:all;
+			transition-duration:0.4s;
+			transition-timing-function:ease-in-out;
+			transition-delay:0s;
+
+			> .header-slideout-menu-line{
+				height:2px;
+				float:right;
+				margin-bottom:7px;
+				background-color:#fff;
+				transition-property:all;
+				transition-duration:0.4s;
+				transition-timing-function:ease-in-out;
+
+				&:nth-child(1){
+					width:100%;
+					transition-delay:0s;
+				}
+
+				&:nth-child(2){
+					width:75%;
+					transition-delay:0.3s;
+				}
+
+				&:nth-child(3){
+					width:50%;
+					transition-delay:0.6s;
+				}
+
+			}
+
+			&:hover > .header-slideout-menu-line:nth-child(1){
+				width:50%;
+			}
+
+			&:hover > .header-slideout-menu-line:nth-child(2){
+				width:100%;
+			}
+
+		}
+
+	}
+
+	.is-sticky .wraper_header_main{
+		box-shadow:0px 0px 10px rgba(0,0,0,0.2);
+	}
+
+}
+
+body[data-header-style="header-style-seventeen"]{
+
+	/* wraper_slideout_menu */
+
+	.wraper_slideout_menu{
+		position:fixed;
+		top:0;
+		bottom:0;
+		right:0;
+		z-index:999;
+		width:100%;
+		max-width:500px;
+		overflow:auto;
+		transform:translateX(100%);
+		-webkit-transform:translateX(100%);
+		transition:all 0.4s ease-in-out;
+		-webkit-transition:all 0.4s ease-in-out;
+
+		> .slideout-menu-overlay{
+			position:relative;
+			height:100%;
+			display:flex;
+			align-items:center;
+			padding:25px;
+
+			> .slideout-menu-close{
+				position:absolute;
+				top:0;
+				right:0;
+				z-index:2;
+				padding:20px;
+				text-align:center;
+				cursor:pointer;
+				font-size:25px;
+				color:#fff;
+				line-height:1;
+			}
+
+			> .slideout-menu{
+				width:100%;
+
+				/* NAV */
+
+				> .slideout-menu-nav{
+					visibility:unset !important;
+					text-align:left;
+
+					> [class*='menu-'] > ul.menu{
+
+						> li,
+						> li > ul > li,
+						> li > ul > li > ul > li,
+						> li > ul > li > ul > li > ul > li,
+						> li > ul > li > ul > li > ul > li > ul li{
+							position:relative;
+							width:100%;
+							margin-bottom:20px;
+						}
+
+						> li{
+							padding-left:30px;
+
+							&:before{
+								position:absolute;
+								top:calc(50% - 1px);
+								left:0;
+								right:0;
+								content:" ";
+								z-index:0;
+								width:0;
+								height:2px;
+								background-color:rgba(255,255,255,0.15);
+								transition:all 0.7s ease-in-out;
+								-webkit-transition:all 0.7s ease-in-out;
+							}
+
+							&:hover:before{
+							    width:100%;
+							}
+
+						}
+
+						> li > a,
+						> li > ul > li > a,
+						> li > ul > li > ul > li > a,
+						> li > ul > li > ul > li > ul > li > a,
+						> li > ul > li > ul > li > ul > li > ul li a{
+							position:relative;
+							display:inline-block;
+							vertical-align:top;
+							color:inherit;
+						}
+
+						> li > a{
+							padding-left:30px;
+							padding-right:30px;
+						}
+
+						> li.current-menu-item > a,
+						> li.current-menu-parent > a,
+						> li > ul > li.current-menu-item > a,
+						> li > ul > li.current-menu-parent > a,
+						> li > ul > li > ul > li.current-menu-item > a,
+						> li > ul > li > ul > li.current-menu-parent > a{
+						}
+
+						> li > ul,
+						> li > ul > li > ul,
+						> li > ul > li > ul > li > ul,
+						> li > ul > li > ul > li > ul > li > ul{
+							display:none;
+							margin-top:15px;
+						}
+
+						> li > ul > li,
+						> li > ul > li > ul > li,
+						> li > ul > li > ul > li > ul > li,
+						> li > ul > li > ul > li > ul > li > ul li{
+							margin-bottom:15px;
+						}
+
+						> li > ul > li > a,
+						> li > ul > li > ul > li > a,
+						> li > ul > li > ul > li > ul > li > a,
+						> li > ul > li > ul > li > ul > li > ul li a{
+							display:block;
+							font-weight:500;
+							font-size:15px;
+							line-height:23px;
+							opacity:0.85;
+						}
+
+						> li > ul > li > ul > li > a{
+							padding-left:35px;
+						}
+
+						> li > ul > li > ul > li > ul > li > a{
+							padding-left:45px;
+						}
+
+						> li > ul > li > ul > li > ul > li > ul li a{
+							padding-left:55px;
+						}
+
+					}
+
+				}
+
+			}
+
+		}
+
+	}
+
+	&.slideout-menu-active .wraper_slideout_menu{
+		transform:translateX(0);
+		-webkit-transform:translateX(0);
+	}
+
+}
+
+/* LARGE DESKTOP PART */
+@media screen and (min-width:1200px){
+}
+
+/* DESKTOP PART */
+@media screen and (min-width:992px) and (max-width:1199px){
+}
+
+/* TABLET LANDSCAPE PART */
+@media screen and (min-width:768px) and (max-width:991px){
+}
+
+/* TABLET PROTRAIT PART */
+@media screen and (min-width:480px) and (max-width:767px){
+}
+
+/* SMART PHONE LANDSCAPE PART */
+@media screen and (min-width:321px) and (max-width:479px){
+}
+
+/* SMART PHONE PROTRAIT PART */
+@media screen and (max-width:320px){
+}

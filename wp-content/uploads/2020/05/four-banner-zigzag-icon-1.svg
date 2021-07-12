@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0" y="0" width="100" height="100" viewBox="0 0 960 560" enable-background="new 0 0 960 560" xml:space="preserve">
+	<style>
+		.zigzag {
+  			stroke-dasharray: 1000;
+  			stroke-dashoffset: -1000;
+  			animation: dash 5s ease-out forwards infinite;
+ 			animation-direction: alternate-reverse;
+ 			transform: rotate(-20deg);
+		}
+
+	@keyframes dash {
+  		to {
+    		stroke-dashoffset: 1200;
+  		}
+	}
+
+	</style>
+  <polyline class="zigzag" fill="none" stroke="#FFE289" stroke-width="75" stroke-miterlimit="10" points="902 245.5 762.5 141.5 623.01 245.5 483.51 141.5 344.01 245.5 204.5 141.5 65 245.5 "/>
+</svg>

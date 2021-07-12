@@ -1,0 +1,146 @@
+/*--------------------------------------------------------------
+# Maintenance Mode Page
+--------------------------------------------------------------*/
+
+/* wraper_maintenance_main */
+
+.wraper_maintenance_main{
+	position:absolute;
+	top:0;
+	right:0;
+	bottom:0;
+	left:0;
+	z-index:1;
+}
+
+.wraper_maintenance_main > .table{
+	display:table;
+	table-layout:fixed;
+	width:100%;
+	height:100%;
+	margin:0;
+}
+
+.wraper_maintenance_main > .table > .table-cell{
+	display:table-cell;
+	width:100%;
+	height:100%;
+	padding:40px;
+	vertical-align:middle;
+}
+
+.wraper_maintenance_main > .table > .table-cell .container{
+	padding-top:40px;
+	padding-bottom:0;
+}
+
+.maintenance_main{
+}
+
+.maintenance_main_item{
+	margin-bottom:40px;
+}
+
+.maintenance_main_item > *:last-child{
+	margin-bottom:0 !important;
+}
+
+/*--------------------------------------------------------------
+# Maintenance Mode Style One
+--------------------------------------------------------------*/
+
+.wraper_maintenance_main.style-one{
+	background-repeat:no-repeat;
+	background-position:calc(50% + 200px) center;
+}
+
+.wraper_maintenance_main.style-one .maintenance_main_item h1{
+	margin-bottom:20px;
+	font-weight:500;
+	font-size:22px;
+	color:#1a1a1a;
+	line-height:32px;
+}
+
+.wraper_maintenance_main.style-one .maintenance_main_item h1 strong{
+	display:block;
+	margin-top:8px;
+	font-weight:700;
+	font-size:65px;
+	line-height:70px;
+}
+
+.wraper_maintenance_main.style-one .maintenance_main_item h2{
+	margin-bottom:20px;
+	font-weight:500;
+	font-size:18px;
+	line-height:40px;
+}
+
+/*--------------------------------------------------------------
+# Maintenance Mode Style Two
+--------------------------------------------------------------*/
+
+.wraper_maintenance_main.style-two{
+	background-repeat:no-repeat;
+	background-position:calc(50% + 250px) center;
+}
+
+.wraper_maintenance_main.style-two .maintenance_main_item h1{
+	margin-bottom:20px;
+	font-weight:600;
+	font-size:40px;
+	color:#1a1a1a;
+	line-height:50px;
+}
+
+.wraper_maintenance_main.style-two .maintenance_main_item h1 strong{
+	display:block;
+	font-weight:700;
+	font-size:65px;
+	line-height:70px;
+}
+
+.wraper_maintenance_main.style-two .maintenance_main_item h2{
+	margin-bottom:20px;
+	text-transform:uppercase;
+	font-weight:500;
+	font-size:18px;
+	color:#1a1a1a;
+	line-height:40px;
+}
+
+/*--------------------------------------------------------------
+# Maintenance Mode Style Three
+--------------------------------------------------------------*/
+
+.wraper_maintenance_main.style-three{
+	background-repeat:no-repeat;
+	background-position:calc(50% + 200px) bottom;
+	background-size:500px auto;
+}
+
+.wraper_maintenance_main.style-three .maintenance_main_item h1{
+	margin-bottom:20px;
+	font-weight:500;
+	font-size:25px;
+	color:#1a1a1a;
+	line-height:35px;
+}
+
+.wraper_maintenance_main.style-three .maintenance_main_item h1 strong{
+	display:block;
+	margin-top:7px;
+	font-weight:700;
+	font-size:70px;
+	line-height:75px;
+}
+
+.wraper_maintenance_main.style-three .maintenance_main_item h2{
+	margin-bottom:20px;
+	text-transform:uppercase;
+	font-weight:500;
+	font-size:20px;
+	color:#1a1a1a;
+	line-height:30px;
+}

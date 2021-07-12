@@ -1,0 +1,76 @@
+/* rt-flip-box element-one */
+
+.rt-flip-box.element-one{
+}
+
+.rt-flip-box.element-one > .holder{
+    position:relative;
+}
+
+.rt-flip-box.element-one > .holder .front,
+.rt-flip-box.element-one > .holder .backY{
+    width:100%;
+}
+
+.rt-flip-box.element-one > .holder .first-card,
+.rt-flip-box.element-one > .holder .second-card{
+    position:relative;
+    display:flex;
+    align-items:center;
+    box-shadow:0px 0px 20px rgba(0,0,0,0.1);
+    text-align:center;
+}
+
+.rt-flip-box.element-one > .holder > .second-card{
+    position:absolute !important;
+    top:0;
+}
+
+.rt-flip-box.element-one > .holder .first-card > .first-card-main,
+.rt-flip-box.element-one > .holder .second-card > .second-card-main{
+    width:100%;
+}
+
+.rt-flip-box.element-one > .holder .first-card img,
+.rt-flip-box.element-one > .holder .second-card img{
+    margin-bottom:15px;
+}
+
+.rt-flip-box.element-one > .holder .first-card h4,
+.rt-flip-box.element-one > .holder .second-card h4{
+    margin-bottom:12px;
+    font-weight:600;
+    font-size:18px;
+    color:#000;
+    line-height:28px;
+}
+
+.rt-flip-box.element-one > .holder .second-card h4{
+    color:#fff;
+}
+
+.rt-flip-box.element-one > .holder .first-card p,
+.rt-flip-box.element-one > .holder .second-card p{
+    margin-bottom:15px;
+    font-weight:400;
+    font-size:15px;
+    line-height:26px;
+}
+
+.rt-flip-box.element-one > .holder .second-card p{
+    color:#fff;
+}
+
+.rt-flip-box.element-one > .holder .second-card .btn{
+    margin-bottom:0;
+    padding:0;
+    background-color:initial;
+    border:none;
+    font-weight:500;
+    font-size:14px;
+    color:#fff;
+}
+
+.rt-flip-box.element-one > .holder .second-card .btn i{
+    margin-left:8px;
+}

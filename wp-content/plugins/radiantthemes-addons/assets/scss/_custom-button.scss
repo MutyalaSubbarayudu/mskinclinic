@@ -1,0 +1,359 @@
+/* ================================== */
+/* RadiantThemes Custom Button CSS */
+/* TABLE OF INDEX */
+/* ================================== */
+/* ==================================
+# Main CSS
+	## Style One
+	## Style Two
+	## Style Three
+	## Hover Style One
+	## Hover Style Two
+	## Hover Style Three
+	## Hover Style Four
+	## Hover Style Five
+	## Hover Style Six
+	## Hover Style Seven
+================================== */
+
+/* ==================================
+# Main CSS
+================================== */
+
+/* ==================================
+# Style One
+================================== */
+
+.radiantthemes-custom-button.element-one{
+	width:100%;
+
+	&[data-button-direction=left]{
+		text-align:left;
+	}
+
+	&[data-button-direction=center]{
+		text-align:center;
+	}
+
+	&[data-button-direction=right]{
+		text-align:right;
+	}
+
+	.radiantthemes-custom-button-main{
+		position:relative;
+		display:inline-block;
+		vertical-align:top;
+		text-align:center;
+		transition:all 0.3s ease-in-out !important;
+		-webkit-transition:all 0.3s ease-in-out !important;
+
+		> .placeholder{
+			position:relative;
+		}
+
+		i{
+			transition:margin 0.3s ease-in-out, opacity 0.3s ease-in-out;
+			-webkit-transition:margin 0.3s ease-in-out, opacity 0.3s ease-in-out;
+		}
+
+	}
+
+	&[data-button-fullwidth=true] .radiantthemes-custom-button-main{
+		width:100%;
+	}
+
+	&[class*='hover-style-'] .radiantthemes-custom-button-main > .overlay{
+		position:absolute;
+		z-index:0;
+		content:" ";
+	}
+
+	&[data-button-icon-position=left] .radiantthemes-custom-button-main i{
+		margin-right:10px;
+	}
+
+	&[data-button-icon-position=right] .radiantthemes-custom-button-main i{
+		margin-left:10px;
+	}
+
+}
+
+/* ==================================
+# Style Two
+================================== */
+
+.radiantthemes-custom-button.element-two{
+	width:100%;
+
+	&[data-button-direction=left]{
+		text-align:left;
+	}
+
+	&[data-button-direction=center]{
+		text-align:center;
+	}
+
+	&[data-button-direction=right]{
+		text-align:right;
+	}
+
+	.radiantthemes-custom-button-main{
+		position:relative;
+		display:inline-block;
+		vertical-align:top;
+		text-align:center;
+		transform:skewX(15deg);
+		-webkit-transform:skewX(15deg);
+		transition:all 0.3s ease-in-out !important;
+		-webkit-transition:all 0.3s ease-in-out !important;
+
+		> .placeholder{
+			position:relative;
+			transform:skewX(-15deg);
+			-webkit-transform:skewX(-15deg);
+		}
+
+		i{
+			transition:margin 0.3s ease-in-out, opacity 0.3s ease-in-out;
+			-webkit-transition:margin 0.3s ease-in-out, opacity 0.3s ease-in-out;
+		}
+
+	}
+
+	&[data-button-fullwidth=true] .radiantthemes-custom-button-main{
+		width:100%;
+	}
+
+	&[class*='hover-style-'] .radiantthemes-custom-button-main > .overlay{
+		position:absolute;
+		z-index:0;
+		content:" ";
+	}
+
+	&[data-button-icon-position=left] .radiantthemes-custom-button-main i{
+		margin-right:10px;
+	}
+
+	&[data-button-icon-position=right] .radiantthemes-custom-button-main i{
+		margin-left:10px;
+	}
+
+}
+
+/* ==================================
+# Style Three
+================================== */
+
+.radiantthemes-custom-button.element-three{
+	width:100%;
+
+	&[data-button-direction=left]{
+		text-align:left;
+	}
+
+	&[data-button-direction=center]{
+		text-align:center;
+	}
+
+	&[data-button-direction=right]{
+		text-align:right;
+	}
+
+	.radiantthemes-custom-button-main{
+		position:relative;
+		display:inline-block;
+		vertical-align:top;
+		text-align:center;
+		transform:skewX(-15deg);
+		-webkit-transform:skewX(-15deg);
+		transition:all 0.3s ease-in-out !important;
+		-webkit-transition:all 0.3s ease-in-out !important;
+
+		> .placeholder{
+			position:relative;
+			transform:skewX(15deg);
+			-webkit-transform:skewX(15deg);
+		}
+
+		i{
+			transition:margin 0.3s ease-in-out, opacity 0.3s ease-in-out;
+			-webkit-transition:margin 0.3s ease-in-out, opacity 0.3s ease-in-out;
+		}
+
+	}
+
+	&[data-button-fullwidth=true] .radiantthemes-custom-button-main{
+		width:100%;
+	}
+
+	&[class*='hover-style-'] .radiantthemes-custom-button-main > .overlay{
+		position:absolute;
+		z-index:0;
+		content:" ";
+	}
+
+	&[data-button-icon-position=left] .radiantthemes-custom-button-main i{
+		margin-right:10px;
+	}
+
+	&[data-button-icon-position=right] .radiantthemes-custom-button-main i{
+		margin-left:10px;
+	}
+
+}
+
+/* ==================================
+## Hover Style One
+================================== */
+
+/* ==================================
+## Hover Style Two
+================================== */
+
+.radiantthemes-custom-button.hover-style-two .radiantthemes-custom-button-main{
+	overflow:hidden;
+}
+
+.radiantthemes-custom-button.hover-style-two .radiantthemes-custom-button-main > .overlay{
+	top:0;
+	right:0;
+	bottom:0;
+	left:0;
+	width:0;
+	border-radius:inherit;
+	transition:width 0.3s ease-in-out;
+	-webkit-transition:width 0.3s ease-in-out;
+}
+
+.radiantthemes-custom-button.hover-style-two .radiantthemes-custom-button-main:hover > .overlay{
+	width:100%;
+}
+
+/* ==================================
+## Hover Style Three
+================================== */
+
+.radiantthemes-custom-button.hover-style-three .radiantthemes-custom-button-main > .overlay{
+	top:0;
+	right:0;
+	bottom:0;
+	left:0;
+	border-radius:inherit;
+	opacity:0;
+	visibility:hidden;
+	transform:scale(0);
+	-webkit-transform:scale(0);
+	transition:all 0.3s ease-in-out;
+	-webkit-transition:all 0.3s ease-in-out;
+}
+
+.radiantthemes-custom-button.hover-style-three .radiantthemes-custom-button-main:hover > .overlay{
+	opacity:1;
+	visibility:visible;
+	transform:scale(1);
+	-webkit-transform:scale(1);
+}
+
+/* ==================================
+## Hover Style Four
+================================== */
+
+.radiantthemes-custom-button.hover-style-four .radiantthemes-custom-button-main i{
+	opacity:0;
+	visibility:hidden;
+}
+
+.radiantthemes-custom-button.hover-style-four .radiantthemes-custom-button-main:hover i{
+	opacity:1;
+	visibility:visible;
+}
+
+.radiantthemes-custom-button[data-button-icon-position=left].hover-style-four .radiantthemes-custom-button-main i{
+	margin-right:-3px;
+}
+
+.radiantthemes-custom-button[data-button-icon-position=left].hover-style-four .radiantthemes-custom-button-main:hover i{
+	margin-right:10px;
+}
+
+.radiantthemes-custom-button[data-button-icon-position=right].hover-style-four .radiantthemes-custom-button-main i{
+	margin-left:-3px;
+}
+
+.radiantthemes-custom-button[data-button-icon-position=right].hover-style-four .radiantthemes-custom-button-main:hover i{
+	margin-left:10px;
+}
+
+/* ==================================
+## Hover Style Five
+================================== */
+
+.radiantthemes-custom-button.hover-style-five .radiantthemes-custom-button-main{
+
+	&:hover{
+		box-shadow:0px 8px 25px rgba(0,0,0,0.25);
+		transform:translateY(-5px);
+		-webkit-transform:translateY(-5px);
+	}
+
+}
+
+/* ==================================
+## Hover Style Six
+================================== */
+
+.radiantthemes-custom-button.hover-style-six .radiantthemes-custom-button-main{
+	backface-visibility:hidden;
+
+	&:hover{
+		animation-name:ButtonHoverSixHorizontalShake;
+		animation-duration:1s;
+		animation-timing-function:ease-in-out;
+		animation-iteration-count:1;
+	}
+
+}
+
+@keyframes ButtonHoverSixHorizontalShake{
+
+	16.65%{
+		transform:translateX(8px);
+	}
+
+	33.3%{
+		transform:translateX(-6px);
+	}
+
+	49.95%{
+		transform:translateX(4px);
+	}
+
+	66.6%{
+		transform:translateX(-2px);
+	}
+
+	83.25%{
+		transform:translateX(1px);
+	}
+
+	100%{
+		transform:translateX(0);
+	}
+
+}
+
+/* ==================================
+## Hover Style Seven
+================================== */
+
+.radiantthemes-custom-button.hover-style-seven .radiantthemes-custom-button-main{
+	backface-visibility:hidden;
+
+	&:hover{
+		box-shadow:0 10px 10px -10px rgba(0,0,0,0.5);
+		transform:scale(1.1);
+		-webkit-transform:scale(1.1);
+
+	}
+
+}

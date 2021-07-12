@@ -1,0 +1,196 @@
+/*--------------------------------------------------------------
+# 404 Error Page
+--------------------------------------------------------------*/
+
+/* wraper_error_main */
+
+.wraper_error_main{
+	width:100%;
+}
+
+/*--------------------------------------------------------------
+# 404 Error Style One
+--------------------------------------------------------------*/
+
+.wraper_error_main.style-one{
+
+	> .container{
+		padding-top:100px;
+		padding-bottom:130px;
+	}
+
+	.error_main{
+		text-align:center;
+
+		> *:last-child{
+			margin-bottom:0 !important;
+		}
+
+		.radiantthemes-counterup{
+			margin-bottom:20px;
+			text-align:center;
+			font-weight:700;
+			font-size:250px;
+			color:#181818;
+			line-height:0.7;
+		}
+
+		h1{
+			margin-bottom:15px;
+			font-weight:700;
+			font-size:30px;
+			color:#181818;
+			line-height:35px;
+			letter-spacing:-1px;
+		}
+
+		h2{
+			margin-bottom:30px;
+			font-weight:400;
+			font-size:16px;
+			color:#737373;
+			line-height:26px;
+		}
+
+		.btn{
+			padding:17px 35px 17px 35px !important;
+			background-color:#7b3cfb !important;
+			border:none !important;
+			text-transform:none !important;
+			font-weight:500 !important;
+			font-size:16px !important;
+			transition:all 0.3s ease-in-out !important;
+			-webkit-transition:all 0.3s ease-in-out !important;
+
+			&:hover{
+				background-color:#661df9 !important;
+			}
+
+			> span{
+				display:inline-block;
+				vertical-align:top;
+				margin-top:3px;
+				margin-right:10px;
+			}
+
+		}
+
+	}
+
+}
+
+/*--------------------------------------------------------------
+# 404 Error Style Two
+--------------------------------------------------------------*/
+
+.wraper_error_main.style-two > .container{
+	padding-top:200px;
+	padding-bottom:200px;
+}
+
+.wraper_error_main.style-two .error_main{
+	text-align:center;
+}
+
+.wraper_error_main.style-two .error_main > *:last-child{
+	margin-bottom:0 !important;
+}
+
+.wraper_error_main.style-two .error_main img{
+	margin-bottom:30px;
+}
+
+.wraper_error_main.style-two .error_main h1{
+	margin-bottom:30px;
+	font-weight:400;
+	font-size:30px;
+	color:#1a1a1a;
+	line-height:40px;
+}
+
+.wraper_error_main.style-two .error_main .btn{
+	transition:all 0.3s ease-in-out !important;
+	-webkit-transition:all 0.3s ease-in-out !important;
+}
+
+/*--------------------------------------------------------------
+# 404 Error Style Three
+--------------------------------------------------------------*/
+
+.wraper_error_main.style-three > .container{
+	padding-top:200px;
+	padding-bottom:160px;
+}
+
+.wraper_error_main.style-three .error_main{
+}
+
+.wraper_error_main.style-three .error_main_item{
+	margin-bottom:40px;
+}
+
+.wraper_error_main.style-three .error_main_item > *:last-child{
+	margin-bottom:0 !important;
+}
+
+.wraper_error_main.style-three .error_main_item img{
+	width:400px;
+	margin-bottom:10px;
+}
+
+.wraper_error_main.style-three .error_main_item h1{
+	margin-bottom:20px;
+	font-weight:700;
+	font-size:80px;
+	color:#242c31;
+	line-height:90px;
+}
+
+.wraper_error_main.style-three .error_main_item h2{
+	margin-bottom:30px;
+	font-weight:400;
+	font-size:20px;
+	color:#1a1a1a;
+	line-height:30px;
+}
+
+.wraper_error_main.style-three .error_main_item .btn{
+	transition:all 0.3s ease-in-out !important;
+	-webkit-transition:all 0.3s ease-in-out !important;
+}
+
+/*--------------------------------------------------------------
+# 404 Error Style Four
+--------------------------------------------------------------*/
+
+.wraper_error_main.style-four > .container{
+	padding-top:150px;
+	padding-bottom:200px;
+}
+
+.wraper_error_main.style-four .error_main{
+	text-align:center;
+}
+
+.wraper_error_main.style-four .error_main > *:last-child{
+	margin-bottom:0 !important;
+}
+
+.wraper_error_main.style-four .error_main img{
+	width:500px;
+	margin-bottom:25px;
+}
+
+.wraper_error_main.style-four .error_main h1{
+	margin-bottom:35px;
+	text-transform:uppercase;
+	font-weight:700;
+	font-size:30px;
+	color:#1a1a1a;
+	line-height:40px;
+}
+
+.wraper_error_main.style-four .error_main .btn{
+	transition:all 0.3s ease-in-out !important;
+	-webkit-transition:all 0.3s ease-in-out !important;
+}

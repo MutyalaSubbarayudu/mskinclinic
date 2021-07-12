@@ -1,0 +1,4 @@
+2020-10-01T07:52:22+00:00 CRITICAL require(): Failed opening required 'template/template-portfolio-element-twelve.php' (include_path='.:') in /home/cura.radiantthemes.com/public_html/wp-content/plugins/radiantthemes-addons/widgets/portfolio/class-radiantthemes-style-portfolio.php on line 504
+
+2020-10-01T08:26:21+00:00 CRITICAL require(): Failed opening required 'template/template-portfolio-element-twelve.php' (include_path='.:') in /home/cura.radiantthemes.com/public_html/wp-content/plugins/radiantthemes-addons/widgets/portfolio/class-radiantthemes-style-portfolio.php on line 504
+

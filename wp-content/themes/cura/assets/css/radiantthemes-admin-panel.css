@@ -1,0 +1,299 @@
+/*--------------------------------------------------------------
+>>> Radiantthemes Admin Panel
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+# Radiantthemes Activator
+# Radiantthemes Activator Sidebar
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+# Radiantthemes Activator
+--------------------------------------------------------------*/
+
+.radiantthemes-activator,
+.radiantthemes-activator *{
+    box-sizing:border-box;
+}
+
+.radiantthemes-activator{
+    padding-top:20px;
+    padding-right:20px;
+}
+
+.radiantthemes-activator a,
+.radiantthemes-activator a:focus,
+.radiantthemes-activator a:hover,
+.radiantthemes-activator a:active{
+    color:#01a89e;
+    text-decoration:none;
+    outline:none;
+}
+
+/*--------------------------------------------------------------
+# Radiantthemes Activator Main
+--------------------------------------------------------------*/
+
+.radiantthemes-activator-main{
+    width:calc(100% - 320px);
+    float:left;
+    margin-bottom:30px;
+}
+
+.radiantthemes-activator-main > *:last-child{
+    margin-bottom:0 !important;
+}
+
+.radiantthemes-content h1{
+    margin:0px 0px 10px 0px;
+    font-family:"Poppins", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+    font-weight:100;
+    font-size:36px;
+    color:#001545;
+    line-height:40px;
+}
+
+.radiantthemes-content h3{
+    margin:0px 0px 10px 0px;
+    font-family:"Poppins", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+    font-weight:600;
+    font-size:18px;
+    color:#343b4a;
+    line-height:32px;
+}
+
+.radiantthemes-content h4{
+    margin:0px 0px 12px 0px;
+    font-family:"Poppins", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+    font-weight:500;
+    font-size:15px;
+    color:#292f3b;
+    line-height:30px;
+}
+
+.radiantthemes-content p{
+    margin:0px 0px 15px 0px;
+}
+
+.radiantthemes-content ul{
+    margin:0px 0px 25px 0px;
+}
+
+.radiantthemes-content ul li{
+    position:relative;
+    margin-bottom:5px;
+    padding-left:20px;
+}
+
+.radiantthemes-content ul li:before{
+    position:absolute;
+    top:0;
+    left:-2px;
+    z-index:0;
+    content:"\f345";
+    font-family:"Dashicons";
+    color:#292f3b;
+}
+
+.radiantthemes-content hr{
+    margin:10px 0px 15px 0px;
+}
+
+.radiantthemes-content p,
+.radiantthemes-content ul li{
+    font-family:"Poppins", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+    font-weight:400;
+    font-size:15px;
+    color:#636363;
+    line-height:30px;
+}
+
+.radiantthemes-notice{
+    margin:0px 0px 20px 0px;
+    padding:17px 18px 0px 18px;
+    background-color:#fff;
+    border:1px rgba(0,0,0,0.1) solid;
+}
+
+.radiantthemes-table{
+    margin:0;
+}
+
+.radiantthemes-table > tbody > tr > td{
+    padding-bottom:3px;
+    font-family:"Poppins", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+    font-weight:400;
+    font-size:14px;
+    color:#676767;
+    line-height:28px;
+}
+
+.radiantthemes-table > tbody > tr > td p{
+    margin:0;
+    font-size:11px;
+    color:#838383;
+    line-height:22px;
+}
+
+.radiantthemes-table > tbody > tr > td .dashicons{
+    font-size:160%;
+}
+
+.radiantthemes-table > tbody > tr > td .dashicons.dashicons-yes{
+    color:#01a89e;
+}
+
+.radiantthemes-table > tbody > tr > td .dashicons.dashicons-no{
+    color:#ed2626;
+}
+
+.radiantthemes-resgiter-form{
+    margin:0px 0px 20px 0px;
+}
+
+.radiantthemes-resgiter-form .radiantthemes-resgiter-form-row{
+}
+
+.radiantthemes-resgiter-form .radiantthemes-resgiter-form-row input[type=text]{
+    width:100%;
+    max-width:400px;
+    height:40px;
+    padding:0px 12px 0px 12px;
+    background-color:#fff;
+    border:1px rgba(0,0,0,0.1) solid;
+    box-shadow:initial;
+    font-family:"Poppins", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+    font-weight:400;
+    font-size:15px;
+    color:#636363;
+    line-height:30px;
+    transition:all 0.3s ease-in-out;
+    -webkit-transition:all 0.3s ease-in-out;
+}
+
+.radiantthemes-resgiter-form .radiantthemes-resgiter-form-row input[type=text]:focus{
+    border-color:#01a89e;
+}
+
+.radiantthemes-resgiter-form .radiantthemes-resgiter-form-row button[type=submit]{
+    height:40px;
+    padding-left:25px;
+    padding-right:25px;
+    background-color:#01a89e;
+    border:none;
+    font-family:"Poppins", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+    font-weight:400;
+    font-size:15px;
+    color:#fff;
+    line-height:30px;
+    cursor:pointer;
+    transition:all 0.3s ease-in-out;
+    -webkit-transition:all 0.3s ease-in-out;
+}
+
+.radiantthemes-resgiter-form .radiantthemes-resgiter-form-row button[type=submit]:hover{
+    background-color:#3b4354;
+}
+
+.radiantthemes-resgiter-form .radiantthemes-resgiter-form-row button[type=submit] .dashicons{
+    vertical-align:top;
+    margin:4px 3px 0px -5px;
+}
+
+/*--------------------------------------------------------------
+# Radiantthemes Activator Sidebar
+--------------------------------------------------------------*/
+
+.radiantthemes-activator-sidebar{
+    width:300px;
+    float:right;
+    margin-bottom:30px;
+    padding:12px 15px 0px 15px;
+    background-color:#fff;
+    border:1px rgba(0,0,0,0.1) solid;
+}
+
+.radiantthemes-activator-sidebar hr{
+    margin-left:-15px;
+    margin-right:-15px;
+}
+
+/* LARGE DESKTOP PART */
+@media screen and (min-width:1200px){
+}
+
+/* DESKTOP PART */
+@media screen and (min-width:992px) and (max-width:1199px){
+}
+
+/* TABLET LANDSCAPE PART */
+@media screen and (min-width:768px) and (max-width:991px){
+}
+
+/* TABLET PROTRAIT PART */
+@media screen and (min-width:480px) and (max-width:767px){
+
+    /*--------------------------------------------------------------
+    # Radiantthemes Activator
+    --------------------------------------------------------------*/
+
+    .radiantthemes-activator{
+        padding-right:10px;
+    }
+    
+    /*--------------------------------------------------------------
+    # Radiantthemes Activator Main
+    --------------------------------------------------------------*/
+
+    .radiantthemes-activator-main,
+    .radiantthemes-activator-sidebar{
+        width:100%;
+        float:none;
+    }
+
+}
+
+/* SMART PHONE LANDSCAPE PART */
+@media screen and (min-width:321px) and (max-width:479px){
+
+    /*--------------------------------------------------------------
+    # Radiantthemes Activator
+    --------------------------------------------------------------*/
+
+    .radiantthemes-activator{
+        padding-right:10px;
+    }
+    
+    /*--------------------------------------------------------------
+    # Radiantthemes Activator Main
+    --------------------------------------------------------------*/
+
+    .radiantthemes-activator-main,
+    .radiantthemes-activator-sidebar{
+        width:100%;
+        float:none;
+    }
+
+}
+
+/* SMART PHONE PROTRAIT PART */
+@media screen and (max-width:320px){
+
+    /*--------------------------------------------------------------
+    # Radiantthemes Activator
+    --------------------------------------------------------------*/
+
+    .radiantthemes-activator{
+        padding-right:10px;
+    }
+    
+    /*--------------------------------------------------------------
+    # Radiantthemes Activator Main
+    --------------------------------------------------------------*/
+
+    .radiantthemes-activator-main,
+    .radiantthemes-activator-sidebar{
+        width:100%;
+        float:none;
+    }
+
+}

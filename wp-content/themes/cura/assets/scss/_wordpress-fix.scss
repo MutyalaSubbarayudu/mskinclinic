@@ -1,0 +1,92 @@
+/*--------------------------------------------------------------
+# WordPress Fix
+--------------------------------------------------------------*/
+
+#page{
+    word-wrap:break-word;
+}
+
+img.alignright,
+figure.alignright{
+	float:right;
+	margin:0px 0px 25px 15px;
+}
+
+img.alignleft,
+figure.alignleft{
+	float:left;
+	margin:0px 15px 25px 0px;
+}
+
+img.aligncenter,
+figure.aligncenter{
+	display:block;
+	margin-left:auto;
+	margin-right:auto;
+}
+
+.alignright{
+	float:right;
+}
+
+.alignleft{
+	float:left;
+}
+
+.aligncenter{
+	display:block;
+	margin-left:auto;
+	margin-right:auto;
+}
+
+.screen-reader-text{
+	display:none;
+}
+
+.wp-caption{
+	max-width:100%;
+}
+
+.wp-caption-text{
+	font-size:11px;
+	line-height:17px;
+	margin:0;
+	padding:4px 5px 5px 5px;
+}
+
+.comment-list .comment.bypostauthor{
+	list-style:none;
+}
+
+.edit-link{
+	display:none;
+	position:fixed;
+	bottom:0;
+	left:0;
+	right:0;
+	z-index:999;
+	padding:4px 15px 2px 15px;
+	opacity:0.9;
+	text-align:center;
+	text-transform:uppercase;
+	font-weight:400;
+	font-size:10px;
+	color:#fff;
+	line-height:17px;
+    letter-spacing:1px;
+    text-shadow:0px 2px 0px rgba(0,0,0,0.4);
+}
+
+.edit-link a{
+	margin-left:5px;
+	margin-right:5px;
+	color:inherit;
+	transition:all 0.3s ease-in-out;
+	-webkit-transition:all 0.3s ease-in-out;
+}
+
+.edit-link a:hover,
+.edit-link a:focus,
+.edit-link a:active{
+	color:inherit;
+}

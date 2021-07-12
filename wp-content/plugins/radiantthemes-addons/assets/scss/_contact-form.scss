@@ -1,0 +1,178 @@
+﻿/* radiant-contact-form element-one */
+
+.radiant-contact-form.element-one{
+
+	.row{
+		margin-right:0;
+		margin-left:0;
+
+		> [class*='col-']{
+			padding-right:0;
+			padding-left:0;
+		}
+
+	}
+
+	.form-row{
+
+		&.last{
+			margin:0;
+		}
+
+		&.button{
+			text-align:left;
+		}
+
+		> *:last-child{
+			margin-bottom:0 !important;
+		}
+
+		label{
+			font-weight:500;
+			font-size:14px;
+			margin-bottom:10px;
+		}
+
+		label span{
+			color:#bf0000;
+		}
+
+		input[type=text],
+		input[type=email],
+		input[type=url],
+		input[type=tel],
+		input[type=number],
+		input[type=password],
+		input[type=date],
+		input[type=time],
+		input[type=file],
+		select,
+		textarea{
+			width:100%;
+			font-size:14px;
+			resize:none;
+			appearance:none;
+			transition:all 0.3s ease-in-out;
+			-webkit-transition:all 0.3s ease-in-out;
+		}
+
+		select option{
+			color:#252525;
+		}
+
+		textarea{
+			padding-top:10px;
+			padding-bottom:10px;
+		}
+
+		input[type=radio]{
+			display:inline-block;
+			vertical-align:top;
+			margin-top:5px;
+			margin-right:3px;
+		}
+
+		input[type=checkbox]{
+			display:inline-block;
+			vertical-align:top;
+		    margin-top:7px;
+			margin-right:4px;
+		}
+
+		input[type=text]:focus,
+		input[type=email]:focus,
+		input[type=url]:focus,
+		input[type=tel]:focus,
+		input[type=number]:focus,
+		input[type=password]:focus,
+		input[type=date]:focus,
+		input[type=time]:focus,
+		input[type=file]:focus,
+		select:focus,
+		textarea:focus{
+		}
+
+		input[type=submit],
+		input[type=button],
+		button[type=submit]{
+			box-shadow:initial;
+			cursor:pointer;
+			opacity:1 !important;
+			visibility:visible !important;
+			transition:all 0.3s ease-in-out;
+			-webkit-transition:all 0.3s ease-in-out;
+		}
+
+		.ajax-loader{
+			position:absolute;
+		    margin-top:15px;
+		}
+
+	}
+
+}
+
+/* wpcf7-not-valid-tip */
+
+span.wpcf7-not-valid-tip{
+	width:100%;
+	margin-top:2px;
+	padding:1px 5px 0px 5px;
+	background-color:#f8d7da;
+    border:1px #e4c2c5 solid;
+    border-radius:3px;
+	font-weight:400;
+    font-size:11px;
+    color:#c01d2b;
+    line-height:18px;
+    opacity:0.7;
+}
+
+.wpcf7-response-output{
+	margin-top:5px !important;
+	padding:8px 12px 8px 12px !important;
+	border-width:1px !important;
+	border-style:solid !important;
+	border-radius:3px;
+	font-weight:400;
+    font-size:14px;
+    line-height:22px;
+	opacity:0.9;
+
+	&.wpcf7-validation-errors{
+		background-color:#f8d7da;
+		border-color:#e4c2c5;
+	    color:#c01d2b;
+	}
+
+	&.wpcf7-mail-sent-ok{
+		background-color:#c5ebd4;
+		border-color:#b1dac1;
+	    color:#01742f;
+	}
+
+}
+
+/* LARGE DESKTOP PART */
+@media screen and (min-width:1200px){
+}
+
+/* DESKTOP PART */
+@media screen and (min-width:992px) and (max-width:1199px){
+}
+
+/* TABLET LANDSCAPE PART */
+@media screen and (min-width:768px) and (max-width:991px){
+}
+
+/* TABLET PROTRAIT PART */
+@media screen and (min-width:480px) and (max-width:767px){
+}
+
+/* SMART PHONE LANDSCAPE PART */
+@media screen and (min-width:321px) and (max-width:479px){
+}
+
+/* SMART PHONE PROTRAIT PART */
+@media screen and (max-width:320px){
+}

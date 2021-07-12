@@ -1,0 +1,665 @@
+﻿/* LARGE DESKTOP PART */
+@media screen and (min-width:1200px) {
+
+	/*--------------------------------------------------------------
+	# YITH Fix
+	--------------------------------------------------------------*/
+
+	#yith-quick-view-modal > .yith-wcqv-wrapper {
+		height: auto !important;
+	}
+
+	/*--------------------------------------------------------------
+	# Common
+	--------------------------------------------------------------*/
+
+	.order-xl-1 {
+		order: 1;
+	}
+
+	.order-xl-2 {
+		order: 2;
+	}
+
+	.order-xl-3 {
+		order: 3;
+	}
+
+	.order-xl-4 {
+		order: 4;
+	}
+
+}
+
+/* DESKTOP PART */
+@media screen and (min-width:992px) and (max-width:1199px) {
+
+	/*--------------------------------------------------------------
+	# YITH Fix
+	--------------------------------------------------------------*/
+
+	#yith-quick-view-modal > .yith-wcqv-wrapper {
+		height: auto !important;
+	}
+
+	/*--------------------------------------------------------------
+	# Common
+	--------------------------------------------------------------*/
+
+	.order-lg-1 {
+		order: 1;
+	}
+
+	.order-lg-2 {
+		order: 2;
+	}
+
+	.order-lg-3 {
+		order: 3;
+	}
+
+	.order-lg-4 {
+		order: 4;
+	}
+
+}
+
+/* TABLET LANDSCAPE PART */
+@media screen and (min-width:768px) and (max-width:991px) {
+
+	/*--------------------------------------------------------------
+	# Common
+	--------------------------------------------------------------*/
+
+	.order-md-1 {
+		order: 1;
+	}
+
+	.order-md-2 {
+		order: 2;
+	}
+
+	.order-md-3 {
+		order: 3;
+	}
+
+	.order-md-4 {
+		order: 4;
+	}
+
+	/*--------------------------------------------------------------
+	# Shop Page
+	--------------------------------------------------------------*/
+
+	/*--------------------------------------------------------------
+	# Product Listing Page
+	--------------------------------------------------------------*/
+
+	.radiantthemes-shop.three-column > .radiantthemes-shop-box,
+	.radiantthemes-shop.four-column > .radiantthemes-shop-box,
+	.radiantthemes-shop.five-column > .radiantthemes-shop-box,
+	.radiantthemes-shop.six-column > .radiantthemes-shop-box {
+		width: 33.33%;
+	}
+
+	/*--------------------------------------------------------------
+	# Event Page
+	--------------------------------------------------------------*/
+
+	/*--------------------------------------------------------------
+	# Event List View Page
+	--------------------------------------------------------------*/
+
+	.radiantthemes-event-list-item > .row {
+		display: block;
+	}
+
+	.radiantthemes-event-list-item-pic,
+	.radiantthemes-event-list-item-data,
+	.radiantthemes-event-list-item-button {
+		max-width: initial;
+	}
+
+	.radiantthemes-event-list-item-pic {
+		position: static;
+		background-image: initial;
+	}
+
+}
+
+/* TABLET PROTRAIT PART */
+@media screen and (min-width:480px) and (max-width:767px) {
+
+	/*--------------------------------------------------------------
+	# GDPR Notice
+	--------------------------------------------------------------*/
+
+	.gdpr-notice > .row {
+		display: block;
+	}
+
+	.gdpr-notice .btn {
+		margin-top: 25px;
+	}
+
+	/*--------------------------------------------------------------
+	# Footer
+	--------------------------------------------------------------*/
+
+	/*--------------------------------------------------------------
+	# Footer Style Default
+	--------------------------------------------------------------*/
+
+	.wraper_footer.style-default .wraper_footer_copyright .footer_copyright .footer_copyright_item {
+		text-align: center !important;
+	}
+
+	/*--------------------------------------------------------------
+	# YITH Fix
+	--------------------------------------------------------------*/
+
+	#yith-quick-view-modal > .yith-wcqv-wrapper > .yith-wcqv-main #yith-quick-view-content .images,
+	#yith-quick-view-modal > .yith-wcqv-wrapper > .yith-wcqv-main #yith-quick-view-content .summary {
+		width: 100%;
+	}
+
+	/*--------------------------------------------------------------
+	# Common
+	--------------------------------------------------------------*/
+
+	.order-sm-1 {
+		order: 1;
+	}
+
+	.order-sm-2 {
+		order: 2;
+	}
+
+	.order-sm-3 {
+		order: 3;
+	}
+
+	.order-sm-4 {
+		order: 4;
+	}
+
+	/*--------------------------------------------------------------
+	# Blog Page
+	--------------------------------------------------------------*/
+
+	/*--------------------------------------------------------------
+	# Blog Single Page
+	--------------------------------------------------------------*/
+
+	.comments-area ol.comment-list > li,
+	.comments-area ol.comment-list > li ol.children > li {
+		padding: 0;
+		background-color: transparent;
+		box-shadow: initial;
+	}
+
+	.comments-area ol.comment-list li ol {
+		padding-left: 20px;
+	}
+
+	/*--------------------------------------------------------------
+	# Shop Page
+	--------------------------------------------------------------*/
+
+	/*--------------------------------------------------------------
+	# Product Listing Page
+	--------------------------------------------------------------*/
+
+	.radiantthemes-shop.three-column > .radiantthemes-shop-box,
+	.radiantthemes-shop.four-column > .radiantthemes-shop-box,
+	.radiantthemes-shop.five-column > .radiantthemes-shop-box,
+	.radiantthemes-shop.six-column > .radiantthemes-shop-box {
+		width: 50%;
+	}
+
+	/*--------------------------------------------------------------
+	## Product Single Page
+	--------------------------------------------------------------*/
+
+	.shop_single > .summary .quantity {
+		width: 100%;
+		margin: 0px 0px 20px 0px !important;
+	}
+
+	.wraper_shop_single.style-one .shop_single_tabs > ul.nav-tabs > li {
+		width: 100%;
+		margin-right: 0;
+		margin-bottom: 10px;
+	}
+
+	/*--------------------------------------------------------------
+	# Cart Page
+	--------------------------------------------------------------*/
+
+	.woocommerce input.input-text[name=coupon_code] {
+		width: 100% !important;
+	}
+
+	/*--------------------------------------------------------------
+	# Event Page
+	--------------------------------------------------------------*/
+
+	/*--------------------------------------------------------------
+	# Event List View Page
+	--------------------------------------------------------------*/
+
+	.radiantthemes-event-list-item > .row {
+		display: block;
+	}
+
+	.radiantthemes-event-list-item-pic,
+	.radiantthemes-event-list-item-data,
+	.radiantthemes-event-list-item-button {
+		max-width: initial;
+	}
+
+	.radiantthemes-event-list-item-pic {
+		position: static;
+		background-image: initial;
+	}
+
+}
+
+/* SMART PHONE LANDSCAPE PART */
+@media screen and (min-width:321px) and (max-width:479px) {
+
+	/*--------------------------------------------------------------
+	# GDPR Notice
+	--------------------------------------------------------------*/
+
+	.gdpr-notice > .row {
+		display: block;
+	}
+
+	.gdpr-notice .btn {
+		margin-top: 25px;
+	}
+
+	/*--------------------------------------------------------------
+	# Footer
+	--------------------------------------------------------------*/
+
+	/*--------------------------------------------------------------
+	# Footer Style Default
+	--------------------------------------------------------------*/
+
+	.wraper_footer.style-default .wraper_footer_copyright .footer_copyright .footer_copyright_item {
+		text-align: center !important;
+	}
+
+	/*--------------------------------------------------------------
+	# Gallery Columns
+	--------------------------------------------------------------*/
+
+	.gallery-item,
+	.gallery-columns-1 .gallery-item,
+	.gallery-columns-2 .gallery-item,
+	.gallery-columns-3 .gallery-item,
+	.gallery-columns-4 .gallery-item {
+		width: 100%;
+		max-width: initial;
+	}
+
+	/*--------------------------------------------------------------
+	# YITH Fix
+	--------------------------------------------------------------*/
+
+	#yith-quick-view-modal > .yith-wcqv-wrapper > .yith-wcqv-main #yith-quick-view-content .images,
+	#yith-quick-view-modal > .yith-wcqv-wrapper > .yith-wcqv-main #yith-quick-view-content .summary {
+		width: 100%;
+	}
+
+	/*--------------------------------------------------------------
+	# Common
+	--------------------------------------------------------------*/
+
+	.order-1 {
+		order: 1;
+	}
+
+	.order-2 {
+		order: 2;
+	}
+
+	.order-3 {
+		order: 3;
+	}
+
+	.order-4 {
+		order: 4;
+	}
+
+	/*--------------------------------------------------------------
+	# Blog Page
+	--------------------------------------------------------------*/
+
+	/*--------------------------------------------------------------
+	# Blog Single Page
+	--------------------------------------------------------------*/
+
+	.comments-area ol.comment-list > li,
+	.comments-area ol.comment-list > li ol.children > li {
+		padding: 0;
+		background-color: transparent;
+		box-shadow: initial;
+	}
+
+	.comments-area ol.comment-list li ol {
+		padding-left: 0;
+	}
+
+	.comments-area ol.comment-list li .reply {
+		position: static;
+		margin-bottom: 12px;
+	}
+
+	/*--------------------------------------------------------------
+	# Shop Page
+	--------------------------------------------------------------*/
+
+	/*--------------------------------------------------------------
+	# Product Listing Page
+	--------------------------------------------------------------*/
+
+	.woocommerce .woocommerce-products-header,
+	.woocommerce .woocommerce-result-count,
+	.woocommerce .woocommerce-ordering {
+		width: 100%;
+		text-align: center;
+	}
+
+	.radiantthemes-shop.three-column > .radiantthemes-shop-box,
+	.radiantthemes-shop.four-column > .radiantthemes-shop-box,
+	.radiantthemes-shop.five-column > .radiantthemes-shop-box,
+	.radiantthemes-shop.six-column > .radiantthemes-shop-box {
+		width: 100%;
+	}
+
+	/*--------------------------------------------------------------
+	## Product Single Page
+	--------------------------------------------------------------*/
+
+	.shop_single > .summary .quantity {
+		width: 100%;
+		margin: 0px 0px 20px 0px !important;
+	}
+
+	.wraper_shop_single.style-one .shop_single_tabs > ul.nav-tabs > li {
+		width: 100%;
+		margin-right: 0;
+		margin-bottom: 10px;
+	}
+
+	/*--------------------------------------------------------------
+	# Cart Page
+	--------------------------------------------------------------*/
+
+	.woocommerce input.input-text[name=coupon_code] {
+		width: 100% !important;
+		margin: 0px 0 !important;
+	}
+
+	.woocommerce input.button[name=apply_coupon] {
+		width: 100% !important;
+	}
+
+	/*--------------------------------------------------------------
+	# Checkout Page
+	--------------------------------------------------------------*/
+
+	.woocommerce form #customer_details,
+	.woocommerce form #order_review_heading,
+	.woocommerce form #order_review {
+		width: 100%;
+	}
+
+	/*--------------------------------------------------------------
+	# Event Page
+	--------------------------------------------------------------*/
+
+	/*--------------------------------------------------------------
+	# Event List View Page
+	--------------------------------------------------------------*/
+
+	.radiantthemes-event-list-item > .row {
+		display: block;
+	}
+
+	.radiantthemes-event-list-item-pic,
+	.radiantthemes-event-list-item-data,
+	.radiantthemes-event-list-item-button {
+		max-width: initial;
+	}
+
+	.radiantthemes-event-list-item-pic {
+		position: static;
+		background-image: initial;
+	}
+
+	/*--------------------------------------------------------------
+	# 404 Error Page
+	--------------------------------------------------------------*/
+
+	/*--------------------------------------------------------------
+	# 404 Error Style One
+	--------------------------------------------------------------*/
+
+	.wraper_error_main.style-one .error_main .radiantthemes-counterup {
+		font-size: 150px;
+	}
+
+	/*--------------------------------------------------------------
+	# Post Style List View
+	--------------------------------------------------------------*/
+	.post.style-six > [class*='col-'],
+	.post.style-three > [class*='col-'] {
+		padding: 0;
+	}
+
+	.wraper_blog_main.style-three > .container > .row > [class*="col-"],
+	.wraper_blog_main.style-four > .container > .row > [class*="col-"],
+	.wraper_blog_main.style-six > .container > .row > [class*="col-"] {
+		padding: 15px;
+	}
+
+	.post.style-six .entry-main,
+	.post.style-three .entry-main {
+		padding: 25px;
+	}
+
+}
+
+/* SMART PHONE PROTRAIT PART */
+@media screen and (max-width:320px) {
+
+	/*--------------------------------------------------------------
+	# GDPR Notice
+	--------------------------------------------------------------*/
+
+	.gdpr-notice > .row {
+		display: block;
+	}
+
+	.gdpr-notice .btn {
+		margin-top: 25px;
+	}
+
+	/*--------------------------------------------------------------
+	# Footer
+	--------------------------------------------------------------*/
+
+	/*--------------------------------------------------------------
+	# Footer Style Default
+	--------------------------------------------------------------*/
+
+	.wraper_footer.style-default .wraper_footer_copyright .footer_copyright .footer_copyright_item {
+		text-align: center !important;
+	}
+
+	/*--------------------------------------------------------------
+	# Gallery Columns
+	--------------------------------------------------------------*/
+
+	.gallery-item,
+	.gallery-columns-1 .gallery-item,
+	.gallery-columns-2 .gallery-item,
+	.gallery-columns-3 .gallery-item,
+	.gallery-columns-4 .gallery-item {
+		width: 100%;
+		max-width: initial;
+	}
+
+	/*--------------------------------------------------------------
+	# YITH Fix
+	--------------------------------------------------------------*/
+
+	#yith-quick-view-modal > .yith-wcqv-wrapper > .yith-wcqv-main #yith-quick-view-content .images,
+	#yith-quick-view-modal > .yith-wcqv-wrapper > .yith-wcqv-main #yith-quick-view-content .summary {
+		width: 100%;
+	}
+
+	/*--------------------------------------------------------------
+	# Common
+	--------------------------------------------------------------*/
+
+	.order-1 {
+		order: 1;
+	}
+
+	.order-2 {
+		order: 2;
+	}
+
+	.order-3 {
+		order: 3;
+	}
+
+	.order-4 {
+		order: 4;
+	}
+
+	/*--------------------------------------------------------------
+	# Blog Page
+	--------------------------------------------------------------*/
+
+	/*--------------------------------------------------------------
+	# Blog Single Page
+	--------------------------------------------------------------*/
+
+	.comments-area ol.comment-list > li,
+	.comments-area ol.comment-list > li ol.children > li {
+		padding: 0;
+		background-color: transparent;
+		box-shadow: initial;
+	}
+
+	.comments-area ol.comment-list li ol {
+		padding-left: 0;
+	}
+
+	.comments-area ol.comment-list li .reply {
+		position: static;
+		margin-bottom: 12px;
+	}
+
+	/*--------------------------------------------------------------
+	# Shop Page
+	--------------------------------------------------------------*/
+
+	/*--------------------------------------------------------------
+	# Product Listing Page
+	--------------------------------------------------------------*/
+
+	.woocommerce .woocommerce-products-header,
+	.woocommerce .woocommerce-result-count,
+	.woocommerce .woocommerce-ordering {
+		width: 100%;
+		text-align: center;
+	}
+
+	.radiantthemes-shop.three-column > .radiantthemes-shop-box,
+	.radiantthemes-shop.four-column > .radiantthemes-shop-box,
+	.radiantthemes-shop.five-column > .radiantthemes-shop-box,
+	.radiantthemes-shop.six-column > .radiantthemes-shop-box {
+		width: 100%;
+	}
+
+	/*--------------------------------------------------------------
+	## Product Single Page
+	--------------------------------------------------------------*/
+
+	.shop_single > .summary .quantity {
+		width: 100%;
+		margin: 0px 0px 20px 0px !important;
+	}
+
+	.wraper_shop_single.style-one .shop_single_tabs > ul.nav-tabs > li {
+		width: 100%;
+		margin-right: 0;
+		margin-bottom: 10px;
+	}
+
+	/*--------------------------------------------------------------
+	# Cart Page
+	--------------------------------------------------------------*/
+
+	.woocommerce input.input-text[name=coupon_code] {
+		width: 100% !important;
+		margin: 0px 0px 7px 0px !important;
+	}
+
+	.woocommerce input.button[name=apply_coupon] {
+		width: 100% !important;
+	}
+
+	/*--------------------------------------------------------------
+	# Checkout Page
+	--------------------------------------------------------------*/
+
+	.woocommerce form #customer_details,
+	.woocommerce form #order_review_heading,
+	.woocommerce form #order_review {
+		width: 100%;
+	}
+
+	/*--------------------------------------------------------------
+	# Event Page
+	--------------------------------------------------------------*/
+
+	/*--------------------------------------------------------------
+	# Event List View Page
+	--------------------------------------------------------------*/
+
+	.radiantthemes-event-list-item > .row {
+		display: block;
+	}
+
+	.radiantthemes-event-list-item-pic,
+	.radiantthemes-event-list-item-data,
+	.radiantthemes-event-list-item-button {
+		max-width: initial;
+	}
+
+	.radiantthemes-event-list-item-pic {
+		position: static;
+		background-image: initial;
+	}
+
+	/*--------------------------------------------------------------
+	# 404 Error Page
+	--------------------------------------------------------------*/
+
+	/*--------------------------------------------------------------
+	# 404 Error Style One
+	--------------------------------------------------------------*/
+
+	.wraper_error_main.style-one .error_main .radiantthemes-counterup {
+		font-size: 150px;
+	}
+
+}

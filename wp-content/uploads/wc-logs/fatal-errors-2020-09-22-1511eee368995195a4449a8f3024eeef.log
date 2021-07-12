@@ -1,0 +1,334 @@
+2020-09-22T04:28:26+00:00 CRITICAL Uncaught Error: Call to a member function get_cart_contents_count() on null in /home/cura.radiantthemes.com/public_html/wp-content/themes/cura/functions.php:2211
+Stack trace:
+#0 /home/cura.radiantthemes.com/public_html/wp-includes/class-wp-hook.php(287): rt_before_nav_menu_callback('')
+#1 /home/cura.radiantthemes.com/public_html/wp-includes/class-wp-hook.php(311): WP_Hook->apply_filters('', Array)
+#2 /home/cura.radiantthemes.com/public_html/wp-includes/plugin.php(478): WP_Hook->do_action(Array)
+#3 /home/cura.radiantthemes.com/public_html/wp-content/plugins/radiantthemes-addons/widgets/custom-cart-button/class-radiantthemes-custom-cart.php(190): do_action('rt_before_nav_m...')
+#4 /home/cura.radiantthemes.com/public_html/wp-content/plugins/elementor/includes/base/widget-base.php(530): RadiantthemesAddons\Widgets\Radiantthemes_style_Custom_Cart->render()
+#5 /home/cura.radiantthemes.com/public_html/wp-content/plugins/elementor/includes/base/widget-base.php(643): Elementor\Widget_Base->render_content()
+#6 /home/cu in /home/cura.radiantthemes.com/public_html/wp-content/themes/cura/functions.php on line 2211
+
+2020-09-22T04:28:39+00:00 CRITICAL Uncaught Error: Call to a member function get_cart_contents_count() on null in /home/cura.radiantthemes.com/public_html/wp-content/themes/cura/functions.php:2211
+Stack trace:
+#0 /home/cura.radiantthemes.com/public_html/wp-includes/class-wp-hook.php(287): rt_before_nav_menu_callback('')
+#1 /home/cura.radiantthemes.com/public_html/wp-includes/class-wp-hook.php(311): WP_Hook->apply_filters('', Array)
+#2 /home/cura.radiantthemes.com/public_html/wp-includes/plugin.php(478): WP_Hook->do_action(Array)
+#3 /home/cura.radiantthemes.com/public_html/wp-content/plugins/radiantthemes-addons/widgets/custom-cart-button/class-radiantthemes-custom-cart.php(190): do_action('rt_before_nav_m...')
+#4 /home/cura.radiantthemes.com/public_html/wp-content/plugins/elementor/includes/base/widget-base.php(530): RadiantthemesAddons\Widgets\Radiantthemes_style_Custom_Cart->render()
+#5 /home/cura.radiantthemes.com/public_html/wp-content/plugins/elementor/includes/base/widget-base.php(643): Elementor\Widget_Base->render_content()
+#6 /home/cu in /home/cura.radiantthemes.com/public_html/wp-content/themes/cura/functions.php on line 2211
+
+2020-09-22T04:42:54+00:00 CRITICAL Uncaught Error: Call to a member function get_cart_contents_count() on null in /home/cura.radiantthemes.com/public_html/wp-content/themes/cura/functions.php:2211
+Stack trace:
+#0 /home/cura.radiantthemes.com/public_html/wp-includes/class-wp-hook.php(287): rt_before_nav_menu_callback('')
+#1 /home/cura.radiantthemes.com/public_html/wp-includes/class-wp-hook.php(311): WP_Hook->apply_filters('', Array)
+#2 /home/cura.radiantthemes.com/public_html/wp-includes/plugin.php(478): WP_Hook->do_action(Array)
+#3 /home/cura.radiantthemes.com/public_html/wp-content/plugins/radiantthemes-addons/widgets/custom-cart-button/class-radiantthemes-custom-cart.php(190): do_action('rt_before_nav_m...')
+#4 /home/cura.radiantthemes.com/public_html/wp-content/plugins/elementor/includes/base/widget-base.php(530): RadiantthemesAddons\Widgets\Radiantthemes_style_Custom_Cart->render()
+#5 /home/cura.radiantthemes.com/public_html/wp-content/plugins/elementor/includes/base/widget-base.php(643): Elementor\Widget_Base->render_content()
+#6 /home/cu in /home/cura.radiantthemes.com/public_html/wp-content/themes/cura/functions.php on line 2211
+
+2020-09-22T04:51:26+00:00 CRITICAL Uncaught Error: Call to a member function get_cart_contents_count() on null in /home/cura.radiantthemes.com/public_html/wp-content/themes/cura/functions.php:2211
+Stack trace:
+#0 /home/cura.radiantthemes.com/public_html/wp-includes/class-wp-hook.php(287): rt_before_nav_menu_callback('')
+#1 /home/cura.radiantthemes.com/public_html/wp-includes/class-wp-hook.php(311): WP_Hook->apply_filters('', Array)
+#2 /home/cura.radiantthemes.com/public_html/wp-includes/plugin.php(478): WP_Hook->do_action(Array)
+#3 /home/cura.radiantthemes.com/public_html/wp-content/plugins/radiantthemes-addons/widgets/custom-cart-button/class-radiantthemes-custom-cart.php(190): do_action('rt_before_nav_m...')
+#4 /home/cura.radiantthemes.com/public_html/wp-content/plugins/elementor/includes/base/widget-base.php(530): RadiantthemesAddons\Widgets\Radiantthemes_style_Custom_Cart->render()
+#5 /home/cura.radiantthemes.com/public_html/wp-content/plugins/elementor/includes/base/widget-base.php(643): Elementor\Widget_Base->render_content()
+#6 /home/cu in /home/cura.radiantthemes.com/public_html/wp-content/themes/cura/functions.php on line 2211
+
+2020-09-22T06:26:06+00:00 CRITICAL Uncaught Error: Call to a member function get_cart_contents_count() on null in /home/cura.radiantthemes.com/public_html/wp-content/themes/cura/functions.php:2211
+Stack trace:
+#0 /home/cura.radiantthemes.com/public_html/wp-includes/class-wp-hook.php(287): rt_before_nav_menu_callback('')
+#1 /home/cura.radiantthemes.com/public_html/wp-includes/class-wp-hook.php(311): WP_Hook->apply_filters('', Array)
+#2 /home/cura.radiantthemes.com/public_html/wp-includes/plugin.php(478): WP_Hook->do_action(Array)
+#3 /home/cura.radiantthemes.com/public_html/wp-content/plugins/radiantthemes-addons/widgets/custom-cart-button/class-radiantthemes-custom-cart.php(190): do_action('rt_before_nav_m...')
+#4 /home/cura.radiantthemes.com/public_html/wp-content/plugins/elementor/includes/base/widget-base.php(530): RadiantthemesAddons\Widgets\Radiantthemes_style_Custom_Cart->render()
+#5 /home/cura.radiantthemes.com/public_html/wp-content/plugins/elementor/includes/base/widget-base.php(643): Elementor\Widget_Base->render_content()
+#6 /home/cu in /home/cura.radiantthemes.com/public_html/wp-content/themes/cura/functions.php on line 2211
+
+2020-09-22T06:37:47+00:00 CRITICAL Uncaught Error: Call to a member function get_cart_contents_count() on null in /home/cura.radiantthemes.com/public_html/wp-content/themes/cura/functions.php:2211
+Stack trace:
+#0 /home/cura.radiantthemes.com/public_html/wp-includes/class-wp-hook.php(287): rt_before_nav_menu_callback('')
+#1 /home/cura.radiantthemes.com/public_html/wp-includes/class-wp-hook.php(311): WP_Hook->apply_filters('', Array)
+#2 /home/cura.radiantthemes.com/public_html/wp-includes/plugin.php(478): WP_Hook->do_action(Array)
+#3 /home/cura.radiantthemes.com/public_html/wp-content/plugins/radiantthemes-addons/widgets/custom-cart-button/class-radiantthemes-custom-cart.php(190): do_action('rt_before_nav_m...')
+#4 /home/cura.radiantthemes.com/public_html/wp-content/plugins/elementor/includes/base/widget-base.php(530): RadiantthemesAddons\Widgets\Radiantthemes_style_Custom_Cart->render()
+#5 /home/cura.radiantthemes.com/public_html/wp-content/plugins/elementor/includes/base/widget-base.php(643): Elementor\Widget_Base->render_content()
+#6 /home/cu in /home/cura.radiantthemes.com/public_html/wp-content/themes/cura/functions.php on line 2211
+
+2020-09-22T06:40:49+00:00 CRITICAL Uncaught Error: Call to a member function get_cart_contents_count() on null in /home/cura.radiantthemes.com/public_html/wp-content/themes/cura/functions.php:2211
+Stack trace:
+#0 /home/cura.radiantthemes.com/public_html/wp-includes/class-wp-hook.php(287): rt_before_nav_menu_callback('')
+#1 /home/cura.radiantthemes.com/public_html/wp-includes/class-wp-hook.php(311): WP_Hook->apply_filters('', Array)
+#2 /home/cura.radiantthemes.com/public_html/wp-includes/plugin.php(478): WP_Hook->do_action(Array)
+#3 /home/cura.radiantthemes.com/public_html/wp-content/plugins/radiantthemes-addons/widgets/custom-cart-button/class-radiantthemes-custom-cart.php(190): do_action('rt_before_nav_m...')
+#4 /home/cura.radiantthemes.com/public_html/wp-content/plugins/elementor/includes/base/widget-base.php(530): RadiantthemesAddons\Widgets\Radiantthemes_style_Custom_Cart->render()
+#5 /home/cura.radiantthemes.com/public_html/wp-content/plugins/elementor/includes/base/widget-base.php(643): Elementor\Widget_Base->render_content()
+#6 /home/cu in /home/cura.radiantthemes.com/public_html/wp-content/themes/cura/functions.php on line 2211
+
+2020-09-22T06:44:56+00:00 CRITICAL Uncaught Error: Call to a member function get_cart_contents_count() on null in /home/cura.radiantthemes.com/public_html/wp-content/themes/cura/functions.php:2211
+Stack trace:
+#0 /home/cura.radiantthemes.com/public_html/wp-includes/class-wp-hook.php(287): rt_before_nav_menu_callback('')
+#1 /home/cura.radiantthemes.com/public_html/wp-includes/class-wp-hook.php(311): WP_Hook->apply_filters('', Array)
+#2 /home/cura.radiantthemes.com/public_html/wp-includes/plugin.php(478): WP_Hook->do_action(Array)
+#3 /home/cura.radiantthemes.com/public_html/wp-content/plugins/radiantthemes-addons/widgets/custom-cart-button/class-radiantthemes-custom-cart.php(190): do_action('rt_before_nav_m...')
+#4 /home/cura.radiantthemes.com/public_html/wp-content/plugins/elementor/includes/base/widget-base.php(530): RadiantthemesAddons\Widgets\Radiantthemes_style_Custom_Cart->render()
+#5 /home/cura.radiantthemes.com/public_html/wp-content/plugins/elementor/includes/base/widget-base.php(643): Elementor\Widget_Base->render_content()
+#6 /home/cu in /home/cura.radiantthemes.com/public_html/wp-content/themes/cura/functions.php on line 2211
+
+2020-09-22T06:46:15+00:00 CRITICAL Uncaught Error: Call to a member function get_cart_contents_count() on null in /home/cura.radiantthemes.com/public_html/wp-content/themes/cura/functions.php:2211
+Stack trace:
+#0 /home/cura.radiantthemes.com/public_html/wp-includes/class-wp-hook.php(287): rt_before_nav_menu_callback('')
+#1 /home/cura.radiantthemes.com/public_html/wp-includes/class-wp-hook.php(311): WP_Hook->apply_filters('', Array)
+#2 /home/cura.radiantthemes.com/public_html/wp-includes/plugin.php(478): WP_Hook->do_action(Array)
+#3 /home/cura.radiantthemes.com/public_html/wp-content/plugins/radiantthemes-addons/widgets/custom-cart-button/class-radiantthemes-custom-cart.php(190): do_action('rt_before_nav_m...')
+#4 /home/cura.radiantthemes.com/public_html/wp-content/plugins/elementor/includes/base/widget-base.php(530): RadiantthemesAddons\Widgets\Radiantthemes_style_Custom_Cart->render()
+#5 /home/cura.radiantthemes.com/public_html/wp-content/plugins/elementor/includes/base/widget-base.php(643): Elementor\Widget_Base->render_content()
+#6 /home/cu in /home/cura.radiantthemes.com/public_html/wp-content/themes/cura/functions.php on line 2211
+
+2020-09-22T06:48:19+00:00 CRITICAL Uncaught Error: Call to a member function get_cart_contents_count() on null in /home/cura.radiantthemes.com/public_html/wp-content/themes/cura/functions.php:2212
+Stack trace:
+#0 /home/cura.radiantthemes.com/public_html/wp-includes/class-wp-hook.php(287): rt_before_nav_menu_callback('')
+#1 /home/cura.radiantthemes.com/public_html/wp-includes/class-wp-hook.php(311): WP_Hook->apply_filters('', Array)
+#2 /home/cura.radiantthemes.com/public_html/wp-includes/plugin.php(478): WP_Hook->do_action(Array)
+#3 /home/cura.radiantthemes.com/public_html/wp-content/plugins/radiantthemes-addons/widgets/custom-cart-button/class-radiantthemes-custom-cart.php(190): do_action('rt_before_nav_m...')
+#4 /home/cura.radiantthemes.com/public_html/wp-content/plugins/elementor/includes/base/widget-base.php(530): RadiantthemesAddons\Widgets\Radiantthemes_style_Custom_Cart->render()
+#5 /home/cura.radiantthemes.com/public_html/wp-content/plugins/elementor/includes/base/widget-base.php(643): Elementor\Widget_Base->render_content()
+#6 /home/cu in /home/cura.radiantthemes.com/public_html/wp-content/themes/cura/functions.php on line 2212
+
+2020-09-22T06:48:41+00:00 CRITICAL Uncaught Error: Call to a member function get_cart_contents_count() on null in /home/cura.radiantthemes.com/public_html/wp-content/themes/cura/functions.php:2212
+Stack trace:
+#0 /home/cura.radiantthemes.com/public_html/wp-includes/class-wp-hook.php(287): rt_before_nav_menu_callback('')
+#1 /home/cura.radiantthemes.com/public_html/wp-includes/class-wp-hook.php(311): WP_Hook->apply_filters('', Array)
+#2 /home/cura.radiantthemes.com/public_html/wp-includes/plugin.php(478): WP_Hook->do_action(Array)
+#3 /home/cura.radiantthemes.com/public_html/wp-content/plugins/radiantthemes-addons/widgets/custom-cart-button/class-radiantthemes-custom-cart.php(190): do_action('rt_before_nav_m...')
+#4 /home/cura.radiantthemes.com/public_html/wp-content/plugins/elementor/includes/base/widget-base.php(530): RadiantthemesAddons\Widgets\Radiantthemes_style_Custom_Cart->render()
+#5 /home/cura.radiantthemes.com/public_html/wp-content/plugins/elementor/includes/base/widget-base.php(643): Elementor\Widget_Base->render_content()
+#6 /home/cu in /home/cura.radiantthemes.com/public_html/wp-content/themes/cura/functions.php on line 2212
+
+2020-09-22T06:48:44+00:00 CRITICAL Uncaught Error: Call to a member function get_cart_contents_count() on null in /home/cura.radiantthemes.com/public_html/wp-content/themes/cura/functions.php:2212
+Stack trace:
+#0 /home/cura.radiantthemes.com/public_html/wp-includes/class-wp-hook.php(287): rt_before_nav_menu_callback('')
+#1 /home/cura.radiantthemes.com/public_html/wp-includes/class-wp-hook.php(311): WP_Hook->apply_filters('', Array)
+#2 /home/cura.radiantthemes.com/public_html/wp-includes/plugin.php(478): WP_Hook->do_action(Array)
+#3 /home/cura.radiantthemes.com/public_html/wp-content/plugins/radiantthemes-addons/widgets/custom-cart-button/class-radiantthemes-custom-cart.php(190): do_action('rt_before_nav_m...')
+#4 /home/cura.radiantthemes.com/public_html/wp-content/plugins/elementor/includes/base/widget-base.php(530): RadiantthemesAddons\Widgets\Radiantthemes_style_Custom_Cart->render()
+#5 /home/cura.radiantthemes.com/public_html/wp-content/plugins/elementor/includes/base/widget-base.php(643): Elementor\Widget_Base->render_content()
+#6 /home/cu in /home/cura.radiantthemes.com/public_html/wp-content/themes/cura/functions.php on line 2212
+
+2020-09-22T06:49:06+00:00 CRITICAL Uncaught Error: Call to a member function is_empty() on null in /home/cura.radiantthemes.com/public_html/wp-content/plugins/woocommerce/templates/cart/mini-cart.php:24
+Stack trace:
+#0 /home/cura.radiantthemes.com/public_html/wp-content/plugins/woocommerce/includes/wc-core-functions.php(344): include()
+#1 /home/cura.radiantthemes.com/public_html/wp-content/plugins/woocommerce/includes/wc-template-functions.php(2162): wc_get_template('cart/mini-cart....', Array)
+#2 /home/cura.radiantthemes.com/public_html/wp-content/themes/cura/functions.php(2214): woocommerce_mini_cart()
+#3 /home/cura.radiantthemes.com/public_html/wp-includes/class-wp-hook.php(287): rt_before_nav_menu_callback('')
+#4 /home/cura.radiantthemes.com/public_html/wp-includes/class-wp-hook.php(311): WP_Hook->apply_filters('', Array)
+#5 /home/cura.radiantthemes.com/public_html/wp-includes/plugin.php(478): WP_Hook->do_action(Array)
+#6 /home/cura.radiantthemes.com/public_html/wp-content/plugins/radiantthemes-addons/widgets/custom-cart-button/class-radia in /home/cura.radiantthemes.com/public_html/wp-content/plugins/woocommerce/templates/cart/mini-cart.php on line 24
+
+2020-09-22T06:50:32+00:00 CRITICAL Uncaught Error: Call to a member function is_empty() on null in /home/cura.radiantthemes.com/public_html/wp-content/plugins/woocommerce/templates/cart/mini-cart.php:24
+Stack trace:
+#0 /home/cura.radiantthemes.com/public_html/wp-content/plugins/woocommerce/includes/wc-core-functions.php(344): include()
+#1 /home/cura.radiantthemes.com/public_html/wp-content/plugins/woocommerce/includes/wc-template-functions.php(2162): wc_get_template('cart/mini-cart....', Array)
+#2 /home/cura.radiantthemes.com/public_html/wp-content/themes/cura/functions.php(2215): woocommerce_mini_cart()
+#3 /home/cura.radiantthemes.com/public_html/wp-includes/class-wp-hook.php(287): rt_before_nav_menu_callback('')
+#4 /home/cura.radiantthemes.com/public_html/wp-includes/class-wp-hook.php(311): WP_Hook->apply_filters('', Array)
+#5 /home/cura.radiantthemes.com/public_html/wp-includes/plugin.php(478): WP_Hook->do_action(Array)
+#6 /home/cura.radiantthemes.com/public_html/wp-content/plugins/radiantthemes-addons/widgets/custom-cart-button/class-radia in /home/cura.radiantthemes.com/public_html/wp-content/plugins/woocommerce/templates/cart/mini-cart.php on line 24
+
+2020-09-22T06:50:35+00:00 CRITICAL Uncaught Error: Call to a member function is_empty() on null in /home/cura.radiantthemes.com/public_html/wp-content/plugins/woocommerce/templates/cart/mini-cart.php:24
+Stack trace:
+#0 /home/cura.radiantthemes.com/public_html/wp-content/plugins/woocommerce/includes/wc-core-functions.php(344): include()
+#1 /home/cura.radiantthemes.com/public_html/wp-content/plugins/woocommerce/includes/wc-template-functions.php(2162): wc_get_template('cart/mini-cart....', Array)
+#2 /home/cura.radiantthemes.com/public_html/wp-content/themes/cura/functions.php(2215): woocommerce_mini_cart()
+#3 /home/cura.radiantthemes.com/public_html/wp-includes/class-wp-hook.php(287): rt_before_nav_menu_callback('')
+#4 /home/cura.radiantthemes.com/public_html/wp-includes/class-wp-hook.php(311): WP_Hook->apply_filters('', Array)
+#5 /home/cura.radiantthemes.com/public_html/wp-includes/plugin.php(478): WP_Hook->do_action(Array)
+#6 /home/cura.radiantthemes.com/public_html/wp-content/plugins/radiantthemes-addons/widgets/custom-cart-button/class-radia in /home/cura.radiantthemes.com/public_html/wp-content/plugins/woocommerce/templates/cart/mini-cart.php on line 24
+
+2020-09-22T06:57:34+00:00 CRITICAL Uncaught Error: Call to a member function is_empty() on null in /home/cura.radiantthemes.com/public_html/wp-content/plugins/woocommerce/templates/cart/mini-cart.php:24
+Stack trace:
+#0 /home/cura.radiantthemes.com/public_html/wp-content/plugins/woocommerce/includes/wc-core-functions.php(344): include()
+#1 /home/cura.radiantthemes.com/public_html/wp-content/plugins/woocommerce/includes/wc-template-functions.php(2162): wc_get_template('cart/mini-cart....', Array)
+#2 /home/cura.radiantthemes.com/public_html/wp-content/themes/cura/functions.php(2215): woocommerce_mini_cart()
+#3 /home/cura.radiantthemes.com/public_html/wp-includes/class-wp-hook.php(287): rt_before_nav_menu_callback('')
+#4 /home/cura.radiantthemes.com/public_html/wp-includes/class-wp-hook.php(311): WP_Hook->apply_filters('', Array)
+#5 /home/cura.radiantthemes.com/public_html/wp-includes/plugin.php(478): WP_Hook->do_action(Array)
+#6 /home/cura.radiantthemes.com/public_html/wp-content/plugins/radiantthemes-addons/widgets/custom-cart-button/class-radia in /home/cura.radiantthemes.com/public_html/wp-content/plugins/woocommerce/templates/cart/mini-cart.php on line 24
+
+2020-09-22T13:41:02+00:00 CRITICAL Object of class WP_Post could not be converted to string in /home/cura.radiantthemes.com/public_html/wp-content/themes/cura/functions.php on line 609
+
+2020-09-22T13:44:14+00:00 CRITICAL Uncaught Error: Cannot use object of type WP_Post as array in /home/cura.radiantthemes.com/public_html/wp-content/themes/cura/functions.php:608
+Stack trace:
+#0 /home/cura.radiantthemes.com/public_html/wp-includes/class-wp-hook.php(287): radiantthemes_scripts('')
+#1 /home/cura.radiantthemes.com/public_html/wp-includes/class-wp-hook.php(311): WP_Hook->apply_filters(NULL, Array)
+#2 /home/cura.radiantthemes.com/public_html/wp-includes/plugin.php(478): WP_Hook->do_action(Array)
+#3 /home/cura.radiantthemes.com/public_html/wp-includes/script-loader.php(1999): do_action('wp_enqueue_scri...')
+#4 /home/cura.radiantthemes.com/public_html/wp-includes/class-wp-hook.php(287): wp_enqueue_scripts('')
+#5 /home/cura.radiantthemes.com/public_html/wp-includes/class-wp-hook.php(311): WP_Hook->apply_filters(NULL, Array)
+#6 /home/cura.radiantthemes.com/public_html/wp-includes/plugin.php(478): WP_Hook->do_action(Array)
+#7 /home/cura.radiantthemes.com/public_html/wp-includes/general-template.php(3006): do_action('wp_head')
+#8 /home/c in /home/cura.radiantthemes.com/public_html/wp-content/themes/cura/functions.php on line 608
+
+2020-09-22T14:04:38+00:00 CRITICAL Uncaught Error: Call to a member function get_cart_contents_count() on null in /home/cura.radiantthemes.com/public_html/wp-content/themes/cura/functions.php:2285
+Stack trace:
+#0 /home/cura.radiantthemes.com/public_html/wp-includes/class-wp-hook.php(287): rt_before_nav_menu_callback('')
+#1 /home/cura.radiantthemes.com/public_html/wp-includes/class-wp-hook.php(311): WP_Hook->apply_filters('', Array)
+#2 /home/cura.radiantthemes.com/public_html/wp-includes/plugin.php(478): WP_Hook->do_action(Array)
+#3 /home/cura.radiantthemes.com/public_html/wp-content/plugins/radiantthemes-addons/widgets/custom-cart-button/class-radiantthemes-custom-cart.php(190): do_action('rt_before_nav_m...')
+#4 /home/cura.radiantthemes.com/public_html/wp-content/plugins/elementor/includes/base/widget-base.php(530): RadiantthemesAddons\Widgets\Radiantthemes_style_Custom_Cart->render()
+#5 /home/cura.radiantthemes.com/public_html/wp-content/plugins/elementor/includes/base/widget-base.php(643): Elementor\Widget_Base->render_content()
+#6 /home/cu in /home/cura.radiantthemes.com/public_html/wp-content/themes/cura/functions.php on line 2285
+
+2020-09-22T14:06:53+00:00 CRITICAL Uncaught Error: Call to a member function get_cart_contents_count() on null in /home/cura.radiantthemes.com/public_html/wp-content/themes/cura/functions.php:2285
+Stack trace:
+#0 /home/cura.radiantthemes.com/public_html/wp-includes/class-wp-hook.php(287): rt_before_nav_menu_callback('')
+#1 /home/cura.radiantthemes.com/public_html/wp-includes/class-wp-hook.php(311): WP_Hook->apply_filters('', Array)
+#2 /home/cura.radiantthemes.com/public_html/wp-includes/plugin.php(478): WP_Hook->do_action(Array)
+#3 /home/cura.radiantthemes.com/public_html/wp-content/plugins/radiantthemes-addons/widgets/custom-cart-button/class-radiantthemes-custom-cart.php(190): do_action('rt_before_nav_m...')
+#4 /home/cura.radiantthemes.com/public_html/wp-content/plugins/elementor/includes/base/widget-base.php(530): RadiantthemesAddons\Widgets\Radiantthemes_style_Custom_Cart->render()
+#5 /home/cura.radiantthemes.com/public_html/wp-content/plugins/elementor/includes/base/widget-base.php(643): Elementor\Widget_Base->render_content()
+#6 /home/cu in /home/cura.radiantthemes.com/public_html/wp-content/themes/cura/functions.php on line 2285
+
+2020-09-22T14:08:11+00:00 CRITICAL Uncaught Error: Call to a member function get_cart_contents_count() on null in /home/cura.radiantthemes.com/public_html/wp-content/themes/cura/functions.php:2285
+Stack trace:
+#0 /home/cura.radiantthemes.com/public_html/wp-includes/class-wp-hook.php(287): rt_before_nav_menu_callback('')
+#1 /home/cura.radiantthemes.com/public_html/wp-includes/class-wp-hook.php(311): WP_Hook->apply_filters('', Array)
+#2 /home/cura.radiantthemes.com/public_html/wp-includes/plugin.php(478): WP_Hook->do_action(Array)
+#3 /home/cura.radiantthemes.com/public_html/wp-content/plugins/radiantthemes-addons/widgets/custom-cart-button/class-radiantthemes-custom-cart.php(190): do_action('rt_before_nav_m...')
+#4 /home/cura.radiantthemes.com/public_html/wp-content/plugins/elementor/includes/base/widget-base.php(530): RadiantthemesAddons\Widgets\Radiantthemes_style_Custom_Cart->render()
+#5 /home/cura.radiantthemes.com/public_html/wp-content/plugins/elementor/includes/base/widget-base.php(643): Elementor\Widget_Base->render_content()
+#6 /home/cu in /home/cura.radiantthemes.com/public_html/wp-content/themes/cura/functions.php on line 2285
+
+2020-09-22T14:11:56+00:00 CRITICAL Uncaught Error: Call to a member function get_cart_contents_count() on null in /home/cura.radiantthemes.com/public_html/wp-content/themes/cura/functions.php:2286
+Stack trace:
+#0 /home/cura.radiantthemes.com/public_html/wp-includes/class-wp-hook.php(287): rt_before_nav_menu_callback('')
+#1 /home/cura.radiantthemes.com/public_html/wp-includes/class-wp-hook.php(311): WP_Hook->apply_filters('', Array)
+#2 /home/cura.radiantthemes.com/public_html/wp-includes/plugin.php(478): WP_Hook->do_action(Array)
+#3 /home/cura.radiantthemes.com/public_html/wp-content/plugins/radiantthemes-addons/widgets/custom-cart-button/class-radiantthemes-custom-cart.php(190): do_action('rt_before_nav_m...')
+#4 /home/cura.radiantthemes.com/public_html/wp-content/plugins/elementor/includes/base/widget-base.php(530): RadiantthemesAddons\Widgets\Radiantthemes_style_Custom_Cart->render()
+#5 /home/cura.radiantthemes.com/public_html/wp-content/plugins/elementor/includes/base/widget-base.php(643): Elementor\Widget_Base->render_content()
+#6 /home/cu in /home/cura.radiantthemes.com/public_html/wp-content/themes/cura/functions.php on line 2286
+
+2020-09-22T14:12:24+00:00 CRITICAL Uncaught Error: Call to a member function get_cart_contents_count() on null in /home/cura.radiantthemes.com/public_html/wp-content/themes/cura/functions.php:2286
+Stack trace:
+#0 /home/cura.radiantthemes.com/public_html/wp-includes/class-wp-hook.php(287): rt_before_nav_menu_callback('')
+#1 /home/cura.radiantthemes.com/public_html/wp-includes/class-wp-hook.php(311): WP_Hook->apply_filters('', Array)
+#2 /home/cura.radiantthemes.com/public_html/wp-includes/plugin.php(478): WP_Hook->do_action(Array)
+#3 /home/cura.radiantthemes.com/public_html/wp-content/plugins/radiantthemes-addons/widgets/custom-cart-button/class-radiantthemes-custom-cart.php(190): do_action('rt_before_nav_m...')
+#4 /home/cura.radiantthemes.com/public_html/wp-content/plugins/elementor/includes/base/widget-base.php(530): RadiantthemesAddons\Widgets\Radiantthemes_style_Custom_Cart->render()
+#5 /home/cura.radiantthemes.com/public_html/wp-content/plugins/elementor/includes/base/widget-base.php(643): Elementor\Widget_Base->render_content()
+#6 /home/cu in /home/cura.radiantthemes.com/public_html/wp-content/themes/cura/functions.php on line 2286
+
+2020-09-22T14:12:57+00:00 CRITICAL Uncaught Error: Call to a member function get_cart_contents_count() on null in /home/cura.radiantthemes.com/public_html/wp-content/themes/cura/functions.php:2286
+Stack trace:
+#0 /home/cura.radiantthemes.com/public_html/wp-includes/class-wp-hook.php(287): rt_before_nav_menu_callback('')
+#1 /home/cura.radiantthemes.com/public_html/wp-includes/class-wp-hook.php(311): WP_Hook->apply_filters('', Array)
+#2 /home/cura.radiantthemes.com/public_html/wp-includes/plugin.php(478): WP_Hook->do_action(Array)
+#3 /home/cura.radiantthemes.com/public_html/wp-content/plugins/radiantthemes-addons/widgets/custom-cart-button/class-radiantthemes-custom-cart.php(190): do_action('rt_before_nav_m...')
+#4 /home/cura.radiantthemes.com/public_html/wp-content/plugins/elementor/includes/base/widget-base.php(530): RadiantthemesAddons\Widgets\Radiantthemes_style_Custom_Cart->render()
+#5 /home/cura.radiantthemes.com/public_html/wp-content/plugins/elementor/includes/base/widget-base.php(643): Elementor\Widget_Base->render_content()
+#6 /home/cu in /home/cura.radiantthemes.com/public_html/wp-content/themes/cura/functions.php on line 2286
+
+2020-09-22T14:15:42+00:00 CRITICAL Uncaught Error: Call to a member function is_empty() on null in /home/cura.radiantthemes.com/public_html/wp-content/plugins/woocommerce/templates/cart/mini-cart.php:24
+Stack trace:
+#0 /home/cura.radiantthemes.com/public_html/wp-content/plugins/woocommerce/includes/wc-core-functions.php(344): include()
+#1 /home/cura.radiantthemes.com/public_html/wp-content/plugins/woocommerce/includes/wc-template-functions.php(2162): wc_get_template('cart/mini-cart....', Array)
+#2 /home/cura.radiantthemes.com/public_html/wp-content/themes/cura/functions.php(2289): woocommerce_mini_cart()
+#3 /home/cura.radiantthemes.com/public_html/wp-includes/class-wp-hook.php(287): rt_before_nav_menu_callback('')
+#4 /home/cura.radiantthemes.com/public_html/wp-includes/class-wp-hook.php(311): WP_Hook->apply_filters('', Array)
+#5 /home/cura.radiantthemes.com/public_html/wp-includes/plugin.php(478): WP_Hook->do_action(Array)
+#6 /home/cura.radiantthemes.com/public_html/wp-content/plugins/radiantthemes-addons/widgets/custom-cart-button/class-radia in /home/cura.radiantthemes.com/public_html/wp-content/plugins/woocommerce/templates/cart/mini-cart.php on line 24
+
+2020-09-22T14:15:47+00:00 CRITICAL Uncaught Error: Call to a member function is_empty() on null in /home/cura.radiantthemes.com/public_html/wp-content/plugins/woocommerce/templates/cart/mini-cart.php:24
+Stack trace:
+#0 /home/cura.radiantthemes.com/public_html/wp-content/plugins/woocommerce/includes/wc-core-functions.php(344): include()
+#1 /home/cura.radiantthemes.com/public_html/wp-content/plugins/woocommerce/includes/wc-template-functions.php(2162): wc_get_template('cart/mini-cart....', Array)
+#2 /home/cura.radiantthemes.com/public_html/wp-content/themes/cura/functions.php(2289): woocommerce_mini_cart()
+#3 /home/cura.radiantthemes.com/public_html/wp-includes/class-wp-hook.php(287): rt_before_nav_menu_callback('')
+#4 /home/cura.radiantthemes.com/public_html/wp-includes/class-wp-hook.php(311): WP_Hook->apply_filters('', Array)
+#5 /home/cura.radiantthemes.com/public_html/wp-includes/plugin.php(478): WP_Hook->do_action(Array)
+#6 /home/cura.radiantthemes.com/public_html/wp-content/plugins/radiantthemes-addons/widgets/custom-cart-button/class-radia in /home/cura.radiantthemes.com/public_html/wp-content/plugins/woocommerce/templates/cart/mini-cart.php on line 24
+
+2020-09-22T14:15:47+00:00 CRITICAL Uncaught Error: Call to a member function is_empty() on null in /home/cura.radiantthemes.com/public_html/wp-content/plugins/woocommerce/templates/cart/mini-cart.php:24
+Stack trace:
+#0 /home/cura.radiantthemes.com/public_html/wp-content/plugins/woocommerce/includes/wc-core-functions.php(344): include()
+#1 /home/cura.radiantthemes.com/public_html/wp-content/plugins/woocommerce/includes/wc-template-functions.php(2162): wc_get_template('cart/mini-cart....', Array)
+#2 /home/cura.radiantthemes.com/public_html/wp-content/themes/cura/functions.php(2289): woocommerce_mini_cart()
+#3 /home/cura.radiantthemes.com/public_html/wp-includes/class-wp-hook.php(287): rt_before_nav_menu_callback('')
+#4 /home/cura.radiantthemes.com/public_html/wp-includes/class-wp-hook.php(311): WP_Hook->apply_filters('', Array)
+#5 /home/cura.radiantthemes.com/public_html/wp-includes/plugin.php(478): WP_Hook->do_action(Array)
+#6 /home/cura.radiantthemes.com/public_html/wp-content/plugins/radiantthemes-addons/widgets/custom-cart-button/class-radia in /home/cura.radiantthemes.com/public_html/wp-content/plugins/woocommerce/templates/cart/mini-cart.php on line 24
+
+2020-09-22T14:15:47+00:00 CRITICAL Uncaught Error: Call to a member function is_empty() on null in /home/cura.radiantthemes.com/public_html/wp-content/plugins/woocommerce/templates/cart/mini-cart.php:24
+Stack trace:
+#0 /home/cura.radiantthemes.com/public_html/wp-content/plugins/woocommerce/includes/wc-core-functions.php(344): include()
+#1 /home/cura.radiantthemes.com/public_html/wp-content/plugins/woocommerce/includes/wc-template-functions.php(2162): wc_get_template('cart/mini-cart....', Array)
+#2 /home/cura.radiantthemes.com/public_html/wp-content/themes/cura/functions.php(2289): woocommerce_mini_cart()
+#3 /home/cura.radiantthemes.com/public_html/wp-includes/class-wp-hook.php(287): rt_before_nav_menu_callback('')
+#4 /home/cura.radiantthemes.com/public_html/wp-includes/class-wp-hook.php(311): WP_Hook->apply_filters('', Array)
+#5 /home/cura.radiantthemes.com/public_html/wp-includes/plugin.php(478): WP_Hook->do_action(Array)
+#6 /home/cura.radiantthemes.com/public_html/wp-content/plugins/radiantthemes-addons/widgets/custom-cart-button/class-radia in /home/cura.radiantthemes.com/public_html/wp-content/plugins/woocommerce/templates/cart/mini-cart.php on line 24
+
+2020-09-22T14:15:47+00:00 CRITICAL Uncaught Error: Call to a member function is_empty() on null in /home/cura.radiantthemes.com/public_html/wp-content/plugins/woocommerce/templates/cart/mini-cart.php:24
+Stack trace:
+#0 /home/cura.radiantthemes.com/public_html/wp-content/plugins/woocommerce/includes/wc-core-functions.php(344): include()
+#1 /home/cura.radiantthemes.com/public_html/wp-content/plugins/woocommerce/includes/wc-template-functions.php(2162): wc_get_template('cart/mini-cart....', Array)
+#2 /home/cura.radiantthemes.com/public_html/wp-content/themes/cura/functions.php(2289): woocommerce_mini_cart()
+#3 /home/cura.radiantthemes.com/public_html/wp-includes/class-wp-hook.php(287): rt_before_nav_menu_callback('')
+#4 /home/cura.radiantthemes.com/public_html/wp-includes/class-wp-hook.php(311): WP_Hook->apply_filters('', Array)
+#5 /home/cura.radiantthemes.com/public_html/wp-includes/plugin.php(478): WP_Hook->do_action(Array)
+#6 /home/cura.radiantthemes.com/public_html/wp-content/plugins/radiantthemes-addons/widgets/custom-cart-button/class-radia in /home/cura.radiantthemes.com/public_html/wp-content/plugins/woocommerce/templates/cart/mini-cart.php on line 24
+
+2020-09-22T14:15:58+00:00 CRITICAL Uncaught Error: Call to a member function is_empty() on null in /home/cura.radiantthemes.com/public_html/wp-content/plugins/woocommerce/templates/cart/mini-cart.php:24
+Stack trace:
+#0 /home/cura.radiantthemes.com/public_html/wp-content/plugins/woocommerce/includes/wc-core-functions.php(344): include()
+#1 /home/cura.radiantthemes.com/public_html/wp-content/plugins/woocommerce/includes/wc-template-functions.php(2162): wc_get_template('cart/mini-cart....', Array)
+#2 /home/cura.radiantthemes.com/public_html/wp-content/themes/cura/functions.php(2289): woocommerce_mini_cart()
+#3 /home/cura.radiantthemes.com/public_html/wp-includes/class-wp-hook.php(287): rt_before_nav_menu_callback('')
+#4 /home/cura.radiantthemes.com/public_html/wp-includes/class-wp-hook.php(311): WP_Hook->apply_filters('', Array)
+#5 /home/cura.radiantthemes.com/public_html/wp-includes/plugin.php(478): WP_Hook->do_action(Array)
+#6 /home/cura.radiantthemes.com/public_html/wp-content/plugins/radiantthemes-addons/widgets/custom-cart-button/class-radia in /home/cura.radiantthemes.com/public_html/wp-content/plugins/woocommerce/templates/cart/mini-cart.php on line 24
+
+2020-09-22T14:19:38+00:00 CRITICAL Uncaught Error: Call to a member function is_empty() on null in /home/cura.radiantthemes.com/public_html/wp-content/plugins/woocommerce/templates/cart/mini-cart.php:24
+Stack trace:
+#0 /home/cura.radiantthemes.com/public_html/wp-content/plugins/woocommerce/includes/wc-core-functions.php(344): include()
+#1 /home/cura.radiantthemes.com/public_html/wp-content/plugins/woocommerce/includes/wc-template-functions.php(2162): wc_get_template('cart/mini-cart....', Array)
+#2 /home/cura.radiantthemes.com/public_html/wp-content/themes/cura/functions.php(2289): woocommerce_mini_cart()
+#3 /home/cura.radiantthemes.com/public_html/wp-includes/class-wp-hook.php(287): rt_before_nav_menu_callback('')
+#4 /home/cura.radiantthemes.com/public_html/wp-includes/class-wp-hook.php(311): WP_Hook->apply_filters('', Array)
+#5 /home/cura.radiantthemes.com/public_html/wp-includes/plugin.php(478): WP_Hook->do_action(Array)
+#6 /home/cura.radiantthemes.com/public_html/wp-content/plugins/radiantthemes-addons/widgets/custom-cart-button/class-radia in /home/cura.radiantthemes.com/public_html/wp-content/plugins/woocommerce/templates/cart/mini-cart.php on line 24
+
+2020-09-22T14:19:44+00:00 CRITICAL Uncaught Error: Call to a member function is_empty() on null in /home/cura.radiantthemes.com/public_html/wp-content/plugins/woocommerce/templates/cart/mini-cart.php:24
+Stack trace:
+#0 /home/cura.radiantthemes.com/public_html/wp-content/plugins/woocommerce/includes/wc-core-functions.php(344): include()
+#1 /home/cura.radiantthemes.com/public_html/wp-content/plugins/woocommerce/includes/wc-template-functions.php(2162): wc_get_template('cart/mini-cart....', Array)
+#2 /home/cura.radiantthemes.com/public_html/wp-content/themes/cura/functions.php(2289): woocommerce_mini_cart()
+#3 /home/cura.radiantthemes.com/public_html/wp-includes/class-wp-hook.php(287): rt_before_nav_menu_callback('')
+#4 /home/cura.radiantthemes.com/public_html/wp-includes/class-wp-hook.php(311): WP_Hook->apply_filters('', Array)
+#5 /home/cura.radiantthemes.com/public_html/wp-includes/plugin.php(478): WP_Hook->do_action(Array)
+#6 /home/cura.radiantthemes.com/public_html/wp-content/plugins/radiantthemes-addons/widgets/custom-cart-button/class-radia in /home/cura.radiantthemes.com/public_html/wp-content/plugins/woocommerce/templates/cart/mini-cart.php on line 24
+
+2020-09-22T14:20:35+00:00 CRITICAL Uncaught Error: Call to a member function get_cart_contents_count() on null in /home/cura.radiantthemes.com/public_html/wp-content/themes/cura/functions.php:2354
+Stack trace:
+#0 /home/cura.radiantthemes.com/public_html/wp-includes/class-wp-hook.php(287): rt_before_nav_menu_callback('')
+#1 /home/cura.radiantthemes.com/public_html/wp-includes/class-wp-hook.php(311): WP_Hook->apply_filters('', Array)
+#2 /home/cura.radiantthemes.com/public_html/wp-includes/plugin.php(478): WP_Hook->do_action(Array)
+#3 /home/cura.radiantthemes.com/public_html/wp-content/plugins/radiantthemes-addons/widgets/custom-cart-button/class-radiantthemes-custom-cart.php(190): do_action('rt_before_nav_m...')
+#4 /home/cura.radiantthemes.com/public_html/wp-content/plugins/elementor/includes/base/widget-base.php(530): RadiantthemesAddons\Widgets\Radiantthemes_style_Custom_Cart->render()
+#5 /home/cura.radiantthemes.com/public_html/wp-content/plugins/elementor/includes/base/widget-base.php(643): Elementor\Widget_Base->render_content()
+#6 /home/cu in /home/cura.radiantthemes.com/public_html/wp-content/themes/cura/functions.php on line 2354
+
+2020-09-22T14:20:44+00:00 CRITICAL Uncaught Error: Call to a member function get_cart_contents_count() on null in /home/cura.radiantthemes.com/public_html/wp-content/themes/cura/functions.php:2354
+Stack trace:
+#0 /home/cura.radiantthemes.com/public_html/wp-includes/class-wp-hook.php(287): rt_before_nav_menu_callback('')
+#1 /home/cura.radiantthemes.com/public_html/wp-includes/class-wp-hook.php(311): WP_Hook->apply_filters('', Array)
+#2 /home/cura.radiantthemes.com/public_html/wp-includes/plugin.php(478): WP_Hook->do_action(Array)
+#3 /home/cura.radiantthemes.com/public_html/wp-content/plugins/radiantthemes-addons/widgets/custom-cart-button/class-radiantthemes-custom-cart.php(190): do_action('rt_before_nav_m...')
+#4 /home/cura.radiantthemes.com/public_html/wp-content/plugins/elementor/includes/base/widget-base.php(530): RadiantthemesAddons\Widgets\Radiantthemes_style_Custom_Cart->render()
+#5 /home/cura.radiantthemes.com/public_html/wp-content/plugins/elementor/includes/base/widget-base.php(643): Elementor\Widget_Base->render_content()
+#6 /home/cu in /home/cura.radiantthemes.com/public_html/wp-content/themes/cura/functions.php on line 2354
+

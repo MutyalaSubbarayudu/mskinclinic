@@ -1,0 +1,60 @@
+/*--------------------------------------------------------------
+# WooCommerce Fix
+--------------------------------------------------------------*/
+
+.woocommerce-info,
+.woocommerce-error,
+.woocommerce-message{
+	border-width:1px;
+	border-style:solid;
+}
+
+.woocommerce-info{
+	background-color:#cce5ff;
+	border-color:#c5ddf5;
+}
+
+.woocommerce-error{
+	background-color:#f8d7da;
+	border-color:#e4c2c5;
+}
+
+.woocommerce-message{
+	background-color:#9abc44;
+	border-color:#82a132;
+}
+
+.woocommerce-info:before,
+.woocommerce-error:before,
+.woocommerce-message:before{
+	top:inherit;
+}
+
+.woocommerce-info,
+.woocommerce-info:before,
+.woocommerce-info a:not(.button){
+	color:#0078bc !important;
+}
+
+.woocommerce-error,
+.woocommerce-error:before,
+.woocommerce-error a:not(.button){
+	color:#c01d2b !important;
+}
+
+.woocommerce-message,
+.woocommerce-message:before,
+.woocommerce-message a:not(.button){
+	color:#fff !important;
+}
+
+.woocommerce-error .button,
+.woocommerce-info .button,
+.woocommerce-message .button,
+.woocommerce-error .button:hover,
+.woocommerce-info .button:hover,
+.woocommerce-message .button:hover{
+	padding:4px 0px 0px 0px !important;
+	background-color:initial !important;
+	color:#fff !important;
+}

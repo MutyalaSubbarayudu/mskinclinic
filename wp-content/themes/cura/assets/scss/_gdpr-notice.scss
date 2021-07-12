@@ -1,0 +1,35 @@
+/*--------------------------------------------------------------
+# GDPR Notice
+--------------------------------------------------------------*/
+
+.gdpr-notice{
+	position:fixed;
+	bottom:0;
+	z-index:99;
+	margin:0;
+	padding:20px 30px 17px 20px;
+	border:none;
+	border-radius:0;
+	font-weight:300;
+	color:#fff;
+}
+
+.gdpr-notice .close{
+    top:-12px;
+}
+
+.gdpr-notice > .row{
+	display:flex;
+	flex-wrap:wrap;
+	align-items:center;
+}
+
+.gdpr-notice > .row > [class*='col-']{
+}
+
+.gdpr-notice p{
+	margin:0;
+}
+
+.gdpr-notice .btn{
+}

@@ -1,0 +1,27 @@
+﻿/* rt-progress-bar element-one */
+
+.rt-progress-bar.element-one{
+
+	> .title{
+		margin-bottom:5px;
+		font-weight:700;
+		font-size:16px;
+		color:#000;
+		line-height:28px;
+
+		> .progress-width{
+			float:right;
+		}
+
+	}
+
+	> .progress{
+
+		> .progress-bar{
+			transition-duration:2s;
+			-webkit-transition-duration:2s;
+		}
+
+	}
+
+}

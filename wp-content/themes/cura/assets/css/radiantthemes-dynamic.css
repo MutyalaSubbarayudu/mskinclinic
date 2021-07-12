@@ -1,0 +1,111 @@
+@font-face {
+font-family:"Jost Regular";
+src:url(http://localhost/mskinclinic/wp-content/uploads/2020/07/Jost-Regular.ttf);}
+@font-face {
+font-family:"Jost Medium";
+src:url(http://localhost/mskinclinic/wp-content/uploads/2020/07/Jost-Medium.ttf);}
+@font-face {
+font-family:"Jost SemiBold";
+src:url(http://localhost/mskinclinic/wp-content/uploads/2020/06/Jost-SemiBold.ttf);}
+@font-face {
+font-family:"Jost Bold";
+src:url(http://localhost/mskinclinic/wp-content/uploads/2020/07/Jost-Bold.ttf);}
+@font-face {
+font-family:"PlayfairDisplay Regular";
+src:url(http://localhost/mskinclinic/wp-content/uploads/2020/07/PlayfairDisplay-Regular.ttf);}
+@font-face {
+font-family:"PlayfairDisplay Medium";
+src:url(http://localhost/mskinclinic/wp-content/uploads/2020/07/PlayfairDisplay-Medium.ttf);}
+@font-face {
+font-family:"PlayfairDisplay SemiBold";
+src:url(http://localhost/mskinclinic/wp-content/uploads/2020/07/PlayfairDisplay-SemiBold.ttf);}
+@font-face {
+font-family:"PlayfairDisplay Bold";
+src:url(http://localhost/mskinclinic/wp-content/uploads/2020/07/PlayfairDisplay-Bold.ttf);}
+@font-face {
+font-family:"Nunito Regular";
+src:url(http://localhost/mskinclinic/wp-content/uploads/2020/08/Nunito-Regular.ttf);}
+@font-face {
+font-family:"Nunito SemiBold";
+src:url(http://localhost/mskinclinic/wp-content/uploads/2020/08/Nunito-SemiBold.ttf);}
+
+
+
+
+.wraper_header .wraper_header_main .header_main .brand-logo img, .wraper_header .wraper_header_main .header_main .brand-logo-sticky img{
+	max-width: px !important;
+	height: ;
+}
+.wraper_header .wraper_header_main .nav, .wraper_header .wraper_header_main .header-hamburger-menu {
+	margin:     !important;
+}
+
+.radiantthemes-website-layout.boxed{
+	max-width: 1200px ;
+}
+
+@media (min-width: 1200px){
+
+	.radiantthemes-website-layout.boxed .container{
+		width: calc( 1200px - 30px) ;
+	}
+
+	.radiantthemes-website-layout.boxed .container.page-container{
+		width: 1200px ;
+	}
+
+}
+
+.radiantthemes-website-layout.boxed .container-fluid{
+	max-width: calc( 1200px - 30px) ;
+}
+
+
+
+
+
+
+
+
+body[data-header-style='header-style-one'] #hamburger-menu{
+	max-width: px ;
+}
+
+body[data-header-style='header-style-one'] #hamburger-menu.right{
+	right: -px ;
+}
+
+
+body[data-header-style='header-style-two'] #hamburger-menu{
+	max-width: px ;
+}
+
+body[data-header-style='header-style-two'] #hamburger-menu.right{
+	right: -px ;
+}
+
+
+body[data-header-style='header-style-six'] #hamburger-menu{
+	max-width: px ;
+}
+
+body[data-header-style='header-style-six'] #hamburger-menu.right{
+	right: -px ;
+}
+
+
+body[data-header-style='header-style-sixteen'] #hamburger-menu{
+	max-width: px ;
+}
+
+body[data-header-style='header-style-sixteen'] #hamburger-menu.right{
+	right: px ;
+}
+
+.wraper_inner_banner_main .inner_banner_main{
+	text-align: left ;
+}
+
+.wraper_inner_banner_breadcrumb .inner_banner_breadcrumb{
+	text-align: left ;
+}

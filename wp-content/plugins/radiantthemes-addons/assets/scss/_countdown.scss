@@ -1,0 +1,47 @@
+﻿/* rt-countdown element-one */
+
+.rt-countdown.element-one{
+	clear:both;
+	margin-left:-5px;
+	margin-right:-5px;
+	border-top:1px rgba(0,0,0,0.2) solid;
+	border-bottom:1px rgba(0,0,0,0.2) solid;
+
+	> .time{
+		position:relative;
+		display:table-cell;
+		width:1%;
+		padding:20px 5px 23px 5px;
+		text-transform:uppercase;
+		text-align:center;
+		font-weight:400;
+		font-size:16px;
+		line-height:24px;
+
+		&:before{
+			position:absolute;
+			top:calc(50% - 55px);
+			left:-7px;
+			z-index:0;
+			content:":";
+			font-weight:300;
+			font-size:65px;
+			line-height:1;
+		}
+
+		&:first-child:before,
+		&:only-child:before{
+			display:none;
+		}
+
+		strong{
+			display:block;
+			margin-bottom:7px;
+			font-weight:300;
+			font-size:65px;
+			line-height:1;
+		}
+
+	}
+
+}

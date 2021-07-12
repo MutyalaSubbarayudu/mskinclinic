@@ -1,0 +1,120 @@
+﻿/* radiantthemes-separator element-one */
+
+.radiantthemes-separator.element-one{
+
+	> .radiantthemes-separator-block{
+		position:relative;
+		display:inline-block;
+		vertical-align:top;
+		overflow:hidden;
+
+		> .radiantthemes-separator-block-gap{
+			position:absolute;
+			top:0;
+			bottom:0;
+			width:12px;
+			animation:RadiantThemesSeparatorAnimation 1.5s infinite ease-in-out;
+		}
+
+		@keyframes RadiantThemesSeparatorAnimation{
+			0%{
+				left:-12px;
+			}
+			100%{
+				left:100%;
+			}
+		}
+
+	}
+
+}
+
+/* radiantthemes-separator element-two */
+
+.radiantthemes-separator.element-two{
+
+	> .radiantthemes-separator-block{
+		position:relative;
+		display:inline-block;
+		vertical-align:top;
+		overflow:hidden;
+		transform:skewX(20deg);
+		-webkit-transform:skewX(20deg);
+
+		> .radiantthemes-separator-block-gap{
+			position:absolute;
+			top:0;
+			bottom:0;
+			width:12px;
+			animation:RadiantThemesSeparatorAnimation 1.5s infinite ease-in-out;
+		}
+
+		@keyframes RadiantThemesSeparatorAnimation{
+			0%{
+				left:-12px;
+			}
+			100%{
+				left:100%;
+			}
+		}
+
+	}
+
+}
+
+/* radiantthemes-separator element-three */
+
+.radiantthemes-separator.element-three{
+
+	> .radiantthemes-separator-block{
+		position:relative;
+		display:inline-block;
+		vertical-align:top;
+		overflow:hidden;
+		transform:skewX(-20deg);
+		-webkit-transform:skewX(-20deg);
+
+		> .radiantthemes-separator-block-gap{
+			position:absolute;
+			top:0;
+			bottom:0;
+			width:12px;
+			animation:RadiantThemesSeparatorAnimation 1.5s infinite ease-in-out;
+		}
+
+		@keyframes RadiantThemesSeparatorAnimation{
+			0%{
+				left:-12px;
+			}
+			100%{
+				left:100%;
+			}
+		}
+
+	}
+
+}
+
+/* LARGE DESKTOP PART */
+@media screen and (min-width:1200px){
+}
+
+/* DESKTOP PART */
+@media screen and (min-width:992px) and (max-width:1199px){
+}
+
+/* TABLET LANDSCAPE PART */
+@media screen and (min-width:768px) and (max-width:991px){
+}
+
+/* TABLET PROTRAIT PART */
+@media screen and (min-width:480px) and (max-width:767px){
+}
+
+/* SMART PHONE LANDSCAPE PART */
+@media screen and (min-width:321px) and (max-width:479px){
+}
+
+/* SMART PHONE PROTRAIT PART */
+@media screen and (max-width:320px){
+}
